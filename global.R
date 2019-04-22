@@ -20,4 +20,4 @@ st_transform(4326) %>%
 mutate(FnlGg_m = gsub("Back Bay, Downtown, Beacon Hill, West &amp; North End", "Downtown", FnlGg_m)) %>%
 mutate(FnlGg_m = gsub("_", " ", FnlGg_m))
 
-ccp.dat <- read.csv("data/flows.dat.csv")
+ccp.dat <- read.csv("data/flowsdat.csv")
