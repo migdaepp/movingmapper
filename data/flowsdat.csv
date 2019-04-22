@@ -1,859 +1,859 @@
 "","origin","destination","flows","population"
-"1","Boston Allston/Brighton","Boston Downtown",51.2011751529707,98268.3412008922
-"2","Boston Allston/Brighton","Boston Dorchester",119.727983077931,100315.40334471
-"3","Boston Allston/Brighton","Boston Fenway",65.7081366481664,98072.7918218001
-"4","Boston Allston/Brighton","Boston Jamaica Plain",60.6726000708261,100272.30079568
-"5","Boston Allston/Brighton","Boston Roslindale",9.15594323157535,100197.114519605
-"6","Boston Allston/Brighton","Boston South Boston",71.2450962803048,98202.8347296101
-"7","Boston Allston/Brighton","Boston South End",89.2837448303678,100678.601708314
-"8","Boston Allston/Brighton","Boston West Roxbury",43.2701388718264,100678.154647816
-"9","Boston Allston/Brighton","Cambridge All",140.46995106209,100661.910216116
-"10","Boston Allston/Brighton","CMRPC Developing Suburbs",112.720440648644,99873.595836551
-"11","Boston Allston/Brighton","Framingham All",80.5023498236846,99276.1995776483
-"12","Boston Allston/Brighton","ICC Inner Core",101.276881171546,98899.214497547
-"13","Boston Allston/Brighton","MAGIC Maturing Suburbs",97.2122218348093,100245.27775141
-"14","Boston Allston/Brighton","Metrowest Maturing Suburbs",15.6503738056132,100075.376839944
-"15","Boston Allston/Brighton","Newton Ward 2",79.702896243231,99386.9101857754
-"16","Boston Allston/Brighton","Newton Ward 5",102.262191435773,99159.9817160088
-"17","Boston Allston/Brighton","NSPC Maturing Suburbs",81.0538861125374,100585.669268357
-"18","Boston Allston/Brighton","Somerville 2143",70.0106516764127,100458.521738895
-"19","Boston Allston/Brighton","Somerville 2144",177.620312876635,100750.660548297
-"20","Boston Allston/Brighton","Somerville 2145",162.006543567062,98934.9736129246
-"21","Boston Allston/Brighton","SSC Maturing Suburbs",72.1736148600826,97899.5347291669
-"22","Boston Allston/Brighton","TRIC Maturing Suburbs",143.996152212906,100246.00917876
-"23","Boston Downtown","Boston Allston/Brighton",40.59838028656,99957.307154624
-"24","Boston Downtown","Boston Charlestown",156.930126291073,98946.3978807458
-"25","Boston Downtown","Boston Dorchester",81.1942963357079,101255.291320983
-"26","Boston Downtown","Boston Fenway",128.062030790043,102327.613076748
-"27","Boston Downtown","Boston Jamaica Plain",190.93875948349,98880.4986137421
-"28","Boston Downtown","Boston South Boston",47.5708139788317,100388.99002455
-"29","Boston Downtown","Boston South End",129.989412800879,101644.597981543
-"30","Boston Downtown","Cambridge All",24.1250347319096,99919.1147180544
-"31","Boston Downtown","CCC Maturing Suburbs",132.561145685575,102069.935542839
-"32","Boston Downtown","ICC Inner Core",128.546080829595,98624.7583952616
-"33","Boston Downtown","Metrowest Maturing Suburbs",261.774406857211,99443.9918024958
-"34","Boston Downtown","NSPC Maturing Suburbs",161.419050987554,98977.8478030477
-"35","Boston Downtown","NSTF Regional Urban Centers",132.31177371384,98416.1132433975
-"36","Boston Downtown","Somerville 2144",103.762889836817,99731.2447384812
-"37","Boston Downtown","SSC Maturing Suburbs",89.014149262005,100783.432178556
-"38","Boston Downtown","TRIC Maturing Suburbs",159.212582789604,99644.6898251798
-"39","Boston Charlestown","Boston Downtown",40.4882742419546,99998.5884562385
-"40","Boston Charlestown","ICC Inner Core",97.1053984604132,99948.8432589578
-"41","Boston Charlestown","NSPC Maturing Suburbs",131.597077011679,99322.3646053529
-"42","Boston Dorchester","Boston Allston/Brighton",-34.0876781895651,101047.921510944
-"43","Boston Dorchester","Boston Downtown",48.1374715161147,100040.584520798
-"44","Boston Dorchester","Boston Fenway",128.663835979121,99579.6036751749
-"45","Boston Dorchester","Boston Hyde Park",90.7212099311782,99286.8761524269
-"46","Boston Dorchester","Boston Jamaica Plain",133.740829605668,99657.2108192432
-"47","Boston Dorchester","Boston Mattapan",68.3571862260709,99640.7635413891
-"48","Boston Dorchester","Boston Roslindale",123.774521841995,100358.493788264
-"49","Boston Dorchester","Boston Roxbury",97.9124102172091,98595.7118309085
-"50","Boston Dorchester","Boston South Boston",41.7219561987001,99454.2221262402
-"51","Boston Dorchester","Boston South End",43.6290733882108,100449.621850712
-"52","Boston Dorchester","Boston West Roxbury",174.28068104177,100887.38867018
-"53","Boston Dorchester","Cambridge All",152.378128451342,98585.835710087
-"54","Boston Dorchester","ICC Inner Core",77.4059649849222,99014.2040232264
-"55","Boston Dorchester","ICC Maturing Suburbs",126.866716826707,99974.9260809823
-"56","Boston Dorchester","OCPC Developing Suburbs",151.473523375971,98330.6171897597
-"57","Boston Dorchester","Quincy North Quincy",86.776429063602,99854.9253088255
-"58","Boston Dorchester","Quincy Quincy Center",161.805311020389,101433.01660423
-"59","Boston Dorchester","Quincy South Quincy",114.05540989059,101571.458010678
-"60","Boston Dorchester","SSC Maturing Suburbs",197.204990600595,100701.805956868
-"61","Boston Dorchester","TRIC Maturing Suburbs",63.3013218875996,99448.9856760186
-"62","Boston East Boston","Everett All",23.4425820027363,100415.548069016
-"63","Boston East Boston","ICC Inner Core",93.5372628295363,99527.1175431881
-"64","Boston Fenway","Boston Allston/Brighton",101.339679051655,99576.2604481078
-"65","Boston Fenway","Boston Downtown",54.5173999164594,97962.7982380796
-"66","Boston Fenway","Boston Dorchester",111.696217695912,99171.5726815879
-"67","Boston Fenway","Boston Jamaica Plain",70.1369191096832,99664.0886892663
-"68","Boston Fenway","Boston Roxbury",88.8125311245013,100138.765257129
-"69","Boston Fenway","Boston South Boston",188.402991058523,99736.7610035293
-"70","Boston Fenway","Boston South End",124.84091549791,101613.053768827
-"71","Boston Fenway","Cambridge All",73.7691841257441,98773.2916523195
-"72","Boston Fenway","ICC Inner Core",95.2448851065417,98856.8591653518
-"73","Boston Hyde Park","Boston Dorchester",22.3923537714138,100092.426571051
-"74","Boston Hyde Park","Boston Mattapan",39.374590528768,98986.2947011331
-"75","Boston Hyde Park","Boston Roslindale",116.592501328851,100001.845167181
-"76","Boston Hyde Park","Boston West Roxbury",30.2436295095283,103326.093929086
-"77","Boston Hyde Park","ICC Inner Core",103.866137785913,101908.863530246
-"78","Boston Hyde Park","SSC Maturing Suburbs",61.7925182374408,98648.0946359736
-"79","Boston Hyde Park","TRIC Maturing Suburbs",30.3955738448997,100830.508816575
-"80","Boston Jamaica Plain","Boston Allston/Brighton",25.7540830350903,101027.17623287
-"81","Boston Jamaica Plain","Boston Dorchester",0.478034584002017,99301.5531503448
-"82","Boston Jamaica Plain","Boston Hyde Park",84.6541900332374,99563.3647190199
-"83","Boston Jamaica Plain","Boston Roslindale",98.3886876303461,99073.7540149115
-"84","Boston Jamaica Plain","Boston Roxbury",89.8158057032619,99416.083659428
-"85","Boston Jamaica Plain","Boston West Roxbury",176.018309791984,100491.494028637
-"86","Boston Jamaica Plain","ICC Inner Core",130.518559183815,100578.517057609
-"87","Boston Jamaica Plain","SSC Maturing Suburbs",115.592271580708,99070.0304757583
-"88","Boston Jamaica Plain","TRIC Maturing Suburbs",213.094415485023,100870.236458855
-"89","Boston Mattapan","Boston Dorchester",-18.9399973820657,100396.364159013
-"90","Boston Mattapan","Boston Hyde Park",85.3947894895396,100383.066472554
-"91","Boston Mattapan","TRIC Maturing Suburbs",78.7278370618206,101795.350495718
-"92","Boston Roslindale","Boston Dorchester",161.184198355233,102033.867461741
-"93","Boston Roslindale","Boston Hyde Park",111.987106816884,99680.7987358698
-"94","Boston Roslindale","Boston Jamaica Plain",35.8539618313042,100475.999886631
-"95","Boston Roslindale","Boston West Roxbury",162.283841419248,100256.441303049
-"96","Boston Roslindale","ICC Inner Core",159.300046945364,100215.899130229
-"97","Boston Roslindale","TRIC Maturing Suburbs",158.757015209035,99715.3431374543
-"98","Boston Roxbury","Boston Allston/Brighton",156.695338927997,98993.4894268115
-"99","Boston Roxbury","Boston Dorchester",107.772525879095,102245.500976981
-"100","Boston Roxbury","Boston Fenway",156.619256424472,101039.00336886
-"101","Boston Roxbury","Boston Hyde Park",147.634624283617,98721.2630454276
-"102","Boston Roxbury","Boston Jamaica Plain",109.957130783363,100027.939508676
-"103","Boston Roxbury","Boston South End",100.315578881146,99593.0316449308
-"104","Boston Roxbury","ICC Inner Core",98.4033568117028,101603.17357479
-"105","Boston South Boston","Boston Downtown",163.952685917191,100807.491221026
-"106","Boston South Boston","Boston Dorchester",28.1116705396152,98637.9826210653
-"107","Boston South Boston","Boston South End",118.609584808726,99889.1589646786
-"108","Boston South Boston","ICC Inner Core",49.3240881632311,98951.9015305937
-"109","Boston South Boston","OCPC Developing Suburbs",138.916176598012,101429.190595411
-"110","Boston South Boston","SSC Maturing Suburbs",63.058272003766,100488.066751269
-"111","Boston South Boston","TRIC Maturing Suburbs",184.060916940478,101167.960640054
-"112","Boston South End","Boston Downtown",110.479095167115,101666.166127522
-"113","Boston South End","Boston Dorchester",58.4638815368892,100391.082909239
-"114","Boston South End","Boston Roxbury",0.721057699750617,100854.048352778
-"115","Boston South End","Boston South Boston",98.9701522055791,100171.551656633
-"116","Boston South End","Cambridge All",175.259949347329,98629.5387448531
-"117","Boston South End","ICC Inner Core",147.597126874681,99178.39524651
-"118","Boston South End","SSC Maturing Suburbs",77.4039005524729,100127.813446201
-"119","Boston South End","TRIC Maturing Suburbs",159.362711815197,100240.631909224
-"120","Boston West Roxbury","Boston Hyde Park",122.687484550511,101055.334413301
-"121","Boston West Roxbury","Boston Roslindale",26.7062465248615,100616.751813009
-"122","Boston West Roxbury","ICC Inner Core",40.5376361824627,99310.9675145853
-"123","Boston West Roxbury","TRIC Maturing Suburbs",141.179840010523,100822.647938934
-"124","Brockton Ward 1","Brockton Ward 4",-8.38621509666086,99487.4843674527
-"125","Brockton Ward 1","OCPC Developing Suburbs",95.4512650692135,100162.106808277
-"126","Brockton Ward 1","TRIC Maturing Suburbs",156.99487554536,102331.442814056
-"127","Brockton Ward 2","Brockton Ward 1",141.880038216399,100432.045926948
-"128","Brockton Ward 2","Brockton Ward 4",6.74386600338146,101260.373685658
-"129","Brockton Ward 2","Brockton Ward 5",156.746956001617,101471.3030466
-"130","Brockton Ward 2","Brockton Ward 7",78.4672616378148,99140.0501348627
-"131","Brockton Ward 4","Brockton Ward 1",43.3164228441949,100354.813279304
-"132","Brockton Ward 4","Brockton Ward 2",151.416276871576,100401.572019017
-"133","Brockton Ward 4","Brockton Ward 5",64.5898304684492,99763.72672336
-"134","Brockton Ward 4","Brockton Ward 7",98.8525404970868,98025.9870138029
-"135","Brockton Ward 4","OCPC Developing Suburbs",65.965770390898,99619.5257331204
-"136","Brockton Ward 5","Brockton Ward 4",133.747079484632,101411.724290516
-"137","Brockton Ward 5","OCPC Developing Suburbs",40.1355250672291,99529.0742981357
-"138","Brockton Ward 6","OCPC Developing Suburbs",127.259179829769,99586.0894366165
-"139","Brockton Ward 7","Brockton Ward 1",59.0555177104866,98347.7131966514
-"140","Brockton Ward 7","Brockton Ward 2",152.684661177778,98180.4120898594
-"141","Brockton Ward 7","Brockton Ward 4",50.0008139878085,101939.13410174
-"142","BRPC Developing Suburbs","BRPC Regional Urban Centers",128.506011200753,99059.6425808988
-"143","BRPC Developing Suburbs","BRPC Rural Towns",138.642152469012,98739.5310702129
-"144","BRPC Regional Urban Centers","BRPC Developing Suburbs",162.063891066278,100692.612019747
-"145","BRPC Regional Urban Centers","BRPC Rural Towns",-15.3092602916408,99003.431686077
-"146","BRPC Rural Towns","BRPC Developing Suburbs",73.980721936219,99618.2013967015
-"147","BRPC Rural Towns","BRPC Regional Urban Centers",144.125252366807,99650.1035858849
-"148","Cambridge All","Boston Allston/Brighton",46.3687185497757,103277.376033092
-"149","Cambridge All","Boston Downtown",135.849050300063,99493.3128006601
-"150","Cambridge All","Boston Charlestown",40.4598827344737,101215.323147859
-"151","Cambridge All","Boston Dorchester",42.5269479495724,99413.3562943856
-"152","Cambridge All","Boston Fenway",163.491208199304,98901.2890223978
-"153","Cambridge All","Boston Jamaica Plain",46.32030008174,99734.6513398314
-"154","Cambridge All","Boston South Boston",172.349828820735,100417.929508463
-"155","Cambridge All","Boston South End",44.9423860195627,97703.518874399
-"156","Cambridge All","ICC Inner Core",146.887473503348,99538.983830149
-"157","Cambridge All","MAGIC Maturing Suburbs",137.54959999562,100767.523442445
-"158","Cambridge All","Metrowest Maturing Suburbs",18.9944694539244,101103.363666966
-"159","Cambridge All","NSPC Maturing Suburbs",42.6169324741143,98007.3608062925
-"160","Cambridge All","Somerville 2143",159.928240970239,99625.1733934535
-"161","Cambridge All","Somerville 2144",84.5759213567078,101138.719174347
-"162","Cambridge All","Somerville 2145",88.2853492044772,99217.1006455712
-"163","Cambridge All","SSC Maturing Suburbs",154.404081355957,100881.105647007
-"164","Cambridge All","TRIC Maturing Suburbs",99.2708407207511,100332.09930709
-"165","CCC Developing Suburbs","CCC Maturing Suburbs",95.554601258375,98842.7989531396
-"166","CCC Maturing Suburbs","CCC Developing Suburbs",118.148347992485,100508.391271776
-"167","CCC Maturing Suburbs","ICC Inner Core",-25.0191086448685,99191.0879444266
-"168","CCC Maturing Suburbs","OCPC Developing Suburbs",196.000098210108,100048.550179333
-"169","CCC Maturing Suburbs","SRPEDD Developing Suburbs",32.2482052075453,99214.2586563191
-"170","CCC Maturing Suburbs","SSC Maturing Suburbs",43.4931181574302,100048.95104235
-"171","CCC Rural Towns","CCC Maturing Suburbs",151.061598899358,101647.200346495
-"172","Chelsea Ward 3","Chelsea Ward 4",76.3082196291993,100692.981752113
-"173","Chelsea Ward 3","ICC Inner Core",18.775943599537,99875.9553193814
-"174","Chelsea Ward 4","Chelsea Ward 3",67.7393515956482,99711.7670465385
-"175","Chelsea Ward 4","ICC Inner Core",156.831198769193,99598.5036715911
-"176","CMRPC Developing Suburbs","CCC Maturing Suburbs",13.9597928160149,101504.936462628
-"177","CMRPC Developing Suburbs","CMRPC Regional Urban Centers",46.9420727493134,99178.2222492239
-"178","CMRPC Developing Suburbs","Framingham All",140.06803176748,98999.6332534767
-"179","CMRPC Developing Suburbs","ICC Inner Core",68.5858760056597,100979.756433472
-"180","CMRPC Developing Suburbs","MAGIC Developing Suburbs",142.642803715435,100203.428495056
-"181","CMRPC Developing Suburbs","MAGIC Maturing Suburbs",168.606447259196,98847.9743792568
-"182","CMRPC Developing Suburbs","Metrowest Maturing Suburbs",126.817091818785,100271.093622138
-"183","CMRPC Developing Suburbs","Metrowest Regional Urban Centers",58.8887040516566,99339.9903157231
-"184","CMRPC Developing Suburbs","MRPC Developing Suburbs",131.305898121057,101737.850700207
-"185","CMRPC Developing Suburbs","MRPC Regional Urban Centers",29.473874025888,97267.755873294
-"186","CMRPC Developing Suburbs","MRPC Rural Towns",62.4507762422942,101297.614041983
-"187","CMRPC Developing Suburbs","PVPC Developing Suburbs",83.516216871639,99885.9322278545
-"188","CMRPC Developing Suburbs","PVPC Regional Urban Centers",100.979858976649,100711.379166006
-"189","CMRPC Developing Suburbs","PVPC Rural Towns",173.984150274943,100735.528494881
-"190","CMRPC Developing Suburbs","SRPEDD Developing Suburbs",70.477051933499,99954.3558520172
-"191","CMRPC Developing Suburbs","SWAP Developing Suburbs",31.3575142688667,101794.587643564
-"192","CMRPC Developing Suburbs","SWAP Regional Urban Centers",-58.1993826056982,100806.362077535
-"193","CMRPC Developing Suburbs","Worcester Burncoat",38.9490639416854,97715.9017356557
-"194","CMRPC Developing Suburbs","Worcester Doherty",93.5025791236905,100803.731790282
-"195","CMRPC Developing Suburbs","Worcester North",97.3674723677054,100630.05135773
-"196","CMRPC Developing Suburbs","Worcester South",36.727483579059,99612.3579704108
-"197","CMRPC Regional Urban Centers","CMRPC Developing Suburbs",84.231110939271,99795.0611676077
-"198","Everett All","ICC Inner Core",76.4773129996429,100116.11793549
-"199","Everett All","ICC Maturing Suburbs",135.147536565221,99819.3688059419
-"200","Everett All","NSPC Maturing Suburbs",109.522796528653,100571.523171717
-"201","Everett All","NSTF Regional Urban Centers",67.2742192914181,100320.747048287
-"202","Fall River Sector 1","Fall River Sector 2",97.0782471824144,99437.9026546989
-"203","Fall River Sector 1","Fall River Sector 7",140.219606333798,99301.2024637169
-"204","Fall River Sector 1","SRPEDD Developing Suburbs",130.904694843042,99935.410330972
-"205","Fall River Sector 2","Fall River Sector 5",38.9800134510069,100473.420840225
-"206","Fall River Sector 2","Fall River Sector 7",4.09273573723935,100146.91137294
-"207","Fall River Sector 2","SRPEDD Developing Suburbs",109.72857047091,99405.6281014219
-"208","Fall River Sector 5","Fall River Sector 2",145.700917780768,98125.0446591246
-"209","Fall River Sector 5","Fall River Sector 7",152.325596484999,99613.9936847604
-"210","Fall River Sector 5","Fall River Sector 8",-31.7433116918647,100404.757648117
-"211","Fall River Sector 5","SRPEDD Developing Suburbs",183.663170396677,100276.075336648
-"212","Fall River Sector 7","Fall River Sector 1",70.9932404520331,99779.1891787772
-"213","Fall River Sector 7","Fall River Sector 2",87.4091333949417,99276.897748119
-"214","Fall River Sector 7","Fall River Sector 5",79.8034237430545,99282.9442323972
-"215","Fall River Sector 7","Fall River Sector 8",65.4742469178187,101082.437140308
-"216","Fall River Sector 7","Fall River Sector 9",126.574520556572,98665.4268453716
-"217","Fall River Sector 7","SRPEDD Developing Suburbs",127.716991080724,99786.1558208982
-"218","Fall River Sector 7","SRPEDD Regional Urban Centers",170.215737938187,99506.6117817948
-"219","Fall River Sector 8","Fall River Sector 2",143.231409080553,98730.270225552
-"220","Fall River Sector 8","Fall River Sector 7",197.264049122208,99450.0385359438
-"221","Fall River Sector 8","Fall River Sector 9",138.501312687326,98502.5060371278
-"222","Fall River Sector 8","SRPEDD Developing Suburbs",65.7044718160787,99634.5745945971
-"223","Fall River Sector 9","Fall River Sector 7",152.257091575918,100320.44107917
-"224","Fall River Sector 9","Fall River Sector 8",131.223718694082,98344.3718846349
-"225","Fall River Sector 9","SRPEDD Developing Suburbs",113.058176156197,98694.737140138
-"226","Fall River Sector 9","SRPEDD Regional Urban Centers",149.381764089548,99938.2173640732
-"227","Framingham All","CMRPC Developing Suburbs",-10.4668248971457,100158.001629869
-"228","Framingham All","ICC Inner Core",124.649032918905,99070.4023559813
-"229","Framingham All","MAGIC Maturing Suburbs",81.3110117348357,98022.1353972742
-"230","Framingham All","Metrowest Maturing Suburbs",33.7978116771496,99194.9127077752
-"231","Framingham All","Metrowest Regional Urban Centers",117.71259569669,99758.7081759492
-"232","Framingham All","SWAP Developing Suburbs",81.3930445346014,98953.7776153648
-"233","Framingham All","SWAP Regional Urban Centers",135.130179743573,100588.858252723
-"234","FRCOG Developing Suburbs","FRCOG Rural Towns",115.717131624354,99638.2460272873
-"235","FRCOG Developing Suburbs","MRPC Developing Suburbs",60.8528891062134,99213.0458174338
-"236","FRCOG Developing Suburbs","PVPC Regional Urban Centers",112.289788656577,100989.872137822
-"237","FRCOG Rural Towns","FRCOG Developing Suburbs",134.652785291288,100397.365674197
-"238","FRCOG Rural Towns","PVPC Developing Suburbs",10.1692209139939,100245.797947179
-"239","FRCOG Rural Towns","PVPC Regional Urban Centers",65.7033860733757,100819.181765433
-"240","ICC Inner Core","Boston Allston/Brighton",72.8432544765871,99412.090866954
-"241","ICC Inner Core","Boston Downtown",191.699160494457,100865.313913115
-"242","ICC Inner Core","Boston Charlestown",60.391909153921,101091.501203541
-"243","ICC Inner Core","Boston Dorchester",122.056278416435,98498.0198536439
-"244","ICC Inner Core","Boston East Boston",129.241053440818,99346.9571498802
-"245","ICC Inner Core","Boston Fenway",147.269305425903,99000.0014937789
-"246","ICC Inner Core","Boston Jamaica Plain",177.700605564869,98492.8460492651
-"247","ICC Inner Core","Boston Roslindale",133.73656806345,100755.009217563
-"248","ICC Inner Core","Boston Roxbury",146.580390511852,99296.2317980612
-"249","ICC Inner Core","Boston South Boston",38.4420334208616,100756.458996033
-"250","ICC Inner Core","Boston South End",116.931915143547,100126.76868154
-"251","ICC Inner Core","Boston West Roxbury",132.229114636343,98444.4753376139
-"252","ICC Inner Core","Cambridge All",71.1345524023728,100098.823120765
-"253","ICC Inner Core","CCC Maturing Suburbs",156.871354194974,99252.1904580425
-"254","ICC Inner Core","Chelsea Ward 3",91.6021273239526,101672.005042436
-"255","ICC Inner Core","Chelsea Ward 4",65.6289262582225,99770.2408769179
-"256","ICC Inner Core","CMRPC Developing Suburbs",193.918835612544,101941.131768238
-"257","ICC Inner Core","Everett All",164.551026381355,100693.062240321
-"258","ICC Inner Core","Framingham All",91.0593529309614,102240.956228376
-"259","ICC Inner Core","ICC Maturing Suburbs",88.3381350838052,101095.88627048
-"260","ICC Inner Core","Lynn Ward 3",112.760290462684,102366.139065453
-"261","ICC Inner Core","Lynn Ward 4",156.007081527889,99712.3351938554
-"262","ICC Inner Core","Lynn Ward 5",60.1018954454847,99967.4624790767
-"263","ICC Inner Core","Lynn Ward 7",92.4639154592954,101068.431811144
-"264","ICC Inner Core","MAGIC Developing Suburbs",62.4069280976074,98780.8351088605
-"265","ICC Inner Core","MAGIC Maturing Suburbs",110.011780967213,100658.122369825
-"266","ICC Inner Core","Metrowest Maturing Suburbs",62.0747389663611,101152.225772845
-"267","ICC Inner Core","Metrowest Regional Urban Centers",15.7933299764516,99463.4839510347
-"268","ICC Inner Core","MRPC Developing Suburbs",44.4929676831985,100962.105953451
-"269","ICC Inner Core","MRPC Regional Urban Centers",154.189765571014,100417.679623051
-"270","ICC Inner Core","MVPC Developing Suburbs",111.592802122705,100962.406310664
-"271","ICC Inner Core","MVPC Regional Urban Centers",179.720569130117,99486.3732830617
-"272","ICC Inner Core","Newton Ward 2",95.228754103332,97781.1047657843
-"273","ICC Inner Core","Newton Ward 3",172.941634335236,99559.838673007
-"274","ICC Inner Core","Newton Ward 5",32.0741684621523,99702.7228994201
-"275","ICC Inner Core","Newton Ward 8",23.5647790498323,100161.719066075
-"276","ICC Inner Core","NMCOG Developing Suburbs",115.8263176865,101416.768450267
-"277","ICC Inner Core","NMCOG Maturing Suburbs",159.44103175493,101552.775585001
-"278","ICC Inner Core","NSPC Maturing Suburbs",101.317733348178,101649.291475672
-"279","ICC Inner Core","NSPC Regional Urban Centers",71.4922891248648,100963.406045495
-"280","ICC Inner Core","NSTF Developing Suburbs",181.76149968534,99324.2491232182
-"281","ICC Inner Core","NSTF Maturing Suburbs",59.9306574853441,99791.6264301273
-"282","ICC Inner Core","NSTF Regional Urban Centers",104.234285132271,101589.218766291
-"283","ICC Inner Core","OCPC Developing Suburbs",63.1786725952516,99621.7024324827
-"284","ICC Inner Core","Quincy Quincy Center",163.63117670162,98884.7098032593
-"285","ICC Inner Core","Quincy South Quincy",56.1426437712206,101387.056957326
-"286","ICC Inner Core","Somerville 2143",83.5112198038197,99843.1567913631
-"287","ICC Inner Core","Somerville 2144",160.335373405131,99983.2623799493
-"288","ICC Inner Core","Somerville 2145",137.634738055904,100624.762452587
-"289","ICC Inner Core","SRPEDD Developing Suburbs",180.198197168229,99554.5060227307
-"290","ICC Inner Core","SSC Maturing Suburbs",178.253497201907,101628.376933857
-"291","ICC Inner Core","SWAP Developing Suburbs",111.756680274362,102379.849646718
-"292","ICC Inner Core","TRIC Developing Suburbs",61.5876551746706,101530.99362374
-"293","ICC Inner Core","TRIC Maturing Suburbs",40.1600442307047,100822.942087117
-"294","ICC Inner Core","TRIC Regional Urban Centers",91.9693745483206,98987.3553970057
-"295","ICC Maturing Suburbs","Boston Dorchester",150.674552185681,101414.457703285
-"296","ICC Maturing Suburbs","ICC Inner Core",197.358971273497,100889.717987109
-"297","ICC Maturing Suburbs","NSPC Maturing Suburbs",136.673345316873,101277.968046093
-"298","ICC Maturing Suburbs","NSTF Regional Urban Centers",162.938187672561,100823.266073166
-"299","ICC Maturing Suburbs","SSC Maturing Suburbs",74.1856926898631,100529.346918371
-"300","ICC Maturing Suburbs","TRIC Maturing Suburbs",68.6311136584397,99479.8312596787
-"301","Lawrence Ward A","Lawrence Ward C",189.304053025604,101643.747290637
-"302","Lawrence Ward A","Lawrence Ward D",62.8160294917781,99493.7142354726
-"303","Lawrence Ward A","Lawrence Ward E",120.839604818061,98566.1345345211
-"304","Lawrence Ward A","Lawrence Ward F",101.023945756133,99738.697966294
-"305","Lawrence Ward A","MVPC Regional Urban Centers",168.035968165705,100307.572527355
-"306","Lawrence Ward C","Lawrence Ward A",105.821172456528,98347.8526554561
-"307","Lawrence Ward C","Lawrence Ward D",73.2560156821368,97730.7122614506
-"308","Lawrence Ward C","Lawrence Ward E",131.495867192299,101179.055211048
-"309","Lawrence Ward C","MVPC Regional Urban Centers",107.176315588679,100553.495600688
-"310","Lawrence Ward D","Lawrence Ward A",67.4623909256602,100359.51859207
-"311","Lawrence Ward D","Lawrence Ward C",155.480691548181,100609.68955619
-"312","Lawrence Ward D","Lawrence Ward E",222.254273968142,101299.080025366
-"313","Lawrence Ward D","Lawrence Ward F",95.3257390757989,101583.144574419
-"314","Lawrence Ward D","MVPC Regional Urban Centers",92.4767891016985,101238.430465212
-"315","Lawrence Ward E","Lawrence Ward D",99.0263953124942,99382.176296584
-"316","Lawrence Ward E","Lawrence Ward F",79.750618164389,99268.0167300132
-"317","Lawrence Ward E","MVPC Developing Suburbs",74.7192787916597,98612.9822161298
-"318","Lawrence Ward E","MVPC Regional Urban Centers",98.1934504014764,101481.611047705
-"319","Lawrence Ward F","Lawrence Ward A",10.5636373177191,100936.451236429
-"320","Lawrence Ward F","Lawrence Ward D",152.478095891038,98263.6473660514
-"321","Lawrence Ward F","Lawrence Ward E",98.4001383728243,97979.4966272289
-"322","Lawrence Ward F","MVPC Regional Urban Centers",138.30008438145,98718.0688350224
-"323","Lowell Acre","Lowell Highlands",138.328921501923,99947.8402952397
-"324","Lowell Acre","Lowell Lower Belvidere",9.6916345486277,101223.517683754
-"325","Lowell Centralville","Lowell Lower Belvidere",45.3606055473876,100758.554723475
-"326","Lowell Centralville","NMCOG Developing Suburbs",85.8406876333976,100183.141175267
-"327","Lowell Highlands","Lowell Centralville",107.078983258183,98804.3225646753
-"328","Lowell Highlands","Lowell Lower Belvidere",25.158212326996,100283.305941966
-"329","Lowell Highlands","Lowell Lower Highlands",132.518472436707,99854.960138987
-"330","Lowell Highlands","Lowell Pawtucketville",100.394655275652,98654.3976767514
-"331","Lowell Highlands","NMCOG Developing Suburbs",48.2795627440977,101278.043320746
-"332","Lowell Highlands","NMCOG Maturing Suburbs",81.0658554456688,101120.69672812
-"333","Lowell Lower Belvidere","Lowell Acre",81.1781422496775,99408.9483854678
-"334","Lowell Lower Belvidere","Lowell Centralville",110.772331490295,99297.6085868714
-"335","Lowell Lower Belvidere","Lowell Highlands",5.82550544465917,101006.926284654
-"336","Lowell Lower Belvidere","Lowell Lower Highlands",120.646992057365,98846.6861204631
-"337","Lowell Lower Belvidere","Lowell Pawtucketville",105.848137428099,101009.954395569
-"338","Lowell Lower Belvidere","NMCOG Developing Suburbs",54.0184924184501,100443.879353666
-"339","Lowell Lower Belvidere","NMCOG Maturing Suburbs",39.0465403538296,100995.855669494
-"340","Lowell Lower Highlands","Lowell Highlands",94.6002751941041,100820.540633848
-"341","Lowell Lower Highlands","Lowell Lower Belvidere",172.612249228544,99632.6616221266
-"342","Lowell Pawtucketville","Lowell Lower Belvidere",90.2539733320416,102404.156483696
-"343","Lowell Pawtucketville","NMCOG Developing Suburbs",51.1812973931769,99041.8553766253
-"344","Lowell Pawtucketville","NMCOG Maturing Suburbs",150.346044150823,98929.5436789326
-"345","Lynn Ward 1","Lynn Ward 3",114.267824658973,100595.965582159
-"346","Lynn Ward 1","NSTF Regional Urban Centers",82.4850418345625,100788.679761034
-"347","Lynn Ward 3","ICC Inner Core",60.2734172580921,99228.1220284467
-"348","Lynn Ward 3","Lynn Ward 1",72.0321765320276,98912.2516725805
-"349","Lynn Ward 3","Lynn Ward 4",110.73074099835,100004.256409265
-"350","Lynn Ward 3","Lynn Ward 5",150.543887844774,100326.966344255
-"351","Lynn Ward 3","Lynn Ward 7",-27.139478039911,100148.012824066
-"352","Lynn Ward 3","NSTF Maturing Suburbs",62.8766664624935,100817.192123513
-"353","Lynn Ward 3","NSTF Regional Urban Centers",140.37264518988,99008.6420580779
-"354","Lynn Ward 4","ICC Inner Core",122.620944017254,98249.9901186113
-"355","Lynn Ward 4","Lynn Ward 3",119.4142072644,98991.5599169535
-"356","Lynn Ward 4","Lynn Ward 5",37.1304750965189,101010.368018718
-"357","Lynn Ward 4","Lynn Ward 7",95.0996019850158,100827.103883554
-"358","Lynn Ward 4","NSTF Regional Urban Centers",132.232211545007,101000.097702028
-"359","Lynn Ward 5","ICC Inner Core",104.439557818208,100465.070747847
-"360","Lynn Ward 5","Lynn Ward 3",42.5217191288038,99906.8056724474
-"361","Lynn Ward 5","Lynn Ward 4",155.182190402123,99395.1114032871
-"362","Lynn Ward 5","Lynn Ward 7",80.2394277200301,98822.3329745941
-"363","Lynn Ward 5","NSTF Regional Urban Centers",145.152526703395,100411.490742459
-"364","Lynn Ward 7","Lynn Ward 1",37.3905926227625,99935.9290027071
-"365","Lynn Ward 7","Lynn Ward 3",81.0620819169588,99325.106736638
-"366","Lynn Ward 7","Lynn Ward 5",-6.31435405604599,98275.9548938816
-"367","Lynn Ward 7","NSTF Regional Urban Centers",68.9818299339378,101790.668339196
-"368","MAGIC Developing Suburbs","CMRPC Developing Suburbs",109.24506275202,98538.1244174938
-"369","MAGIC Developing Suburbs","ICC Inner Core",85.805301011741,102313.405827006
-"370","MAGIC Developing Suburbs","MAGIC Maturing Suburbs",198.329506785586,99509.7499498936
-"371","MAGIC Developing Suburbs","Metrowest Regional Urban Centers",136.942835775517,99726.966502075
-"372","MAGIC Developing Suburbs","MRPC Developing Suburbs",136.944835441206,99371.7025025002
-"373","MAGIC Developing Suburbs","MRPC Regional Urban Centers",71.5879835379702,100920.797232044
-"374","MAGIC Maturing Suburbs","Cambridge All",168.125437141308,99532.4768156667
-"375","MAGIC Maturing Suburbs","CCC Maturing Suburbs",35.5045943533499,98455.6437803292
-"376","MAGIC Maturing Suburbs","CMRPC Developing Suburbs",89.1510524821806,99680.7342485935
-"377","MAGIC Maturing Suburbs","ICC Inner Core",22.9029922963564,99448.5838622107
-"378","MAGIC Maturing Suburbs","MAGIC Developing Suburbs",75.3715588412745,100456.143396738
-"379","MAGIC Maturing Suburbs","Metrowest Maturing Suburbs",28.0903331709708,98747.4527213852
-"380","MAGIC Maturing Suburbs","Metrowest Regional Urban Centers",112.647308961062,99738.4308494778
-"381","MAGIC Maturing Suburbs","MRPC Developing Suburbs",77.9634366423807,100389.781723638
-"382","MAGIC Maturing Suburbs","MRPC Regional Urban Centers",8.30411843677832,101206.515309458
-"383","MAGIC Maturing Suburbs","NMCOG Developing Suburbs",133.396035938226,99613.6931809372
-"384","MAGIC Maturing Suburbs","NMCOG Maturing Suburbs",54.4419889376491,100785.63005947
-"385","MAGIC Maturing Suburbs","NSPC Maturing Suburbs",80.4776120165488,100094.035456175
-"386","Metrowest Developing Suburbs","SWAP Developing Suburbs",88.6258557009933,99510.6610805209
-"387","Metrowest Maturing Suburbs","Boston Allston/Brighton",65.4952968141497,101304.22143769
-"388","Metrowest Maturing Suburbs","Boston Downtown",48.0640415904249,99918.0442825656
-"389","Metrowest Maturing Suburbs","Cambridge All",95.4897023395037,99874.8668296023
-"390","Metrowest Maturing Suburbs","CCC Maturing Suburbs",141.72713967781,98405.9780136793
-"391","Metrowest Maturing Suburbs","CMRPC Developing Suburbs",120.541147871197,99958.555717695
-"392","Metrowest Maturing Suburbs","Framingham All",79.2010475507985,100921.653067685
-"393","Metrowest Maturing Suburbs","ICC Inner Core",76.1675541508913,99684.7528860479
-"394","Metrowest Maturing Suburbs","MAGIC Maturing Suburbs",19.4166517033241,100569.429771037
-"395","Metrowest Maturing Suburbs","Metrowest Developing Suburbs",14.9169843834091,100004.367076939
-"396","Metrowest Maturing Suburbs","Metrowest Regional Urban Centers",87.3253045934673,99641.0831185444
-"397","Metrowest Maturing Suburbs","SWAP Developing Suburbs",178.316694155495,99633.8259561004
-"398","Metrowest Maturing Suburbs","TRIC Maturing Suburbs",149.133670706116,100650.135619472
-"399","Metrowest Regional Urban Centers","CMRPC Developing Suburbs",69.8014748261473,101206.613631288
-"400","Metrowest Regional Urban Centers","Framingham All",116.362340829127,99545.4053501541
-"401","Metrowest Regional Urban Centers","ICC Inner Core",22.1291878896967,99141.9533374882
-"402","Metrowest Regional Urban Centers","MAGIC Developing Suburbs",76.1019393340646,101317.729295639
-"403","Metrowest Regional Urban Centers","MAGIC Maturing Suburbs",57.3412173340604,102898.488429897
-"404","Metrowest Regional Urban Centers","Metrowest Maturing Suburbs",-4.99591304204552,99525.338365712
-"405","Metrowest Regional Urban Centers","MRPC Regional Urban Centers",156.277554231629,99091.1027141677
-"406","MRPC Developing Suburbs","CMRPC Developing Suburbs",146.073031737221,98482.4373273462
-"407","MRPC Developing Suburbs","FRCOG Developing Suburbs",17.7993016131716,99473.5870745768
-"408","MRPC Developing Suburbs","MAGIC Developing Suburbs",132.994286919479,97707.4059111011
-"409","MRPC Developing Suburbs","MAGIC Maturing Suburbs",146.640538231884,100735.281512464
-"410","MRPC Developing Suburbs","MRPC Regional Urban Centers",42.427389253793,101895.292957999
-"411","MRPC Developing Suburbs","MRPC Rural Towns",93.4990840627237,99806.3747041021
-"412","MRPC Developing Suburbs","NMCOG Developing Suburbs",132.989706488721,100384.18582051
-"413","MRPC Regional Urban Centers","CMRPC Developing Suburbs",131.188410451265,100531.847654412
-"414","MRPC Regional Urban Centers","MAGIC Developing Suburbs",108.035327536843,100411.6870999
-"415","MRPC Regional Urban Centers","MRPC Developing Suburbs",48.5501973124081,101398.459973574
-"416","MRPC Regional Urban Centers","MRPC Rural Towns",52.9835966656746,99134.6951189194
-"417","MRPC Rural Towns","CMRPC Developing Suburbs",-9.25305304500552,99372.4352334435
-"418","MRPC Rural Towns","MRPC Developing Suburbs",101.315993611312,100189.417341519
-"419","MRPC Rural Towns","MRPC Regional Urban Centers",89.3670167090416,101913.064123249
-"420","MVPC Developing Suburbs","ICC Inner Core",15.1550531924595,100083.142396065
-"421","MVPC Developing Suburbs","MVPC Regional Urban Centers",55.68230094814,99587.9665668077
-"422","MVPC Developing Suburbs","NMCOG Maturing Suburbs",16.4784009816561,100323.216061467
-"423","MVPC Developing Suburbs","NSPC Maturing Suburbs",193.66406540164,100109.961874389
-"424","MVPC Developing Suburbs","NSTF Developing Suburbs",127.495479359602,100782.294341368
-"425","MVPC Developing Suburbs","NSTF Regional Urban Centers",186.902645972663,98833.3731991533
-"426","MVPC Regional Urban Centers","ICC Inner Core",29.239267854439,99396.3842641179
-"427","MVPC Regional Urban Centers","Lawrence Ward A",139.689296599755,98860.8230619114
-"428","MVPC Regional Urban Centers","Lawrence Ward C",105.312450275906,101151.356587719
-"429","MVPC Regional Urban Centers","Lawrence Ward D",96.7260809164754,99841.5857255404
-"430","MVPC Regional Urban Centers","Lawrence Ward E",158.69889456244,100818.968364976
-"431","MVPC Regional Urban Centers","MVPC Developing Suburbs",68.4885998920703,98800.2861457496
-"432","MVPC Regional Urban Centers","NMCOG Developing Suburbs",84.6589356625413,98924.8492669762
-"433","MVPC Regional Urban Centers","NMCOG Maturing Suburbs",66.152094405649,99389.550127457
-"434","MVPC Regional Urban Centers","NSPC Maturing Suburbs",106.610679350715,99937.9343303425
-"435","MVPC Regional Urban Centers","NSTF Developing Suburbs",148.888645381353,99294.5608992688
-"436","MVPC Regional Urban Centers","NSTF Regional Urban Centers",142.838940009891,101579.635409461
-"437","New Bedford Neighborhood 1","New Bedford Neighborhood 2",231.874552377473,101524.681461074
-"438","New Bedford Neighborhood 1","SRPEDD Developing Suburbs",81.5212545157596,100320.912013901
-"439","New Bedford Neighborhood 2","New Bedford Neighborhood 1",75.8362099623584,100353.618265103
-"440","New Bedford Neighborhood 2","New Bedford Neighborhood 3",34.6548076382057,102475.516427749
-"441","New Bedford Neighborhood 2","New Bedford Neighborhood 4",108.459447344187,99389.2189649721
-"442","New Bedford Neighborhood 2","New Bedford Neighborhood 5",67.3322576699459,98667.7063285883
-"443","New Bedford Neighborhood 2","SRPEDD Developing Suburbs",160.272332845159,99205.9514705162
-"444","New Bedford Neighborhood 3","New Bedford Neighborhood 1",97.5273734014513,99303.9825055617
-"445","New Bedford Neighborhood 3","New Bedford Neighborhood 2",139.998647336749,100791.456239802
-"446","New Bedford Neighborhood 3","New Bedford Neighborhood 4",73.9397301349566,101310.957826733
-"447","New Bedford Neighborhood 3","New Bedford Neighborhood 5",149.563966435251,98961.1654391104
-"448","New Bedford Neighborhood 3","SRPEDD Developing Suburbs",163.767239801523,100610.841633141
-"449","New Bedford Neighborhood 4","New Bedford Neighborhood 1",68.3536373482284,101176.942084164
-"450","New Bedford Neighborhood 4","New Bedford Neighborhood 2",118.55044349856,98619.3381850507
-"451","New Bedford Neighborhood 4","New Bedford Neighborhood 3",9.01960358673365,100561.508090036
-"452","New Bedford Neighborhood 4","New Bedford Neighborhood 5",167.97776341426,101411.717004313
-"453","New Bedford Neighborhood 4","SRPEDD Developing Suburbs",112.218847965279,100157.629920044
-"454","New Bedford Neighborhood 5","New Bedford Neighborhood 2",78.9288660030891,98764.6653401233
-"455","New Bedford Neighborhood 5","New Bedford Neighborhood 3",113.725123125038,100370.651741521
-"456","New Bedford Neighborhood 5","New Bedford Neighborhood 4",180.72860355871,100802.004612651
-"457","New Bedford Neighborhood 5","SRPEDD Developing Suburbs",66.7771101593808,98832.1463769087
-"458","Newton Ward 2","Boston Allston/Brighton",60.4435052930696,98934.9002214181
-"459","Newton Ward 2","ICC Inner Core",112.914170382313,101427.997205729
-"460","Newton Ward 2","Metrowest Maturing Suburbs",111.406083410658,97444.0376239971
-"461","Newton Ward 2","Newton Ward 3",87.541738540486,100153.086751626
-"462","Newton Ward 2","Newton Ward 5",115.332294157907,98650.1251718009
-"463","Newton Ward 2","TRIC Maturing Suburbs",108.655617507449,98979.167171296
-"464","Newton Ward 3","ICC Inner Core",50.7791529366583,99815.4476606646
-"465","Newton Ward 3","Newton Ward 2",86.6943829284967,99654.922846302
-"466","Newton Ward 5","ICC Inner Core",166.67211889107,101121.963564592
-"467","Newton Ward 5","Metrowest Maturing Suburbs",93.315457778902,99547.3638861871
-"468","Newton Ward 5","Newton Ward 2",122.580301105711,100673.861105831
-"469","Newton Ward 5","TRIC Maturing Suburbs",85.9148830500359,97957.8127352693
-"470","NMCOG Developing Suburbs","ICC Inner Core",89.907191038135,100129.45417197
-"471","NMCOG Developing Suburbs","Lowell Centralville",36.4552370601784,101171.282929169
-"472","NMCOG Developing Suburbs","Lowell Lower Belvidere",120.815984615869,97746.9198761928
-"473","NMCOG Developing Suburbs","Lowell Pawtucketville",84.8622024891912,99603.8781487148
-"474","NMCOG Developing Suburbs","MRPC Developing Suburbs",53.0791172576325,100121.162046392
-"475","NMCOG Developing Suburbs","MVPC Regional Urban Centers",106.818534488418,101745.793753124
-"476","NMCOG Developing Suburbs","NMCOG Maturing Suburbs",56.1083375211923,99960.3299186162
-"477","NMCOG Developing Suburbs","NSPC Maturing Suburbs",152.79302824313,99206.7707723122
-"478","NMCOG Maturing Suburbs","ICC Inner Core",194.668920141437,100347.133927558
-"479","NMCOG Maturing Suburbs","Lowell Highlands",83.3399692477717,102195.772662624
-"480","NMCOG Maturing Suburbs","Lowell Lower Belvidere",-5.2268571186292,100709.995896927
-"481","NMCOG Maturing Suburbs","Lowell Pawtucketville",85.0850034467873,99643.3158131919
-"482","NMCOG Maturing Suburbs","MAGIC Maturing Suburbs",75.9461057320542,97701.211510742
-"483","NMCOG Maturing Suburbs","MRPC Developing Suburbs",115.575715089369,100341.455198508
-"484","NMCOG Maturing Suburbs","MVPC Developing Suburbs",94.5876720352962,100353.452474584
-"485","NMCOG Maturing Suburbs","MVPC Regional Urban Centers",155.429341688464,99793.0987149932
-"486","NMCOG Maturing Suburbs","NMCOG Developing Suburbs",138.825336358194,100106.150175019
-"487","NMCOG Maturing Suburbs","NSPC Maturing Suburbs",55.4840702530007,99504.4953065217
-"488","NMCOG Maturing Suburbs","NSPC Regional Urban Centers",51.7458081376846,99067.3247427316
-"489","NSPC Maturing Suburbs","Boston Downtown",141.466186812968,101525.302483337
-"490","NSPC Maturing Suburbs","Cambridge All",126.343420873189,99655.2625973773
-"491","NSPC Maturing Suburbs","ICC Inner Core",127.440558394594,99508.7927172562
-"492","NSPC Maturing Suburbs","ICC Maturing Suburbs",130.872815243734,100687.111605536
-"493","NSPC Maturing Suburbs","MAGIC Maturing Suburbs",123.467641253988,101136.683290967
-"494","NSPC Maturing Suburbs","MVPC Developing Suburbs",188.59472529579,100243.189621426
-"495","NSPC Maturing Suburbs","MVPC Regional Urban Centers",87.2182608908214,100032.557996933
-"496","NSPC Maturing Suburbs","NMCOG Developing Suburbs",113.212917171094,101424.109526163
-"497","NSPC Maturing Suburbs","NMCOG Maturing Suburbs",64.4721426773988,99105.7680322111
-"498","NSPC Maturing Suburbs","NSPC Regional Urban Centers",-46.0743221204533,99666.292024833
-"499","NSPC Maturing Suburbs","NSTF Developing Suburbs",40.1835495406936,100221.248674962
-"500","NSPC Maturing Suburbs","NSTF Maturing Suburbs",89.4363190450834,99268.8600147973
-"501","NSPC Maturing Suburbs","NSTF Regional Urban Centers",55.6566428082585,100140.61182313
-"502","NSPC Regional Urban Centers","ICC Inner Core",88.4395230722724,100263.836252159
-"503","NSPC Regional Urban Centers","MAGIC Maturing Suburbs",168.96108186294,99382.0853733088
-"504","NSPC Regional Urban Centers","NMCOG Maturing Suburbs",94.5692456540332,101279.9379381
-"505","NSPC Regional Urban Centers","NSPC Maturing Suburbs",106.025264402532,99634.3273499767
-"506","NSTF Developing Suburbs","MVPC Developing Suburbs",60.359117051767,100269.501139339
-"507","NSTF Developing Suburbs","MVPC Regional Urban Centers",97.7327904293445,99793.2945642712
-"508","NSTF Developing Suburbs","NSTF Maturing Suburbs",69.8986099582059,99811.9443043338
-"509","NSTF Developing Suburbs","NSTF Regional Urban Centers",217.637809522984,98897.2768148143
-"510","NSTF Maturing Suburbs","ICC Inner Core",149.571141463224,99813.8696112435
-"511","NSTF Maturing Suburbs","Lynn Ward 3",137.590031184601,101189.574090651
-"512","NSTF Maturing Suburbs","MVPC Developing Suburbs",157.401248964965,100708.784459059
-"513","NSTF Maturing Suburbs","NSTF Developing Suburbs",74.7612503438708,100305.638028316
-"514","NSTF Maturing Suburbs","NSTF Regional Urban Centers",187.696217289825,100093.023687101
-"515","NSTF Regional Urban Centers","ICC Inner Core",87.0468364576186,99000.3245094556
-"516","NSTF Regional Urban Centers","ICC Maturing Suburbs",230.270407237782,99609.3636406356
-"517","NSTF Regional Urban Centers","Lynn Ward 1",104.23898362828,101757.869619523
-"518","NSTF Regional Urban Centers","Lynn Ward 3",102.857567863342,98710.4170925943
-"519","NSTF Regional Urban Centers","Lynn Ward 4",189.683327485348,100927.193756127
-"520","NSTF Regional Urban Centers","Lynn Ward 7",-8.48114985685669,101000.532720546
-"521","NSTF Regional Urban Centers","MVPC Developing Suburbs",81.462871552447,98991.359391618
-"522","NSTF Regional Urban Centers","MVPC Regional Urban Centers",40.0434974956851,98007.5010761539
-"523","NSTF Regional Urban Centers","NSPC Maturing Suburbs",91.1515605149655,100912.153418363
-"524","NSTF Regional Urban Centers","NSTF Developing Suburbs",127.718523915057,100363.902270321
-"525","NSTF Regional Urban Centers","NSTF Maturing Suburbs",128.555296760267,99035.5945508962
-"526","OCPC Developing Suburbs","Brockton Ward 1",156.601133529058,100865.130058688
-"527","OCPC Developing Suburbs","CCC Maturing Suburbs",106.4101392232,99946.2143178237
-"528","OCPC Developing Suburbs","ICC Inner Core",82.8361719526565,99975.2180157782
-"529","OCPC Developing Suburbs","Quincy South Quincy",160.304705749195,100026.471514375
-"530","OCPC Developing Suburbs","SRPEDD Developing Suburbs",59.638159037195,99859.021316991
-"531","OCPC Developing Suburbs","SRPEDD Regional Urban Centers",35.6035189213678,98988.0016997266
-"532","OCPC Developing Suburbs","SSC Developing Suburbs",141.935011754253,100805.785487979
-"533","OCPC Developing Suburbs","SSC Maturing Suburbs",51.4310137827686,100101.225546201
-"534","OCPC Developing Suburbs","TRIC Maturing Suburbs",67.4052479676065,101443.083610534
-"535","PVPC Developing Suburbs","CMRPC Developing Suburbs",78.7660960744906,99406.7625460158
-"536","PVPC Developing Suburbs","FRCOG Developing Suburbs",155.28834570379,100087.331741458
-"537","PVPC Developing Suburbs","PVPC Maturing Suburbs",114.333255143429,98952.3935393067
-"538","PVPC Developing Suburbs","PVPC Regional Urban Centers",122.692743447002,99320.6148180218
-"539","PVPC Developing Suburbs","PVPC Rural Towns",101.413908121218,100442.74685888
-"540","PVPC Developing Suburbs","Springfield East Forest Park",39.7852006961784,99750.2674797718
-"541","PVPC Developing Suburbs","Springfield Forest Park",70.7517393945944,101014.871353115
-"542","PVPC Developing Suburbs","Springfield Indian Orchard",115.457116870672,100462.301308097
-"543","PVPC Developing Suburbs","Springfield Sixteen Acres",181.379831928297,100007.266904885
-"544","PVPC Maturing Suburbs","PVPC Developing Suburbs",22.4351370029463,99843.9953474866
-"545","PVPC Regional Urban Centers","CMRPC Developing Suburbs",124.418828510074,99519.7063754168
-"546","PVPC Regional Urban Centers","FRCOG Developing Suburbs",65.3073277811148,99761.1216833813
-"547","PVPC Regional Urban Centers","FRCOG Rural Towns",61.2614366056285,100628.720468457
-"548","PVPC Regional Urban Centers","ICC Inner Core",21.7792566938752,99624.4986445274
-"549","PVPC Regional Urban Centers","PVPC Developing Suburbs",135.805194270474,99515.567405049
-"550","PVPC Regional Urban Centers","PVPC Rural Towns",96.1121149820011,100945.100148326
-"551","PVPC Regional Urban Centers","Springfield East Forest Park",140.52894199927,99046.9662525828
-"552","PVPC Regional Urban Centers","Springfield Forest Park",28.7374695937483,101390.156880307
-"553","PVPC Regional Urban Centers","Springfield Indian Orchard",108.48726111447,98542.6037974054
-"554","PVPC Regional Urban Centers","Springfield Liberty Heights",77.6102738923588,100533.248361667
-"555","PVPC Regional Urban Centers","Springfield McKnight",55.8986794035036,99044.5617233966
-"556","PVPC Regional Urban Centers","Springfield Pine Point",104.025702920892,101708.712038741
-"557","PVPC Regional Urban Centers","Springfield Sixteen Acres",99.8354426163133,98807.5492486717
-"558","PVPC Regional Urban Centers","Springfield South End",118.628186694514,99495.8790094396
-"559","PVPC Rural Towns","CMRPC Developing Suburbs",107.411612631139,101084.782719049
-"560","PVPC Rural Towns","PVPC Developing Suburbs",101.235979040038,100476.991407034
-"561","PVPC Rural Towns","PVPC Regional Urban Centers",126.608392590753,99951.2469015622
-"562","Quincy Houghs Neck","SSC Maturing Suburbs",19.789475294385,99590.4427382821
-"563","Quincy North Quincy","ICC Inner Core",60.3490423162397,101242.392144595
-"564","Quincy North Quincy","Quincy Quincy Center",77.4509474135594,101295.273454445
-"565","Quincy North Quincy","Quincy South Quincy",131.900640593396,101360.088730179
-"566","Quincy North Quincy","Quincy Wollaston",85.485070223746,100917.855841567
-"567","Quincy North Quincy","SSC Maturing Suburbs",158.72671544153,100995.615164167
-"568","Quincy Quincy Center","Quincy South Quincy",117.691124773128,99543.7747490878
-"569","Quincy Quincy Center","SSC Maturing Suburbs",113.30972542183,99756.2395808553
-"570","Quincy Quincy Center","TRIC Maturing Suburbs",64.8524800630065,100806.768411324
-"571","Quincy South Quincy","Boston Dorchester",46.7358777606113,100646.029249679
-"572","Quincy South Quincy","ICC Inner Core",-3.16725749934803,100966.389905043
-"573","Quincy South Quincy","OCPC Developing Suburbs",97.4445145148653,99330.7182082758
-"574","Quincy South Quincy","Quincy Houghs Neck",115.315081298656,99828.0198034098
-"575","Quincy South Quincy","Quincy North Quincy",-22.8346522571444,101059.703609778
-"576","Quincy South Quincy","Quincy Quincy Center",73.9141546002879,100396.735222143
-"577","Quincy South Quincy","SSC Maturing Suburbs",122.69162450258,101009.846297165
-"578","Quincy South Quincy","TRIC Maturing Suburbs",79.7598854152602,100362.93411303
-"579","Quincy Wollaston","Quincy North Quincy",83.0359635261082,99224.9469143373
-"580","Quincy Wollaston","Quincy South Quincy",127.346350594949,99929.2503303721
-"581","Quincy Wollaston","SSC Maturing Suburbs",51.2226787277364,100387.493179143
-"582","Somerville 2143","Cambridge All",108.570898652162,99439.3671370843
-"583","Somerville 2143","ICC Inner Core",106.634255768202,99481.0280385719
-"584","Somerville 2143","NSPC Maturing Suburbs",22.5287146436504,99498.7528271259
-"585","Somerville 2143","Somerville 2144",64.0472567975943,99190.856244716
-"586","Somerville 2143","Somerville 2145",60.5341994465799,99567.482800788
-"587","Somerville 2144","Boston Allston/Brighton",110.127171188166,98267.636915965
-"588","Somerville 2144","Boston Downtown",124.994419316711,99080.093640948
-"589","Somerville 2144","Cambridge All",134.147433926375,100219.070488929
-"590","Somerville 2144","ICC Inner Core",113.534752894024,99561.1832142761
-"591","Somerville 2144","NSPC Maturing Suburbs",8.60397591290641,99962.5582850891
-"592","Somerville 2144","Somerville 2143",47.109975997488,99971.6238632273
-"593","Somerville 2144","Somerville 2145",213.404964423543,102067.941151339
-"594","Somerville 2145","Cambridge All",80.2434921640222,101468.680028489
-"595","Somerville 2145","Everett All",60.6566126706604,100375.582966013
-"596","Somerville 2145","ICC Inner Core",159.369313608192,100000.788810916
-"597","Somerville 2145","Somerville 2143",167.449219864879,101315.187482066
-"598","Somerville 2145","Somerville 2144",97.746690297746,100816.082916229
-"599","Springfield East Forest Park","PVPC Developing Suburbs",93.0329210009649,101686.846195856
-"600","Springfield Forest Park","PVPC Developing Suburbs",80.724339596221,99153.2260965541
-"601","Springfield Forest Park","PVPC Regional Urban Centers",74.4817503352501,101002.460247764
-"602","Springfield Forest Park","Springfield McKnight",82.1470919748825,101030.737358693
-"603","Springfield Forest Park","Springfield Pine Point",129.133046986678,99255.704193269
-"604","Springfield Forest Park","Springfield Sixteen Acres",58.1203333400256,100143.178211373
-"605","Springfield Forest Park","Springfield South End",167.153604338491,100504.648971908
-"606","Springfield Indian Orchard","PVPC Developing Suburbs",-8.3396343091075,100120.346639557
-"607","Springfield Indian Orchard","PVPC Regional Urban Centers",89.2053078149462,99589.2379183694
-"608","Springfield Liberty Heights","PVPC Developing Suburbs",120.731173809214,98982.3552211601
-"609","Springfield Liberty Heights","PVPC Regional Urban Centers",66.5665249529941,100408.23354036
-"610","Springfield Liberty Heights","Springfield McKnight",85.124499425641,100349.690824709
-"611","Springfield Liberty Heights","Springfield Pine Point",51.1808198375692,99032.7517113498
-"612","Springfield Liberty Heights","Springfield South End",86.0641982998746,98448.2966424594
-"613","Springfield McKnight","PVPC Developing Suburbs",156.279695794964,100963.115282828
-"614","Springfield McKnight","PVPC Regional Urban Centers",119.883246245971,99033.7314049797
-"615","Springfield McKnight","Springfield Forest Park",136.960679161352,99628.085552307
-"616","Springfield McKnight","Springfield Indian Orchard",87.836322712664,97840.1394159605
-"617","Springfield McKnight","Springfield Liberty Heights",129.555869177499,100591.472977289
-"618","Springfield McKnight","Springfield Pine Point",206.52699254293,99659.8217691531
-"619","Springfield McKnight","Springfield South End",177.513149305899,100524.448389773
-"620","Springfield Pine Point","PVPC Developing Suburbs",79.0615758223152,99817.9487892597
-"621","Springfield Pine Point","PVPC Regional Urban Centers",105.704411327238,98979.9942574853
-"622","Springfield Pine Point","Springfield Forest Park",-52.5455239985774,101213.493698074
-"623","Springfield Pine Point","Springfield Liberty Heights",57.9358196897465,99703.199458958
-"624","Springfield Pine Point","Springfield McKnight",101.125598250793,101181.660488721
-"625","Springfield Pine Point","Springfield South End",29.2593801495878,100043.982190329
-"626","Springfield Sixteen Acres","PVPC Developing Suburbs",219.41414100253,100516.270095557
-"627","Springfield Sixteen Acres","PVPC Regional Urban Centers",147.770299959115,102566.617301033
-"628","Springfield South End","PVPC Developing Suburbs",86.5352702375845,100417.624412211
-"629","Springfield South End","PVPC Regional Urban Centers",116.31148672812,98092.6005004598
-"630","Springfield South End","Springfield Forest Park",-13.4644447310505,100960.09041314
-"631","Springfield South End","Springfield Liberty Heights",73.9344156375899,99270.2962783062
-"632","Springfield South End","Springfield McKnight",154.660143149784,100949.453840731
-"633","Springfield South End","Springfield Pine Point",129.570685705513,99670.3667264079
-"634","SRPEDD Developing Suburbs","CCC Maturing Suburbs",135.915629666385,99805.7332350159
-"635","SRPEDD Developing Suburbs","CMRPC Developing Suburbs",144.303186223123,100999.847055186
-"636","SRPEDD Developing Suburbs","Fall River Sector 2",160.223359195349,99848.2923979066
-"637","SRPEDD Developing Suburbs","Fall River Sector 7",206.941162975811,99247.8149957803
-"638","SRPEDD Developing Suburbs","Fall River Sector 8",110.298706815717,99807.818311101
-"639","SRPEDD Developing Suburbs","Fall River Sector 9",111.733023922654,98994.4768961792
-"640","SRPEDD Developing Suburbs","ICC Inner Core",197.325049085441,100107.909826252
-"641","SRPEDD Developing Suburbs","New Bedford Neighborhood 1",90.2875326155623,101987.356498928
-"642","SRPEDD Developing Suburbs","New Bedford Neighborhood 2",35.4811770083135,98663.2189340673
-"643","SRPEDD Developing Suburbs","New Bedford Neighborhood 3",122.907473544642,98349.0406642268
-"644","SRPEDD Developing Suburbs","New Bedford Neighborhood 4",116.250678354314,99730.0853906712
-"645","SRPEDD Developing Suburbs","New Bedford Neighborhood 5",34.4226517014781,100545.580660236
-"646","SRPEDD Developing Suburbs","OCPC Developing Suburbs",65.4206063568407,99599.716123659
-"647","SRPEDD Developing Suburbs","SRPEDD Maturing Suburbs",76.7270005891723,100019.569149027
-"648","SRPEDD Developing Suburbs","SRPEDD Regional Urban Centers",20.5093852387563,99694.7536568597
-"649","SRPEDD Developing Suburbs","SSC Maturing Suburbs",86.4595033258466,99656.4162882716
-"650","SRPEDD Developing Suburbs","SWAP Developing Suburbs",154.439132412025,99321.0255263853
-"651","SRPEDD Developing Suburbs","TRIC Developing Suburbs",128.336213845965,98378.2075395041
-"652","SRPEDD Developing Suburbs","TRIC Maturing Suburbs",74.4394533165601,99382.818812335
-"653","SRPEDD Maturing Suburbs","SRPEDD Developing Suburbs",147.699596052715,101006.939901902
-"654","SRPEDD Maturing Suburbs","SRPEDD Regional Urban Centers",143.971432732079,98079.5143708462
-"655","SRPEDD Regional Urban Centers","CCC Maturing Suburbs",94.708192819751,100609.468793922
-"656","SRPEDD Regional Urban Centers","CMRPC Developing Suburbs",105.713053374115,100899.02944908
-"657","SRPEDD Regional Urban Centers","Fall River Sector 7",51.3657841660858,100933.625374236
-"658","SRPEDD Regional Urban Centers","Fall River Sector 9",47.8072842054346,99303.1391714764
-"659","SRPEDD Regional Urban Centers","OCPC Developing Suburbs",152.68608139918,100056.246089107
-"660","SRPEDD Regional Urban Centers","SRPEDD Developing Suburbs",88.9354464526998,98623.8777676645
-"661","SRPEDD Regional Urban Centers","SRPEDD Maturing Suburbs",131.621313856039,100133.170253088
-"662","SRPEDD Regional Urban Centers","SSC Maturing Suburbs",3.87895648471216,99670.6258188524
-"663","SRPEDD Regional Urban Centers","TRIC Maturing Suburbs",175.471471014035,99982.9905162668
-"664","SSC Developing Suburbs","OCPC Developing Suburbs",120.549870435491,98518.2495777702
-"665","SSC Developing Suburbs","SSC Maturing Suburbs",145.280180347399,101048.360495079
-"666","SSC Maturing Suburbs","Boston Allston/Brighton",122.169973655943,101614.404717502
-"667","SSC Maturing Suburbs","Boston Downtown",18.6260321156221,102343.551806229
-"668","SSC Maturing Suburbs","Boston Dorchester",172.072381969985,100495.421558596
-"669","SSC Maturing Suburbs","Boston South Boston",153.271638463557,101501.91666021
-"670","SSC Maturing Suburbs","CCC Maturing Suburbs",98.256558568889,100941.180823509
-"671","SSC Maturing Suburbs","ICC Inner Core",93.6623549067482,100134.615313215
-"672","SSC Maturing Suburbs","OCPC Developing Suburbs",78.4267382414058,99230.9026689784
-"673","SSC Maturing Suburbs","Quincy Houghs Neck",96.3169199432789,99350.6856666627
-"674","SSC Maturing Suburbs","Quincy North Quincy",158.16890539424,99575.9552376906
-"675","SSC Maturing Suburbs","Quincy Quincy Center",54.3265191966894,99638.132460922
-"676","SSC Maturing Suburbs","Quincy South Quincy",24.6726304969562,100799.372910999
-"677","SSC Maturing Suburbs","SRPEDD Developing Suburbs",172.921306652763,99057.8082787991
-"678","SSC Maturing Suburbs","SSC Developing Suburbs",152.031292268083,101079.125931192
-"679","SSC Maturing Suburbs","TRIC Maturing Suburbs",59.3418401003312,100597.197516468
-"680","SWAP Developing Suburbs","CCC Maturing Suburbs",61.2041895376516,99038.6585413693
-"681","SWAP Developing Suburbs","CMRPC Developing Suburbs",103.555809987729,99694.1161737805
-"682","SWAP Developing Suburbs","Framingham All",91.8401563408353,100412.192277378
-"683","SWAP Developing Suburbs","ICC Inner Core",8.62429511047438,100805.402087952
-"684","SWAP Developing Suburbs","Metrowest Maturing Suburbs",103.509416287224,100529.715831162
-"685","SWAP Developing Suburbs","SRPEDD Developing Suburbs",70.6238759424703,101552.119615279
-"686","SWAP Developing Suburbs","SWAP Regional Urban Centers",135.331708408418,100830.695867381
-"687","SWAP Developing Suburbs","TRIC Developing Suburbs",105.099563560502,99932.765096041
-"688","SWAP Developing Suburbs","TRIC Maturing Suburbs",79.6939720334552,100153.270849032
-"689","SWAP Regional Urban Centers","CMRPC Developing Suburbs",97.4896373819674,100608.36636677
-"690","SWAP Regional Urban Centers","SWAP Developing Suburbs",121.746119696845,99464.2762632968
-"691","TRIC Developing Suburbs","SRPEDD Developing Suburbs",128.215481220082,100028.897691741
-"692","TRIC Developing Suburbs","SRPEDD Maturing Suburbs",46.6296399890516,99860.7986718831
-"693","TRIC Developing Suburbs","SWAP Developing Suburbs",100.329149129734,100117.014296562
-"694","TRIC Developing Suburbs","TRIC Maturing Suburbs",135.36418981861,99699.3734011734
-"695","TRIC Developing Suburbs","TRIC Regional Urban Centers",54.4010952089848,100266.647394917
-"696","TRIC Maturing Suburbs","Boston Allston/Brighton",74.1304419598329,98410.2303545023
-"697","TRIC Maturing Suburbs","Boston Downtown",161.837280068307,100395.700619772
-"698","TRIC Maturing Suburbs","Boston Dorchester",131.104238681811,99731.0216341078
-"699","TRIC Maturing Suburbs","Boston Hyde Park",97.3423754540382,98742.9257530322
-"700","TRIC Maturing Suburbs","Boston Roslindale",112.602262683537,99764.4918527464
-"701","TRIC Maturing Suburbs","Boston South Boston",190.238467830652,101365.802722303
-"702","TRIC Maturing Suburbs","Boston West Roxbury",170.467984172288,99396.4875452088
-"703","TRIC Maturing Suburbs","Brockton Ward 1",-21.7023561283637,100125.888970859
-"704","TRIC Maturing Suburbs","Brockton Ward 6",116.786783736044,99815.9886142191
-"705","TRIC Maturing Suburbs","CCC Maturing Suburbs",85.5056903298256,99585.1045036945
-"706","TRIC Maturing Suburbs","CMRPC Developing Suburbs",86.868253463536,99913.4629636305
-"707","TRIC Maturing Suburbs","ICC Inner Core",95.3934428841454,98796.5321445633
-"708","TRIC Maturing Suburbs","ICC Maturing Suburbs",87.0283967099719,101236.944000389
-"709","TRIC Maturing Suburbs","Metrowest Maturing Suburbs",130.090028917332,98325.9281141953
-"710","TRIC Maturing Suburbs","OCPC Developing Suburbs",163.711641904778,101367.87804354
-"711","TRIC Maturing Suburbs","Quincy South Quincy",98.7078151616214,98345.9870129858
-"712","TRIC Maturing Suburbs","SRPEDD Developing Suburbs",83.8056339300991,98710.446547354
-"713","TRIC Maturing Suburbs","SRPEDD Maturing Suburbs",75.1222981479141,100013.070079793
-"714","TRIC Maturing Suburbs","SRPEDD Regional Urban Centers",128.786770422899,100493.092477804
-"715","TRIC Maturing Suburbs","SSC Maturing Suburbs",103.421924038028,98885.3705073463
-"716","TRIC Maturing Suburbs","SWAP Developing Suburbs",141.11317433672,101206.736674262
-"717","TRIC Maturing Suburbs","TRIC Developing Suburbs",27.4595334769568,100354.732989078
-"718","TRIC Maturing Suburbs","TRIC Regional Urban Centers",122.049898042522,97712.0785347398
-"719","TRIC Regional Urban Centers","ICC Inner Core",98.0946948711565,100396.976273497
-"720","TRIC Regional Urban Centers","SRPEDD Developing Suburbs",-23.4736302617588,99799.1134505732
-"721","TRIC Regional Urban Centers","SWAP Developing Suburbs",50.5445478714133,100953.564337685
-"722","TRIC Regional Urban Centers","TRIC Developing Suburbs",209.518216889693,101273.353935613
-"723","TRIC Regional Urban Centers","TRIC Maturing Suburbs",89.0237345122329,97764.6999264343
-"724","Worcester Burncoat","CMRPC Developing Suburbs",92.7666230528958,99659.9478862609
-"725","Worcester Burncoat","Worcester Doherty",105.151190354942,100727.51514207
-"726","Worcester Burncoat","Worcester North",105.16115319245,100409.576531543
-"727","Worcester Burncoat","Worcester South",62.2747996022439,99527.6123024029
-"728","Worcester Doherty","CMRPC Developing Suburbs",77.4721882081694,101836.189431269
-"729","Worcester Doherty","Worcester Burncoat",113.304843119008,99436.980483502
-"730","Worcester Doherty","Worcester North",70.7611802043192,98342.0744531259
-"731","Worcester Doherty","Worcester South",25.585165377809,99933.7298167615
-"732","Worcester North","CMRPC Developing Suburbs",99.2163849225912,98487.8234641964
-"733","Worcester North","Worcester Burncoat",150.548873835994,99958.9205948548
-"734","Worcester North","Worcester Doherty",83.1651634676305,101503.022266113
-"735","Worcester North","Worcester South",89.3825361332643,100682.835773488
-"736","Worcester South","CMRPC Developing Suburbs",57.8383988810133,99176.9924069186
-"737","Worcester South","Worcester Burncoat",139.990209224325,98871.7343128446
-"738","Worcester South","Worcester Doherty",174.523314976483,100949.435125289
-"739","Worcester South","Worcester North",31.6111788669676,98527.0232660903
-"740","Boston Allston/Brighton","Other",48.8848197088244,98805.9477391435
-"741","Boston Downtown","Other",56.6278191272518,101323.337260602
-"742","Boston Charlestown","Other",142.45945500699,100310.135704882
-"743","Boston Dorchester","Other",61.1907050717237,99412.2784014154
-"744","Boston East Boston","Other",54.1110443574344,100141.719196006
-"745","Boston Fenway","Other",131.633936962838,99163.5406742841
-"746","Boston Hyde Park","Other",145.317920237317,100997.580676329
-"747","Boston Jamaica Plain","Other",140.624295341918,99421.9183039742
-"748","Boston Mattapan","Other",101.345519098085,100937.761501889
-"749","Boston Roslindale","Other",65.9900382524234,99208.0707926601
-"750","Boston Roxbury","Other",112.942160056377,99491.3547138205
-"751","Boston South Boston","Other",95.7050176440078,99875.1419506155
-"752","Boston South End","Other",37.2786824714968,101541.881130829
-"753","Boston West Roxbury","Other",173.044751929495,102821.624603177
-"754","Brockton Ward 1","Other",148.531117295795,99746.6995102201
-"755","Brockton Ward 2","Other",77.3490678290771,101095.699649425
-"756","Brockton Ward 4","Other",166.020078016252,100052.824209113
-"757","Brockton Ward 5","Other",137.138355395592,98875.3639114706
-"758","Brockton Ward 6","Other",132.015263070109,99439.1053662949
-"759","Brockton Ward 7","Other",140.796656201243,98917.6296824566
-"760","BRPC Developing Suburbs","Other",135.726993710612,99865.305264957
-"761","BRPC Regional Urban Centers","Other",107.59694286452,100251.456051444
-"762","BRPC Rural Towns","Other",143.197428762077,101202.195441562
-"763","Cambridge All","Other",42.1944430194782,100317.730887503
-"764","CCC Developing Suburbs","Other",106.005215607953,99842.2595841179
-"765","CCC Maturing Suburbs","Other",80.87029151687,100027.548383008
-"766","CCC Rural Towns","Other",121.82197225984,98514.6126482771
-"767","Chelsea Ward 3","Other",123.629614112348,100659.109021569
-"768","Chelsea Ward 4","Other",1.78055708812678,101995.34500841
-"769","CMRPC Developing Suburbs","Other",42.2318843466092,100580.299508601
-"770","CMRPC Regional Urban Centers","Other",126.238936230706,100441.613009753
-"771","Everett All","Other",128.80640753354,101512.541281275
-"772","Fall River Sector 1","Other",82.825817602184,101438.056140824
-"773","Fall River Sector 2","Other",30.0194561441407,99683.2775374633
-"774","Fall River Sector 5","Other",117.939154508766,98631.0322007265
-"775","Fall River Sector 7","Other",158.559862597998,100084.419303122
-"776","Fall River Sector 8","Other",128.461156367029,99945.0125317597
-"777","Fall River Sector 9","Other",170.950382749125,100769.271478017
-"778","Framingham All","Other",142.546686688623,99748.0086307336
-"779","FRCOG Developing Suburbs","Other",146.361862333439,100512.646495905
-"780","FRCOG Rural Towns","Other",248.358731583134,101265.63423941
-"781","ICC Inner Core","Other",81.7028822039963,99119.5967248635
-"782","ICC Maturing Suburbs","Other",47.0246856011885,100166.540453373
-"783","Lawrence Ward A","Other",131.168735081888,99918.3999098617
-"784","Lawrence Ward C","Other",143.360962307056,101248.450857163
-"785","Lawrence Ward D","Other",122.747559340637,100938.931648192
-"786","Lawrence Ward E","Other",51.2688994987924,99706.9153670591
-"787","Lawrence Ward F","Other",152.84518263062,102139.094757455
-"788","Lowell Acre","Other",186.051572650725,101225.983338346
-"789","Lowell Centralville","Other",106.059734183363,101030.25064895
-"790","Lowell Highlands","Other",96.4370167394379,100077.434617849
-"791","Lowell Lower Belvidere","Other",158.16581383408,102000.900789462
-"792","Lowell Lower Highlands","Other",92.7648018998731,98587.0688049979
-"793","Lowell Pawtucketville","Other",122.621231198359,99582.7186373861
-"794","Lynn Ward 1","Other",105.370164180259,101472.492842137
-"795","Lynn Ward 3","Other",6.1867816347479,101511.607127287
-"796","Lynn Ward 4","Other",69.3157716954408,99685.5025859852
-"797","Lynn Ward 5","Other",53.6808401168503,99218.9559534976
-"798","Lynn Ward 7","Other",124.75198870155,99841.6369368647
-"799","MAGIC Developing Suburbs","Other",84.2102319733608,99074.5766539925
-"800","MAGIC Maturing Suburbs","Other",80.2040476627198,99769.4889635602
-"801","Metrowest Developing Suburbs","Other",231.620949769967,100426.202679251
-"802","Metrowest Maturing Suburbs","Other",142.392052524892,101697.053988726
-"803","Metrowest Regional Urban Centers","Other",-34.0263217556644,100811.810211063
-"804","MRPC Developing Suburbs","Other",80.4093064826183,100469.9269756
-"805","MRPC Regional Urban Centers","Other",141.88597979605,100465.390975083
-"806","MRPC Rural Towns","Other",66.2723645526727,100730.046555084
-"807","MVPC Developing Suburbs","Other",72.4469394579565,101555.09944572
-"808","MVPC Regional Urban Centers","Other",183.484583750857,98872.0166186713
-"809","New Bedford Neighborhood 1","Other",91.5994100964149,98889.0023465251
-"810","New Bedford Neighborhood 2","Other",113.893305572342,100658.848429287
-"811","New Bedford Neighborhood 3","Other",45.8538212403746,99611.8094777593
-"812","New Bedford Neighborhood 4","Other",118.74173130433,99547.395160939
-"813","New Bedford Neighborhood 5","Other",61.8278327628173,101274.836627082
-"814","Newton Ward 2","Other",133.081220447438,98389.3850293128
-"815","Newton Ward 3","Other",140.217327527467,98791.1632809271
-"816","Newton Ward 5","Other",30.971988688876,100512.038704895
-"817","NMCOG Developing Suburbs","Other",100.331896358626,103155.001732731
-"818","NMCOG Maturing Suburbs","Other",41.7598373785185,102234.498359253
-"819","NSPC Maturing Suburbs","Other",91.624676656612,100221.269916945
-"820","NSPC Regional Urban Centers","Other",30.9818496140938,99726.6917189737
-"821","NSTF Developing Suburbs","Other",-70.6845186795029,99857.8125198763
-"822","NSTF Maturing Suburbs","Other",140.191733535304,99514.5767348222
-"823","NSTF Regional Urban Centers","Other",185.400787985035,100043.234037919
-"824","OCPC Developing Suburbs","Other",256.316082362123,99483.6810415695
-"825","PVPC Developing Suburbs","Other",166.159520958644,100103.886659424
-"826","PVPC Maturing Suburbs","Other",195.073553852386,98823.6532332821
-"827","PVPC Regional Urban Centers","Other",143.370098246543,99164.2964905194
-"828","PVPC Rural Towns","Other",163.598930578638,102267.482809039
-"829","Quincy Houghs Neck","Other",116.559417144384,101583.07987748
-"830","Quincy North Quincy","Other",88.6547940796905,97461.1147764849
-"831","Quincy Quincy Center","Other",51.5135844044215,101673.400098
-"832","Quincy South Quincy","Other",19.3460864039853,99929.7016796892
-"833","Quincy Wollaston","Other",157.866457590584,100494.403870373
-"834","Somerville 2143","Other",90.7187871784156,98902.238403395
-"835","Somerville 2144","Other",118.852204336977,98933.0575937912
-"836","Somerville 2145","Other",11.8209176867611,99734.8558998769
-"837","Springfield East Forest Park","Other",111.001050575693,100741.04491269
-"838","Springfield Forest Park","Other",148.5014616385,98953.6885161178
-"839","Springfield Indian Orchard","Other",46.4067114468989,99279.7303835048
-"840","Springfield Liberty Heights","Other",205.077535998804,98891.011095592
-"841","Springfield McKnight","Other",30.1175914251744,100749.125098779
-"842","Springfield Pine Point","Other",114.443700760356,101301.807568144
-"843","Springfield Sixteen Acres","Other",129.546321151249,100303.417486177
-"844","Springfield South End","Other",197.794824448609,100672.052287009
-"845","SRPEDD Developing Suburbs","Other",20.5467626348835,99900.6698616001
-"846","SRPEDD Maturing Suburbs","Other",47.9717675828164,98713.2792090299
-"847","SRPEDD Regional Urban Centers","Other",155.418687564352,101978.749931248
-"848","SSC Developing Suburbs","Other",69.6976218340877,99692.9398572797
-"849","SSC Maturing Suburbs","Other",113.375779831881,99855.2522925142
-"850","SWAP Developing Suburbs","Other",20.7038700691633,100008.771764797
-"851","SWAP Regional Urban Centers","Other",249.458483370453,99864.982580597
-"852","TRIC Developing Suburbs","Other",59.1437600987644,100460.208213859
-"853","TRIC Maturing Suburbs","Other",150.013897905255,99069.8894256289
-"854","TRIC Regional Urban Centers","Other",38.9573645385521,101021.630645413
-"855","Worcester Burncoat","Other",113.01178139351,100301.231891234
-"856","Worcester Doherty","Other",73.6935924918903,101677.771261031
-"857","Worcester North","Other",105.836707640926,100269.284261613
-"858","Worcester South","Other",102.301142193484,100500.812077892
+"1","Boston Allston/Brighton","Boston Downtown",267,45238
+"2","Boston Allston/Brighton","Boston Dorchester",93,132393
+"3","Boston Allston/Brighton","Boston Fenway",135,43708
+"4","Boston Allston/Brighton","Boston Jamaica Plain",123,33881
+"5","Boston Allston/Brighton","Boston Roslindale",65,28003
+"6","Boston Allston/Brighton","Boston South Boston",152,34837
+"7","Boston Allston/Brighton","Boston South End",107,25242
+"8","Boston Allston/Brighton","Boston West Roxbury",73,28753
+"9","Boston Allston/Brighton","Cambridge All",280,101355
+"10","Boston Allston/Brighton","CMRPC Developing Suburbs",53,308392
+"11","Boston Allston/Brighton","Framingham All",54,66910
+"12","Boston Allston/Brighton","ICC Inner Core",953,417536
+"13","Boston Allston/Brighton","MAGIC Maturing Suburbs",52,115604
+"14","Boston Allston/Brighton","Metrowest Maturing Suburbs",97,106807
+"15","Boston Allston/Brighton","Newton Ward 2",110,24821
+"16","Boston Allston/Brighton","Newton Ward 5",58,20214
+"17","Boston Allston/Brighton","NSPC Maturing Suburbs",67,161159
+"18","Boston Allston/Brighton","Somerville 2143",75,20785
+"19","Boston Allston/Brighton","Somerville 2144",122,29483
+"20","Boston Allston/Brighton","Somerville 2145",53,27210
+"21","Boston Allston/Brighton","SSC Maturing Suburbs",75,198636
+"22","Boston Allston/Brighton","TRIC Maturing Suburbs",117,172876
+"23","Boston Downtown","Boston Allston/Brighton",187,75954
+"24","Boston Downtown","Boston Charlestown",158,15195
+"25","Boston Downtown","Boston Dorchester",59,132393
+"26","Boston Downtown","Boston Fenway",98,43708
+"27","Boston Downtown","Boston Jamaica Plain",61,33881
+"28","Boston Downtown","Boston South Boston",192,34837
+"29","Boston Downtown","Boston South End",326,25242
+"30","Boston Downtown","Cambridge All",263,101355
+"31","Boston Downtown","CCC Maturing Suburbs",53,201577
+"32","Boston Downtown","ICC Inner Core",416,417536
+"33","Boston Downtown","Metrowest Maturing Suburbs",108,106807
+"34","Boston Downtown","NSPC Maturing Suburbs",86,161159
+"35","Boston Downtown","NSTF Regional Urban Centers",62,158671
+"36","Boston Downtown","Somerville 2144",79,29483
+"37","Boston Downtown","SSC Maturing Suburbs",128,198636
+"38","Boston Downtown","TRIC Maturing Suburbs",81,172876
+"39","Boston Charlestown","Boston Downtown",51,45238
+"40","Boston Charlestown","ICC Inner Core",131,417536
+"41","Boston Charlestown","NSPC Maturing Suburbs",67,161159
+"42","Boston Dorchester","Boston Allston/Brighton",63,75954
+"43","Boston Dorchester","Boston Downtown",53,45238
+"44","Boston Dorchester","Boston Fenway",59,43708
+"45","Boston Dorchester","Boston Hyde Park",210,36604
+"46","Boston Dorchester","Boston Jamaica Plain",102,33881
+"47","Boston Dorchester","Boston Mattapan",230,23974
+"48","Boston Dorchester","Boston Roslindale",104,28003
+"49","Boston Dorchester","Boston Roxbury",299,33389
+"50","Boston Dorchester","Boston South Boston",99,34837
+"51","Boston Dorchester","Boston South End",111,25242
+"52","Boston Dorchester","Boston West Roxbury",59,28753
+"53","Boston Dorchester","Cambridge All",64,101355
+"54","Boston Dorchester","ICC Inner Core",213,417536
+"55","Boston Dorchester","ICC Maturing Suburbs",80,52140
+"56","Boston Dorchester","OCPC Developing Suburbs",94,184584
+"57","Boston Dorchester","Quincy North Quincy",63,17172
+"58","Boston Dorchester","Quincy Quincy Center",89,15681
+"59","Boston Dorchester","Quincy South Quincy",133,27277
+"60","Boston Dorchester","SSC Maturing Suburbs",268,198636
+"61","Boston Dorchester","TRIC Maturing Suburbs",247,172876
+"62","Boston East Boston","Everett All",52,38037
+"63","Boston East Boston","ICC Inner Core",430,417536
+"64","Boston Fenway","Boston Allston/Brighton",166,75954
+"65","Boston Fenway","Boston Downtown",155,45238
+"66","Boston Fenway","Boston Dorchester",62,132393
+"67","Boston Fenway","Boston Jamaica Plain",62,33881
+"68","Boston Fenway","Boston Roxbury",68,33389
+"69","Boston Fenway","Boston South Boston",61,34837
+"70","Boston Fenway","Boston South End",82,25242
+"71","Boston Fenway","Cambridge All",133,101355
+"72","Boston Fenway","ICC Inner Core",268,417536
+"73","Boston Hyde Park","Boston Dorchester",122,132393
+"74","Boston Hyde Park","Boston Mattapan",107,23974
+"75","Boston Hyde Park","Boston Roslindale",103,28003
+"76","Boston Hyde Park","Boston West Roxbury",70,28753
+"77","Boston Hyde Park","ICC Inner Core",56,417536
+"78","Boston Hyde Park","SSC Maturing Suburbs",54,198636
+"79","Boston Hyde Park","TRIC Maturing Suburbs",191,172876
+"80","Boston Jamaica Plain","Boston Allston/Brighton",60,75954
+"81","Boston Jamaica Plain","Boston Dorchester",147,132393
+"82","Boston Jamaica Plain","Boston Hyde Park",72,36604
+"83","Boston Jamaica Plain","Boston Roslindale",202,28003
+"84","Boston Jamaica Plain","Boston Roxbury",71,33389
+"85","Boston Jamaica Plain","Boston West Roxbury",59,28753
+"86","Boston Jamaica Plain","ICC Inner Core",181,417536
+"87","Boston Jamaica Plain","SSC Maturing Suburbs",61,198636
+"88","Boston Jamaica Plain","TRIC Maturing Suburbs",65,172876
+"89","Boston Mattapan","Boston Dorchester",236,132393
+"90","Boston Mattapan","Boston Hyde Park",99,36604
+"91","Boston Mattapan","TRIC Maturing Suburbs",89,172876
+"92","Boston Roslindale","Boston Dorchester",75,132393
+"93","Boston Roslindale","Boston Hyde Park",115,36604
+"94","Boston Roslindale","Boston Jamaica Plain",94,33881
+"95","Boston Roslindale","Boston West Roxbury",109,28753
+"96","Boston Roslindale","ICC Inner Core",78,417536
+"97","Boston Roslindale","TRIC Maturing Suburbs",123,172876
+"98","Boston Roxbury","Boston Allston/Brighton",51,75954
+"99","Boston Roxbury","Boston Dorchester",276,132393
+"100","Boston Roxbury","Boston Fenway",54,43708
+"101","Boston Roxbury","Boston Hyde Park",53,36604
+"102","Boston Roxbury","Boston Jamaica Plain",90,33881
+"103","Boston Roxbury","Boston South End",76,25242
+"104","Boston Roxbury","ICC Inner Core",94,417536
+"105","Boston South Boston","Boston Downtown",125,45238
+"106","Boston South Boston","Boston Dorchester",198,132393
+"107","Boston South Boston","Boston South End",61,25242
+"108","Boston South Boston","ICC Inner Core",166,417536
+"109","Boston South Boston","OCPC Developing Suburbs",64,184584
+"110","Boston South Boston","SSC Maturing Suburbs",248,198636
+"111","Boston South Boston","TRIC Maturing Suburbs",75,172876
+"112","Boston South End","Boston Downtown",243,45238
+"113","Boston South End","Boston Dorchester",143,132393
+"114","Boston South End","Boston Roxbury",77,33389
+"115","Boston South End","Boston South Boston",94,34837
+"116","Boston South End","Cambridge All",93,101355
+"117","Boston South End","ICC Inner Core",151,417536
+"118","Boston South End","SSC Maturing Suburbs",65,198636
+"119","Boston South End","TRIC Maturing Suburbs",56,172876
+"120","Boston West Roxbury","Boston Hyde Park",76,36604
+"121","Boston West Roxbury","Boston Roslindale",78,28003
+"122","Boston West Roxbury","ICC Inner Core",89,417536
+"123","Boston West Roxbury","TRIC Maturing Suburbs",169,172876
+"124","Brockton Ward 1","Brockton Ward 4",52,20792
+"125","Brockton Ward 1","OCPC Developing Suburbs",89,184584
+"126","Brockton Ward 1","TRIC Maturing Suburbs",59,172876
+"127","Brockton Ward 2","Brockton Ward 1",82,20218
+"128","Brockton Ward 2","Brockton Ward 4",99,20792
+"129","Brockton Ward 2","Brockton Ward 5",52,13089
+"130","Brockton Ward 2","Brockton Ward 7",81,16616
+"131","Brockton Ward 4","Brockton Ward 1",79,20218
+"132","Brockton Ward 4","Brockton Ward 2",91,12824
+"133","Brockton Ward 4","Brockton Ward 5",83,13089
+"134","Brockton Ward 4","Brockton Ward 7",70,16616
+"135","Brockton Ward 4","OCPC Developing Suburbs",98,184584
+"136","Brockton Ward 5","Brockton Ward 4",60,20792
+"137","Brockton Ward 5","OCPC Developing Suburbs",72,184584
+"138","Brockton Ward 6","OCPC Developing Suburbs",75,184584
+"139","Brockton Ward 7","Brockton Ward 1",59,20218
+"140","Brockton Ward 7","Brockton Ward 2",75,12824
+"141","Brockton Ward 7","Brockton Ward 4",62,20792
+"142","BRPC Developing Suburbs","BRPC Regional Urban Centers",315,63046
+"143","BRPC Developing Suburbs","BRPC Rural Towns",170,25792
+"144","BRPC Regional Urban Centers","BRPC Developing Suburbs",291,46115
+"145","BRPC Regional Urban Centers","BRPC Rural Towns",154,25792
+"146","BRPC Rural Towns","BRPC Developing Suburbs",212,46115
+"147","BRPC Rural Towns","BRPC Regional Urban Centers",146,63046
+"148","Cambridge All","Boston Allston/Brighton",190,75954
+"149","Cambridge All","Boston Downtown",222,45238
+"150","Cambridge All","Boston Charlestown",57,15195
+"151","Cambridge All","Boston Dorchester",82,132393
+"152","Cambridge All","Boston Fenway",85,43708
+"153","Cambridge All","Boston Jamaica Plain",89,33881
+"154","Cambridge All","Boston South Boston",68,34837
+"155","Cambridge All","Boston South End",85,25242
+"156","Cambridge All","ICC Inner Core",1045,417536
+"157","Cambridge All","MAGIC Maturing Suburbs",140,115604
+"158","Cambridge All","Metrowest Maturing Suburbs",81,106807
+"159","Cambridge All","NSPC Maturing Suburbs",101,161159
+"160","Cambridge All","Somerville 2143",270,20785
+"161","Cambridge All","Somerville 2144",293,29483
+"162","Cambridge All","Somerville 2145",108,27210
+"163","Cambridge All","SSC Maturing Suburbs",53,198636
+"164","Cambridge All","TRIC Maturing Suburbs",73,172876
+"165","CCC Developing Suburbs","CCC Maturing Suburbs",213,201577
+"166","CCC Maturing Suburbs","CCC Developing Suburbs",180,21906
+"167","CCC Maturing Suburbs","ICC Inner Core",98,417536
+"168","CCC Maturing Suburbs","OCPC Developing Suburbs",247,184584
+"169","CCC Maturing Suburbs","SRPEDD Developing Suburbs",243,272896
+"170","CCC Maturing Suburbs","SSC Maturing Suburbs",103,198636
+"171","CCC Rural Towns","CCC Maturing Suburbs",53,201577
+"172","Chelsea Ward 3","Chelsea Ward 4",144,17283
+"173","Chelsea Ward 3","ICC Inner Core",118,417536
+"174","Chelsea Ward 4","Chelsea Ward 3",142,17797
+"175","Chelsea Ward 4","ICC Inner Core",143,417536
+"176","CMRPC Developing Suburbs","CCC Maturing Suburbs",127,201577
+"177","CMRPC Developing Suburbs","CMRPC Regional Urban Centers",393,30538
+"178","CMRPC Developing Suburbs","Framingham All",120,66910
+"179","CMRPC Developing Suburbs","ICC Inner Core",142,417536
+"180","CMRPC Developing Suburbs","MAGIC Developing Suburbs",79,45932
+"181","CMRPC Developing Suburbs","MAGIC Maturing Suburbs",63,115604
+"182","CMRPC Developing Suburbs","Metrowest Maturing Suburbs",165,106807
+"183","CMRPC Developing Suburbs","Metrowest Regional Urban Centers",115,36255
+"184","CMRPC Developing Suburbs","MRPC Developing Suburbs",151,104376
+"185","CMRPC Developing Suburbs","MRPC Regional Urban Centers",157,110984
+"186","CMRPC Developing Suburbs","MRPC Rural Towns",92,19547
+"187","CMRPC Developing Suburbs","PVPC Developing Suburbs",132,173566
+"188","CMRPC Developing Suburbs","PVPC Regional Urban Centers",51,239962
+"189","CMRPC Developing Suburbs","PVPC Rural Towns",75,27236
+"190","CMRPC Developing Suburbs","SRPEDD Developing Suburbs",72,272896
+"191","CMRPC Developing Suburbs","SWAP Developing Suburbs",236,103784
+"192","CMRPC Developing Suburbs","SWAP Regional Urban Centers",132,26799
+"193","CMRPC Developing Suburbs","Worcester Burncoat",290,37561
+"194","CMRPC Developing Suburbs","Worcester Doherty",345,59480
+"195","CMRPC Developing Suburbs","Worcester North",281,37617
+"196","CMRPC Developing Suburbs","Worcester South",220,37990
+"197","CMRPC Regional Urban Centers","CMRPC Developing Suburbs",389,308392
+"198","Everett All","ICC Inner Core",452,417536
+"199","Everett All","ICC Maturing Suburbs",65,52140
+"200","Everett All","NSPC Maturing Suburbs",86,161159
+"201","Everett All","NSTF Regional Urban Centers",56,158671
+"202","Fall River Sector 1","Fall River Sector 2",55,16515
+"203","Fall River Sector 1","Fall River Sector 7",88,23223
+"204","Fall River Sector 1","SRPEDD Developing Suburbs",55,272896
+"205","Fall River Sector 2","Fall River Sector 5",53,11806
+"206","Fall River Sector 2","Fall River Sector 7",87,23223
+"207","Fall River Sector 2","SRPEDD Developing Suburbs",96,272896
+"208","Fall River Sector 5","Fall River Sector 2",56,16515
+"209","Fall River Sector 5","Fall River Sector 7",86,23223
+"210","Fall River Sector 5","Fall River Sector 8",51,12871
+"211","Fall River Sector 5","SRPEDD Developing Suburbs",65,272896
+"212","Fall River Sector 7","Fall River Sector 1",88,12601
+"213","Fall River Sector 7","Fall River Sector 2",108,16515
+"214","Fall River Sector 7","Fall River Sector 5",56,11806
+"215","Fall River Sector 7","Fall River Sector 8",93,12871
+"216","Fall River Sector 7","Fall River Sector 9",63,14922
+"217","Fall River Sector 7","SRPEDD Developing Suburbs",116,272896
+"218","Fall River Sector 7","SRPEDD Regional Urban Centers",58,116278
+"219","Fall River Sector 8","Fall River Sector 2",54,16515
+"220","Fall River Sector 8","Fall River Sector 7",72,23223
+"221","Fall River Sector 8","Fall River Sector 9",93,14922
+"222","Fall River Sector 8","SRPEDD Developing Suburbs",77,272896
+"223","Fall River Sector 9","Fall River Sector 7",68,23223
+"224","Fall River Sector 9","Fall River Sector 8",68,12871
+"225","Fall River Sector 9","SRPEDD Developing Suburbs",114,272896
+"226","Fall River Sector 9","SRPEDD Regional Urban Centers",60,116278
+"227","Framingham All","CMRPC Developing Suburbs",209,308392
+"228","Framingham All","ICC Inner Core",124,417536
+"229","Framingham All","MAGIC Maturing Suburbs",69,115604
+"230","Framingham All","Metrowest Maturing Suburbs",366,106807
+"231","Framingham All","Metrowest Regional Urban Centers",172,36255
+"232","Framingham All","SWAP Developing Suburbs",81,103784
+"233","Framingham All","SWAP Regional Urban Centers",58,26799
+"234","FRCOG Developing Suburbs","FRCOG Rural Towns",242,32610
+"235","FRCOG Developing Suburbs","MRPC Developing Suburbs",65,104376
+"236","FRCOG Developing Suburbs","PVPC Regional Urban Centers",101,239962
+"237","FRCOG Rural Towns","FRCOG Developing Suburbs",220,38925
+"238","FRCOG Rural Towns","PVPC Developing Suburbs",56,173566
+"239","FRCOG Rural Towns","PVPC Regional Urban Centers",123,239962
+"240","ICC Inner Core","Boston Allston/Brighton",578,75954
+"241","ICC Inner Core","Boston Downtown",328,45238
+"242","ICC Inner Core","Boston Charlestown",114,15195
+"243","ICC Inner Core","Boston Dorchester",165,132393
+"244","ICC Inner Core","Boston East Boston",312,41604
+"245","ICC Inner Core","Boston Fenway",139,43708
+"246","ICC Inner Core","Boston Jamaica Plain",170,33881
+"247","ICC Inner Core","Boston Roslindale",99,28003
+"248","ICC Inner Core","Boston Roxbury",71,33389
+"249","ICC Inner Core","Boston South Boston",167,34837
+"250","ICC Inner Core","Boston South End",126,25242
+"251","ICC Inner Core","Boston West Roxbury",120,28753
+"252","ICC Inner Core","Cambridge All",594,101355
+"253","ICC Inner Core","CCC Maturing Suburbs",120,201577
+"254","ICC Inner Core","Chelsea Ward 3",111,17797
+"255","ICC Inner Core","Chelsea Ward 4",97,17283
+"256","ICC Inner Core","CMRPC Developing Suburbs",213,308392
+"257","ICC Inner Core","Everett All",423,38037
+"258","ICC Inner Core","Framingham All",239,66910
+"259","ICC Inner Core","ICC Maturing Suburbs",327,52140
+"260","ICC Inner Core","Lynn Ward 3",62,22132
+"261","ICC Inner Core","Lynn Ward 4",76,17440
+"262","ICC Inner Core","Lynn Ward 5",57,19986
+"263","ICC Inner Core","Lynn Ward 7",60,15589
+"264","ICC Inner Core","MAGIC Developing Suburbs",100,45932
+"265","ICC Inner Core","MAGIC Maturing Suburbs",628,115604
+"266","ICC Inner Core","Metrowest Maturing Suburbs",390,106807
+"267","ICC Inner Core","Metrowest Regional Urban Centers",117,36255
+"268","ICC Inner Core","MRPC Developing Suburbs",91,104376
+"269","ICC Inner Core","MRPC Regional Urban Centers",60,110984
+"270","ICC Inner Core","MVPC Developing Suburbs",228,110116
+"271","ICC Inner Core","MVPC Regional Urban Centers",209,136397
+"272","ICC Inner Core","Newton Ward 2",246,24821
+"273","ICC Inner Core","Newton Ward 3",118,14603
+"274","ICC Inner Core","Newton Ward 5",153,20214
+"275","ICC Inner Core","Newton Ward 8",59,11362
+"276","ICC Inner Core","NMCOG Developing Suburbs",93,74368
+"277","ICC Inner Core","NMCOG Maturing Suburbs",318,101690
+"278","ICC Inner Core","NSPC Maturing Suburbs",1103,161159
+"279","ICC Inner Core","NSPC Regional Urban Centers",280,37258
+"280","ICC Inner Core","NSTF Developing Suburbs",82,55889
+"281","ICC Inner Core","NSTF Maturing Suburbs",162,63633
+"282","ICC Inner Core","NSTF Regional Urban Centers",402,158671
+"283","ICC Inner Core","OCPC Developing Suburbs",109,184584
+"284","ICC Inner Core","Quincy Quincy Center",53,15681
+"285","ICC Inner Core","Quincy South Quincy",90,27277
+"286","ICC Inner Core","Somerville 2143",156,20785
+"287","ICC Inner Core","Somerville 2144",285,29483
+"288","ICC Inner Core","Somerville 2145",163,27210
+"289","ICC Inner Core","SRPEDD Developing Suburbs",67,272896
+"290","ICC Inner Core","SSC Maturing Suburbs",199,198636
+"291","ICC Inner Core","SWAP Developing Suburbs",141,103784
+"292","ICC Inner Core","TRIC Developing Suburbs",51,44628
+"293","ICC Inner Core","TRIC Maturing Suburbs",390,172876
+"294","ICC Inner Core","TRIC Regional Urban Centers",83,28587
+"295","ICC Maturing Suburbs","Boston Dorchester",57,132393
+"296","ICC Maturing Suburbs","ICC Inner Core",180,417536
+"297","ICC Maturing Suburbs","NSPC Maturing Suburbs",119,161159
+"298","ICC Maturing Suburbs","NSTF Regional Urban Centers",92,158671
+"299","ICC Maturing Suburbs","SSC Maturing Suburbs",76,198636
+"300","ICC Maturing Suburbs","TRIC Maturing Suburbs",77,172876
+"301","Lawrence Ward A","Lawrence Ward C",78,14242
+"302","Lawrence Ward A","Lawrence Ward D",97,18315
+"303","Lawrence Ward A","Lawrence Ward E",52,12811
+"304","Lawrence Ward A","Lawrence Ward F",54,10378
+"305","Lawrence Ward A","MVPC Regional Urban Centers",167,136397
+"306","Lawrence Ward C","Lawrence Ward A",86,16297
+"307","Lawrence Ward C","Lawrence Ward D",114,18315
+"308","Lawrence Ward C","Lawrence Ward E",51,12811
+"309","Lawrence Ward C","MVPC Regional Urban Centers",107,136397
+"310","Lawrence Ward D","Lawrence Ward A",131,16297
+"311","Lawrence Ward D","Lawrence Ward C",110,14242
+"312","Lawrence Ward D","Lawrence Ward E",72,12811
+"313","Lawrence Ward D","Lawrence Ward F",65,10378
+"314","Lawrence Ward D","MVPC Regional Urban Centers",139,136397
+"315","Lawrence Ward E","Lawrence Ward D",73,18315
+"316","Lawrence Ward E","Lawrence Ward F",54,10378
+"317","Lawrence Ward E","MVPC Developing Suburbs",52,110116
+"318","Lawrence Ward E","MVPC Regional Urban Centers",108,136397
+"319","Lawrence Ward F","Lawrence Ward A",63,16297
+"320","Lawrence Ward F","Lawrence Ward D",61,18315
+"321","Lawrence Ward F","Lawrence Ward E",70,12811
+"322","Lawrence Ward F","MVPC Regional Urban Centers",93,136397
+"323","Lowell Acre","Lowell Highlands",51,17818
+"324","Lowell Acre","Lowell Lower Belvidere",111,33301
+"325","Lowell Centralville","Lowell Lower Belvidere",104,33301
+"326","Lowell Centralville","NMCOG Developing Suburbs",94,74368
+"327","Lowell Highlands","Lowell Centralville",52,15808
+"328","Lowell Highlands","Lowell Lower Belvidere",114,33301
+"329","Lowell Highlands","Lowell Lower Highlands",76,11813
+"330","Lowell Highlands","Lowell Pawtucketville",60,14355
+"331","Lowell Highlands","NMCOG Developing Suburbs",96,74368
+"332","Lowell Highlands","NMCOG Maturing Suburbs",78,101690
+"333","Lowell Lower Belvidere","Lowell Acre",99,12072
+"334","Lowell Lower Belvidere","Lowell Centralville",103,15808
+"335","Lowell Lower Belvidere","Lowell Highlands",98,17818
+"336","Lowell Lower Belvidere","Lowell Lower Highlands",86,11813
+"337","Lowell Lower Belvidere","Lowell Pawtucketville",78,14355
+"338","Lowell Lower Belvidere","NMCOG Developing Suburbs",109,74368
+"339","Lowell Lower Belvidere","NMCOG Maturing Suburbs",119,101690
+"340","Lowell Lower Highlands","Lowell Highlands",100,17818
+"341","Lowell Lower Highlands","Lowell Lower Belvidere",95,33301
+"342","Lowell Pawtucketville","Lowell Lower Belvidere",66,33301
+"343","Lowell Pawtucketville","NMCOG Developing Suburbs",113,74368
+"344","Lowell Pawtucketville","NMCOG Maturing Suburbs",60,101690
+"345","Lynn Ward 1","Lynn Ward 3",54,22132
+"346","Lynn Ward 1","NSTF Regional Urban Centers",69,158671
+"347","Lynn Ward 3","ICC Inner Core",64,417536
+"348","Lynn Ward 3","Lynn Ward 1",80,13903
+"349","Lynn Ward 3","Lynn Ward 4",109,17440
+"350","Lynn Ward 3","Lynn Ward 5",53,19986
+"351","Lynn Ward 3","Lynn Ward 7",63,15589
+"352","Lynn Ward 3","NSTF Maturing Suburbs",72,63633
+"353","Lynn Ward 3","NSTF Regional Urban Centers",128,158671
+"354","Lynn Ward 4","ICC Inner Core",61,417536
+"355","Lynn Ward 4","Lynn Ward 3",103,22132
+"356","Lynn Ward 4","Lynn Ward 5",101,19986
+"357","Lynn Ward 4","Lynn Ward 7",54,15589
+"358","Lynn Ward 4","NSTF Regional Urban Centers",86,158671
+"359","Lynn Ward 5","ICC Inner Core",53,417536
+"360","Lynn Ward 5","Lynn Ward 3",98,22132
+"361","Lynn Ward 5","Lynn Ward 4",93,17440
+"362","Lynn Ward 5","Lynn Ward 7",79,15589
+"363","Lynn Ward 5","NSTF Regional Urban Centers",51,158671
+"364","Lynn Ward 7","Lynn Ward 1",54,13903
+"365","Lynn Ward 7","Lynn Ward 3",65,22132
+"366","Lynn Ward 7","Lynn Ward 5",68,19986
+"367","Lynn Ward 7","NSTF Regional Urban Centers",67,158671
+"368","MAGIC Developing Suburbs","CMRPC Developing Suburbs",102,308392
+"369","MAGIC Developing Suburbs","ICC Inner Core",56,417536
+"370","MAGIC Developing Suburbs","MAGIC Maturing Suburbs",175,115604
+"371","MAGIC Developing Suburbs","Metrowest Regional Urban Centers",123,36255
+"372","MAGIC Developing Suburbs","MRPC Developing Suburbs",106,104376
+"373","MAGIC Developing Suburbs","MRPC Regional Urban Centers",81,110984
+"374","MAGIC Maturing Suburbs","Cambridge All",93,101355
+"375","MAGIC Maturing Suburbs","CCC Maturing Suburbs",57,201577
+"376","MAGIC Maturing Suburbs","CMRPC Developing Suburbs",64,308392
+"377","MAGIC Maturing Suburbs","ICC Inner Core",347,417536
+"378","MAGIC Maturing Suburbs","MAGIC Developing Suburbs",239,45932
+"379","MAGIC Maturing Suburbs","Metrowest Maturing Suburbs",91,106807
+"380","MAGIC Maturing Suburbs","Metrowest Regional Urban Centers",57,36255
+"381","MAGIC Maturing Suburbs","MRPC Developing Suburbs",125,104376
+"382","MAGIC Maturing Suburbs","MRPC Regional Urban Centers",57,110984
+"383","MAGIC Maturing Suburbs","NMCOG Developing Suburbs",76,74368
+"384","MAGIC Maturing Suburbs","NMCOG Maturing Suburbs",113,101690
+"385","MAGIC Maturing Suburbs","NSPC Maturing Suburbs",105,161159
+"386","Metrowest Developing Suburbs","SWAP Developing Suburbs",52,103784
+"387","Metrowest Maturing Suburbs","Boston Allston/Brighton",69,75954
+"388","Metrowest Maturing Suburbs","Boston Downtown",75,45238
+"389","Metrowest Maturing Suburbs","Cambridge All",69,101355
+"390","Metrowest Maturing Suburbs","CCC Maturing Suburbs",73,201577
+"391","Metrowest Maturing Suburbs","CMRPC Developing Suburbs",194,308392
+"392","Metrowest Maturing Suburbs","Framingham All",269,66910
+"393","Metrowest Maturing Suburbs","ICC Inner Core",192,417536
+"394","Metrowest Maturing Suburbs","MAGIC Maturing Suburbs",103,115604
+"395","Metrowest Maturing Suburbs","Metrowest Developing Suburbs",64,13801
+"396","Metrowest Maturing Suburbs","Metrowest Regional Urban Centers",83,36255
+"397","Metrowest Maturing Suburbs","SWAP Developing Suburbs",164,103784
+"398","Metrowest Maturing Suburbs","TRIC Maturing Suburbs",111,172876
+"399","Metrowest Regional Urban Centers","CMRPC Developing Suburbs",240,308392
+"400","Metrowest Regional Urban Centers","Framingham All",96,66910
+"401","Metrowest Regional Urban Centers","ICC Inner Core",63,417536
+"402","Metrowest Regional Urban Centers","MAGIC Developing Suburbs",157,45932
+"403","Metrowest Regional Urban Centers","MAGIC Maturing Suburbs",60,115604
+"404","Metrowest Regional Urban Centers","Metrowest Maturing Suburbs",75,106807
+"405","Metrowest Regional Urban Centers","MRPC Regional Urban Centers",63,110984
+"406","MRPC Developing Suburbs","CMRPC Developing Suburbs",127,308392
+"407","MRPC Developing Suburbs","FRCOG Developing Suburbs",65,38925
+"408","MRPC Developing Suburbs","MAGIC Developing Suburbs",68,45932
+"409","MRPC Developing Suburbs","MAGIC Maturing Suburbs",72,115604
+"410","MRPC Developing Suburbs","MRPC Regional Urban Centers",722,110984
+"411","MRPC Developing Suburbs","MRPC Rural Towns",118,19547
+"412","MRPC Developing Suburbs","NMCOG Developing Suburbs",73,74368
+"413","MRPC Regional Urban Centers","CMRPC Developing Suburbs",199,308392
+"414","MRPC Regional Urban Centers","MAGIC Developing Suburbs",59,45932
+"415","MRPC Regional Urban Centers","MRPC Developing Suburbs",773,104376
+"416","MRPC Regional Urban Centers","MRPC Rural Towns",84,19547
+"417","MRPC Rural Towns","CMRPC Developing Suburbs",78,308392
+"418","MRPC Rural Towns","MRPC Developing Suburbs",104,104376
+"419","MRPC Rural Towns","MRPC Regional Urban Centers",62,110984
+"420","MVPC Developing Suburbs","ICC Inner Core",110,417536
+"421","MVPC Developing Suburbs","MVPC Regional Urban Centers",589,136397
+"422","MVPC Developing Suburbs","NMCOG Maturing Suburbs",84,101690
+"423","MVPC Developing Suburbs","NSPC Maturing Suburbs",159,161159
+"424","MVPC Developing Suburbs","NSTF Developing Suburbs",119,55889
+"425","MVPC Developing Suburbs","NSTF Regional Urban Centers",114,158671
+"426","MVPC Regional Urban Centers","ICC Inner Core",127,417536
+"427","MVPC Regional Urban Centers","Lawrence Ward A",102,16297
+"428","MVPC Regional Urban Centers","Lawrence Ward C",71,14242
+"429","MVPC Regional Urban Centers","Lawrence Ward D",88,18315
+"430","MVPC Regional Urban Centers","Lawrence Ward E",83,12811
+"431","MVPC Regional Urban Centers","MVPC Developing Suburbs",595,110116
+"432","MVPC Regional Urban Centers","NMCOG Developing Suburbs",74,74368
+"433","MVPC Regional Urban Centers","NMCOG Maturing Suburbs",71,101690
+"434","MVPC Regional Urban Centers","NSPC Maturing Suburbs",104,161159
+"435","MVPC Regional Urban Centers","NSTF Developing Suburbs",53,55889
+"436","MVPC Regional Urban Centers","NSTF Regional Urban Centers",91,158671
+"437","New Bedford Neighborhood 1","New Bedford Neighborhood 2",67,19765
+"438","New Bedford Neighborhood 1","SRPEDD Developing Suburbs",213,272896
+"439","New Bedford Neighborhood 2","New Bedford Neighborhood 1",115,18383
+"440","New Bedford Neighborhood 2","New Bedford Neighborhood 3",83,19180
+"441","New Bedford Neighborhood 2","New Bedford Neighborhood 4",67,16801
+"442","New Bedford Neighborhood 2","New Bedford Neighborhood 5",71,19639
+"443","New Bedford Neighborhood 2","SRPEDD Developing Suburbs",152,272896
+"444","New Bedford Neighborhood 3","New Bedford Neighborhood 1",79,18383
+"445","New Bedford Neighborhood 3","New Bedford Neighborhood 2",78,19765
+"446","New Bedford Neighborhood 3","New Bedford Neighborhood 4",90,16801
+"447","New Bedford Neighborhood 3","New Bedford Neighborhood 5",70,19639
+"448","New Bedford Neighborhood 3","SRPEDD Developing Suburbs",166,272896
+"449","New Bedford Neighborhood 4","New Bedford Neighborhood 1",59,18383
+"450","New Bedford Neighborhood 4","New Bedford Neighborhood 2",52,19765
+"451","New Bedford Neighborhood 4","New Bedford Neighborhood 3",93,19180
+"452","New Bedford Neighborhood 4","New Bedford Neighborhood 5",87,19639
+"453","New Bedford Neighborhood 4","SRPEDD Developing Suburbs",160,272896
+"454","New Bedford Neighborhood 5","New Bedford Neighborhood 2",84,19765
+"455","New Bedford Neighborhood 5","New Bedford Neighborhood 3",75,19180
+"456","New Bedford Neighborhood 5","New Bedford Neighborhood 4",100,16801
+"457","New Bedford Neighborhood 5","SRPEDD Developing Suburbs",150,272896
+"458","Newton Ward 2","Boston Allston/Brighton",52,75954
+"459","Newton Ward 2","ICC Inner Core",243,417536
+"460","Newton Ward 2","Metrowest Maturing Suburbs",84,106807
+"461","Newton Ward 2","Newton Ward 3",65,14603
+"462","Newton Ward 2","Newton Ward 5",67,20214
+"463","Newton Ward 2","TRIC Maturing Suburbs",63,172876
+"464","Newton Ward 3","ICC Inner Core",111,417536
+"465","Newton Ward 3","Newton Ward 2",68,24821
+"466","Newton Ward 5","ICC Inner Core",111,417536
+"467","Newton Ward 5","Metrowest Maturing Suburbs",65,106807
+"468","Newton Ward 5","Newton Ward 2",55,24821
+"469","Newton Ward 5","TRIC Maturing Suburbs",53,172876
+"470","NMCOG Developing Suburbs","ICC Inner Core",70,417536
+"471","NMCOG Developing Suburbs","Lowell Centralville",70,15808
+"472","NMCOG Developing Suburbs","Lowell Lower Belvidere",75,33301
+"473","NMCOG Developing Suburbs","Lowell Pawtucketville",80,14355
+"474","NMCOG Developing Suburbs","MRPC Developing Suburbs",137,104376
+"475","NMCOG Developing Suburbs","MVPC Regional Urban Centers",60,136397
+"476","NMCOG Developing Suburbs","NMCOG Maturing Suburbs",169,101690
+"477","NMCOG Developing Suburbs","NSPC Maturing Suburbs",55,161159
+"478","NMCOG Maturing Suburbs","ICC Inner Core",137,417536
+"479","NMCOG Maturing Suburbs","Lowell Highlands",62,17818
+"480","NMCOG Maturing Suburbs","Lowell Lower Belvidere",136,33301
+"481","NMCOG Maturing Suburbs","Lowell Pawtucketville",51,14355
+"482","NMCOG Maturing Suburbs","MAGIC Maturing Suburbs",78,115604
+"483","NMCOG Maturing Suburbs","MRPC Developing Suburbs",58,104376
+"484","NMCOG Maturing Suburbs","MVPC Developing Suburbs",104,110116
+"485","NMCOG Maturing Suburbs","MVPC Regional Urban Centers",88,136397
+"486","NMCOG Maturing Suburbs","NMCOG Developing Suburbs",279,74368
+"487","NMCOG Maturing Suburbs","NSPC Maturing Suburbs",192,161159
+"488","NMCOG Maturing Suburbs","NSPC Regional Urban Centers",68,37258
+"489","NSPC Maturing Suburbs","Boston Downtown",78,45238
+"490","NSPC Maturing Suburbs","Cambridge All",54,101355
+"491","NSPC Maturing Suburbs","ICC Inner Core",580,417536
+"492","NSPC Maturing Suburbs","ICC Maturing Suburbs",105,52140
+"493","NSPC Maturing Suburbs","MAGIC Maturing Suburbs",140,115604
+"494","NSPC Maturing Suburbs","MVPC Developing Suburbs",254,110116
+"495","NSPC Maturing Suburbs","MVPC Regional Urban Centers",159,136397
+"496","NSPC Maturing Suburbs","NMCOG Developing Suburbs",93,74368
+"497","NSPC Maturing Suburbs","NMCOG Maturing Suburbs",321,101690
+"498","NSPC Maturing Suburbs","NSPC Regional Urban Centers",283,37258
+"499","NSPC Maturing Suburbs","NSTF Developing Suburbs",79,55889
+"500","NSPC Maturing Suburbs","NSTF Maturing Suburbs",71,63633
+"501","NSPC Maturing Suburbs","NSTF Regional Urban Centers",218,158671
+"502","NSPC Regional Urban Centers","ICC Inner Core",160,417536
+"503","NSPC Regional Urban Centers","MAGIC Maturing Suburbs",59,115604
+"504","NSPC Regional Urban Centers","NMCOG Maturing Suburbs",127,101690
+"505","NSPC Regional Urban Centers","NSPC Maturing Suburbs",307,161159
+"506","NSTF Developing Suburbs","MVPC Developing Suburbs",136,110116
+"507","NSTF Developing Suburbs","MVPC Regional Urban Centers",67,136397
+"508","NSTF Developing Suburbs","NSTF Maturing Suburbs",81,63633
+"509","NSTF Developing Suburbs","NSTF Regional Urban Centers",358,158671
+"510","NSTF Maturing Suburbs","ICC Inner Core",94,417536
+"511","NSTF Maturing Suburbs","Lynn Ward 3",54,22132
+"512","NSTF Maturing Suburbs","MVPC Developing Suburbs",73,110116
+"513","NSTF Maturing Suburbs","NSTF Developing Suburbs",109,55889
+"514","NSTF Maturing Suburbs","NSTF Regional Urban Centers",420,158671
+"515","NSTF Regional Urban Centers","ICC Inner Core",241,417536
+"516","NSTF Regional Urban Centers","ICC Maturing Suburbs",63,52140
+"517","NSTF Regional Urban Centers","Lynn Ward 1",64,13903
+"518","NSTF Regional Urban Centers","Lynn Ward 3",94,22132
+"519","NSTF Regional Urban Centers","Lynn Ward 4",54,17440
+"520","NSTF Regional Urban Centers","Lynn Ward 7",52,15589
+"521","NSTF Regional Urban Centers","MVPC Developing Suburbs",223,110116
+"522","NSTF Regional Urban Centers","MVPC Regional Urban Centers",177,136397
+"523","NSTF Regional Urban Centers","NSPC Maturing Suburbs",222,161159
+"524","NSTF Regional Urban Centers","NSTF Developing Suburbs",440,55889
+"525","NSTF Regional Urban Centers","NSTF Maturing Suburbs",520,63633
+"526","OCPC Developing Suburbs","Brockton Ward 1",62,20218
+"527","OCPC Developing Suburbs","CCC Maturing Suburbs",229,201577
+"528","OCPC Developing Suburbs","ICC Inner Core",87,417536
+"529","OCPC Developing Suburbs","Quincy South Quincy",64,27277
+"530","OCPC Developing Suburbs","SRPEDD Developing Suburbs",702,272896
+"531","OCPC Developing Suburbs","SRPEDD Regional Urban Centers",145,116278
+"532","OCPC Developing Suburbs","SSC Developing Suburbs",190,41968
+"533","OCPC Developing Suburbs","SSC Maturing Suburbs",660,198636
+"534","OCPC Developing Suburbs","TRIC Maturing Suburbs",183,172876
+"535","PVPC Developing Suburbs","CMRPC Developing Suburbs",120,308392
+"536","PVPC Developing Suburbs","FRCOG Developing Suburbs",52,38925
+"537","PVPC Developing Suburbs","PVPC Maturing Suburbs",59,15633
+"538","PVPC Developing Suburbs","PVPC Regional Urban Centers",1136,239962
+"539","PVPC Developing Suburbs","PVPC Rural Towns",106,27236
+"540","PVPC Developing Suburbs","Springfield East Forest Park",59,10618
+"541","PVPC Developing Suburbs","Springfield Forest Park",92,24733
+"542","PVPC Developing Suburbs","Springfield Indian Orchard",71,11428
+"543","PVPC Developing Suburbs","Springfield Sixteen Acres",114,22937
+"544","PVPC Maturing Suburbs","PVPC Developing Suburbs",56,173566
+"545","PVPC Regional Urban Centers","CMRPC Developing Suburbs",62,308392
+"546","PVPC Regional Urban Centers","FRCOG Developing Suburbs",130,38925
+"547","PVPC Regional Urban Centers","FRCOG Rural Towns",122,32610
+"548","PVPC Regional Urban Centers","ICC Inner Core",56,417536
+"549","PVPC Regional Urban Centers","PVPC Developing Suburbs",1287,173566
+"550","PVPC Regional Urban Centers","PVPC Rural Towns",217,27236
+"551","PVPC Regional Urban Centers","Springfield East Forest Park",55,10618
+"552","PVPC Regional Urban Centers","Springfield Forest Park",117,24733
+"553","PVPC Regional Urban Centers","Springfield Indian Orchard",64,11428
+"554","PVPC Regional Urban Centers","Springfield Liberty Heights",134,17819
+"555","PVPC Regional Urban Centers","Springfield McKnight",140,28486
+"556","PVPC Regional Urban Centers","Springfield Pine Point",78,19112
+"557","PVPC Regional Urban Centers","Springfield Sixteen Acres",96,22937
+"558","PVPC Regional Urban Centers","Springfield South End",78,16949
+"559","PVPC Rural Towns","CMRPC Developing Suburbs",60,308392
+"560","PVPC Rural Towns","PVPC Developing Suburbs",101,173566
+"561","PVPC Rural Towns","PVPC Regional Urban Centers",197,239962
+"562","Quincy Houghs Neck","SSC Maturing Suburbs",93,198636
+"563","Quincy North Quincy","ICC Inner Core",52,417536
+"564","Quincy North Quincy","Quincy Quincy Center",73,15681
+"565","Quincy North Quincy","Quincy South Quincy",92,27277
+"566","Quincy North Quincy","Quincy Wollaston",85,14501
+"567","Quincy North Quincy","SSC Maturing Suburbs",155,198636
+"568","Quincy Quincy Center","Quincy South Quincy",111,27277
+"569","Quincy Quincy Center","SSC Maturing Suburbs",155,198636
+"570","Quincy Quincy Center","TRIC Maturing Suburbs",51,172876
+"571","Quincy South Quincy","Boston Dorchester",55,132393
+"572","Quincy South Quincy","ICC Inner Core",79,417536
+"573","Quincy South Quincy","OCPC Developing Suburbs",109,184584
+"574","Quincy South Quincy","Quincy Houghs Neck",58,13394
+"575","Quincy South Quincy","Quincy North Quincy",58,17172
+"576","Quincy South Quincy","Quincy Quincy Center",122,15681
+"577","Quincy South Quincy","SSC Maturing Suburbs",373,198636
+"578","Quincy South Quincy","TRIC Maturing Suburbs",122,172876
+"579","Quincy Wollaston","Quincy North Quincy",90,17172
+"580","Quincy Wollaston","Quincy South Quincy",64,27277
+"581","Quincy Wollaston","SSC Maturing Suburbs",111,198636
+"582","Somerville 2143","Cambridge All",200,101355
+"583","Somerville 2143","ICC Inner Core",304,417536
+"584","Somerville 2143","NSPC Maturing Suburbs",51,161159
+"585","Somerville 2143","Somerville 2144",120,29483
+"586","Somerville 2143","Somerville 2145",102,27210
+"587","Somerville 2144","Boston Allston/Brighton",61,75954
+"588","Somerville 2144","Boston Downtown",73,45238
+"589","Somerville 2144","Cambridge All",276,101355
+"590","Somerville 2144","ICC Inner Core",538,417536
+"591","Somerville 2144","NSPC Maturing Suburbs",77,161159
+"592","Somerville 2144","Somerville 2143",133,20785
+"593","Somerville 2144","Somerville 2145",109,27210
+"594","Somerville 2145","Cambridge All",62,101355
+"595","Somerville 2145","Everett All",78,38037
+"596","Somerville 2145","ICC Inner Core",327,417536
+"597","Somerville 2145","Somerville 2143",75,20785
+"598","Somerville 2145","Somerville 2144",86,29483
+"599","Springfield East Forest Park","PVPC Developing Suburbs",85,173566
+"600","Springfield Forest Park","PVPC Developing Suburbs",150,173566
+"601","Springfield Forest Park","PVPC Regional Urban Centers",134,239962
+"602","Springfield Forest Park","Springfield McKnight",81,28486
+"603","Springfield Forest Park","Springfield Pine Point",52,19112
+"604","Springfield Forest Park","Springfield Sixteen Acres",58,22937
+"605","Springfield Forest Park","Springfield South End",63,16949
+"606","Springfield Indian Orchard","PVPC Developing Suburbs",97,173566
+"607","Springfield Indian Orchard","PVPC Regional Urban Centers",64,239962
+"608","Springfield Liberty Heights","PVPC Developing Suburbs",67,173566
+"609","Springfield Liberty Heights","PVPC Regional Urban Centers",134,239962
+"610","Springfield Liberty Heights","Springfield McKnight",74,28486
+"611","Springfield Liberty Heights","Springfield Pine Point",67,19112
+"612","Springfield Liberty Heights","Springfield South End",61,16949
+"613","Springfield McKnight","PVPC Developing Suburbs",74,173566
+"614","Springfield McKnight","PVPC Regional Urban Centers",133,239962
+"615","Springfield McKnight","Springfield Forest Park",94,24733
+"616","Springfield McKnight","Springfield Indian Orchard",55,11428
+"617","Springfield McKnight","Springfield Liberty Heights",73,17819
+"618","Springfield McKnight","Springfield Pine Point",83,19112
+"619","Springfield McKnight","Springfield South End",84,16949
+"620","Springfield Pine Point","PVPC Developing Suburbs",52,173566
+"621","Springfield Pine Point","PVPC Regional Urban Centers",81,239962
+"622","Springfield Pine Point","Springfield Forest Park",60,24733
+"623","Springfield Pine Point","Springfield Liberty Heights",92,17819
+"624","Springfield Pine Point","Springfield McKnight",79,28486
+"625","Springfield Pine Point","Springfield South End",74,16949
+"626","Springfield Sixteen Acres","PVPC Developing Suburbs",160,173566
+"627","Springfield Sixteen Acres","PVPC Regional Urban Centers",89,239962
+"628","Springfield South End","PVPC Developing Suburbs",62,173566
+"629","Springfield South End","PVPC Regional Urban Centers",132,239962
+"630","Springfield South End","Springfield Forest Park",90,24733
+"631","Springfield South End","Springfield Liberty Heights",86,17819
+"632","Springfield South End","Springfield McKnight",105,28486
+"633","Springfield South End","Springfield Pine Point",77,19112
+"634","SRPEDD Developing Suburbs","CCC Maturing Suburbs",236,201577
+"635","SRPEDD Developing Suburbs","CMRPC Developing Suburbs",82,308392
+"636","SRPEDD Developing Suburbs","Fall River Sector 2",51,16515
+"637","SRPEDD Developing Suburbs","Fall River Sector 7",93,23223
+"638","SRPEDD Developing Suburbs","Fall River Sector 8",66,12871
+"639","SRPEDD Developing Suburbs","Fall River Sector 9",118,14922
+"640","SRPEDD Developing Suburbs","ICC Inner Core",58,417536
+"641","SRPEDD Developing Suburbs","New Bedford Neighborhood 1",173,18383
+"642","SRPEDD Developing Suburbs","New Bedford Neighborhood 2",124,19765
+"643","SRPEDD Developing Suburbs","New Bedford Neighborhood 3",118,19180
+"644","SRPEDD Developing Suburbs","New Bedford Neighborhood 4",135,16801
+"645","SRPEDD Developing Suburbs","New Bedford Neighborhood 5",98,19639
+"646","SRPEDD Developing Suburbs","OCPC Developing Suburbs",513,184584
+"647","SRPEDD Developing Suburbs","SRPEDD Maturing Suburbs",104,22414
+"648","SRPEDD Developing Suburbs","SRPEDD Regional Urban Centers",836,116278
+"649","SRPEDD Developing Suburbs","SSC Maturing Suburbs",124,198636
+"650","SRPEDD Developing Suburbs","SWAP Developing Suburbs",134,103784
+"651","SRPEDD Developing Suburbs","TRIC Developing Suburbs",96,44628
+"652","SRPEDD Developing Suburbs","TRIC Maturing Suburbs",126,172876
+"653","SRPEDD Maturing Suburbs","SRPEDD Developing Suburbs",140,272896
+"654","SRPEDD Maturing Suburbs","SRPEDD Regional Urban Centers",63,116278
+"655","SRPEDD Regional Urban Centers","CCC Maturing Suburbs",67,201577
+"656","SRPEDD Regional Urban Centers","CMRPC Developing Suburbs",52,308392
+"657","SRPEDD Regional Urban Centers","Fall River Sector 7",63,23223
+"658","SRPEDD Regional Urban Centers","Fall River Sector 9",68,14922
+"659","SRPEDD Regional Urban Centers","OCPC Developing Suburbs",128,184584
+"660","SRPEDD Regional Urban Centers","SRPEDD Developing Suburbs",900,272896
+"661","SRPEDD Regional Urban Centers","SRPEDD Maturing Suburbs",52,22414
+"662","SRPEDD Regional Urban Centers","SSC Maturing Suburbs",54,198636
+"663","SRPEDD Regional Urban Centers","TRIC Maturing Suburbs",73,172876
+"664","SSC Developing Suburbs","OCPC Developing Suburbs",264,184584
+"665","SSC Developing Suburbs","SSC Maturing Suburbs",353,198636
+"666","SSC Maturing Suburbs","Boston Allston/Brighton",63,75954
+"667","SSC Maturing Suburbs","Boston Downtown",93,45238
+"668","SSC Maturing Suburbs","Boston Dorchester",167,132393
+"669","SSC Maturing Suburbs","Boston South Boston",161,34837
+"670","SSC Maturing Suburbs","CCC Maturing Suburbs",134,201577
+"671","SSC Maturing Suburbs","ICC Inner Core",143,417536
+"672","SSC Maturing Suburbs","OCPC Developing Suburbs",933,184584
+"673","SSC Maturing Suburbs","Quincy Houghs Neck",67,13394
+"674","SSC Maturing Suburbs","Quincy North Quincy",68,17172
+"675","SSC Maturing Suburbs","Quincy Quincy Center",106,15681
+"676","SSC Maturing Suburbs","Quincy South Quincy",186,27277
+"677","SSC Maturing Suburbs","SRPEDD Developing Suburbs",214,272896
+"678","SSC Maturing Suburbs","SSC Developing Suburbs",391,41968
+"679","SSC Maturing Suburbs","TRIC Maturing Suburbs",239,172876
+"680","SWAP Developing Suburbs","CCC Maturing Suburbs",69,201577
+"681","SWAP Developing Suburbs","CMRPC Developing Suburbs",333,308392
+"682","SWAP Developing Suburbs","Framingham All",62,66910
+"683","SWAP Developing Suburbs","ICC Inner Core",75,417536
+"684","SWAP Developing Suburbs","Metrowest Maturing Suburbs",112,106807
+"685","SWAP Developing Suburbs","SRPEDD Developing Suburbs",134,272896
+"686","SWAP Developing Suburbs","SWAP Regional Urban Centers",105,26799
+"687","SWAP Developing Suburbs","TRIC Developing Suburbs",61,44628
+"688","SWAP Developing Suburbs","TRIC Maturing Suburbs",113,172876
+"689","SWAP Regional Urban Centers","CMRPC Developing Suburbs",210,308392
+"690","SWAP Regional Urban Centers","SWAP Developing Suburbs",93,103784
+"691","TRIC Developing Suburbs","SRPEDD Developing Suburbs",124,272896
+"692","TRIC Developing Suburbs","SRPEDD Maturing Suburbs",55,22414
+"693","TRIC Developing Suburbs","SWAP Developing Suburbs",116,103784
+"694","TRIC Developing Suburbs","TRIC Maturing Suburbs",117,172876
+"695","TRIC Developing Suburbs","TRIC Regional Urban Centers",79,28587
+"696","TRIC Maturing Suburbs","Boston Allston/Brighton",62,75954
+"697","TRIC Maturing Suburbs","Boston Downtown",61,45238
+"698","TRIC Maturing Suburbs","Boston Dorchester",123,132393
+"699","TRIC Maturing Suburbs","Boston Hyde Park",103,36604
+"700","TRIC Maturing Suburbs","Boston Roslindale",60,28003
+"701","TRIC Maturing Suburbs","Boston South Boston",64,34837
+"702","TRIC Maturing Suburbs","Boston West Roxbury",89,28753
+"703","TRIC Maturing Suburbs","Brockton Ward 1",72,20218
+"704","TRIC Maturing Suburbs","Brockton Ward 6",73,15208
+"705","TRIC Maturing Suburbs","CCC Maturing Suburbs",118,201577
+"706","TRIC Maturing Suburbs","CMRPC Developing Suburbs",52,308392
+"707","TRIC Maturing Suburbs","ICC Inner Core",237,417536
+"708","TRIC Maturing Suburbs","ICC Maturing Suburbs",51,52140
+"709","TRIC Maturing Suburbs","Metrowest Maturing Suburbs",106,106807
+"710","TRIC Maturing Suburbs","OCPC Developing Suburbs",328,184584
+"711","TRIC Maturing Suburbs","Quincy South Quincy",99,27277
+"712","TRIC Maturing Suburbs","SRPEDD Developing Suburbs",227,272896
+"713","TRIC Maturing Suburbs","SRPEDD Maturing Suburbs",63,22414
+"714","TRIC Maturing Suburbs","SRPEDD Regional Urban Centers",87,116278
+"715","TRIC Maturing Suburbs","SSC Maturing Suburbs",267,198636
+"716","TRIC Maturing Suburbs","SWAP Developing Suburbs",174,103784
+"717","TRIC Maturing Suburbs","TRIC Developing Suburbs",234,44628
+"718","TRIC Maturing Suburbs","TRIC Regional Urban Centers",172,28587
+"719","TRIC Regional Urban Centers","ICC Inner Core",54,417536
+"720","TRIC Regional Urban Centers","SRPEDD Developing Suburbs",71,272896
+"721","TRIC Regional Urban Centers","SWAP Developing Suburbs",76,103784
+"722","TRIC Regional Urban Centers","TRIC Developing Suburbs",119,44628
+"723","TRIC Regional Urban Centers","TRIC Maturing Suburbs",167,172876
+"724","Worcester Burncoat","CMRPC Developing Suburbs",407,308392
+"725","Worcester Burncoat","Worcester Doherty",274,59480
+"726","Worcester Burncoat","Worcester North",214,37617
+"727","Worcester Burncoat","Worcester South",133,37990
+"728","Worcester Doherty","CMRPC Developing Suburbs",502,308392
+"729","Worcester Doherty","Worcester Burncoat",269,37561
+"730","Worcester Doherty","Worcester North",255,37617
+"731","Worcester Doherty","Worcester South",278,37990
+"732","Worcester North","CMRPC Developing Suburbs",484,308392
+"733","Worcester North","Worcester Burncoat",241,37561
+"734","Worcester North","Worcester Doherty",257,59480
+"735","Worcester North","Worcester South",213,37990
+"736","Worcester South","CMRPC Developing Suburbs",329,308392
+"737","Worcester South","Worcester Burncoat",175,37561
+"738","Worcester South","Worcester Doherty",318,59480
+"739","Worcester South","Worcester North",228,37617
+"740","Boston Allston/Brighton","Other",969,NA
+"741","Boston Downtown","Other",949,NA
+"742","Boston Charlestown","Other",628,NA
+"743","Boston Dorchester","Other",1021,NA
+"744","Boston East Boston","Other",754,NA
+"745","Boston Fenway","Other",591,NA
+"746","Boston Hyde Park","Other",554,NA
+"747","Boston Jamaica Plain","Other",673,NA
+"748","Boston Mattapan","Other",431,NA
+"749","Boston Roslindale","Other",529,NA
+"750","Boston Roxbury","Other",612,NA
+"751","Boston South Boston","Other",1074,NA
+"752","Boston South End","Other",833,NA
+"753","Boston West Roxbury","Other",612,NA
+"754","Brockton Ward 1","Other",481,NA
+"755","Brockton Ward 2","Other",317,NA
+"756","Brockton Ward 4","Other",396,NA
+"757","Brockton Ward 5","Other",440,NA
+"758","Brockton Ward 6","Other",406,NA
+"759","Brockton Ward 7","Other",415,NA
+"760","BRPC Developing Suburbs","Other",140,NA
+"761","BRPC Regional Urban Centers","Other",163,NA
+"762","BRPC Rural Towns","Other",64,NA
+"763","Cambridge All","Other",936,NA
+"764","CCC Developing Suburbs","Other",174,NA
+"765","CCC Maturing Suburbs","Other",938,NA
+"766","CCC Rural Towns","Other",87,NA
+"767","Chelsea Ward 3","Other",311,NA
+"768","Chelsea Ward 4","Other",327,NA
+"769","CMRPC Developing Suburbs","Other",736,NA
+"770","CMRPC Regional Urban Centers","Other",249,NA
+"771","Everett All","Other",628,NA
+"772","Fall River Sector 1","Other",172,NA
+"773","Fall River Sector 2","Other",213,NA
+"774","Fall River Sector 5","Other",153,NA
+"775","Fall River Sector 7","Other",103,NA
+"776","Fall River Sector 8","Other",159,NA
+"777","Fall River Sector 9","Other",200,NA
+"778","Framingham All","Other",659,NA
+"779","FRCOG Developing Suburbs","Other",193,NA
+"780","FRCOG Rural Towns","Other",134,NA
+"781","ICC Inner Core","Other",944,NA
+"782","ICC Maturing Suburbs","Other",786,NA
+"783","Lawrence Ward A","Other",122,NA
+"784","Lawrence Ward C","Other",110,NA
+"785","Lawrence Ward D","Other",119,NA
+"786","Lawrence Ward E","Other",176,NA
+"787","Lawrence Ward F","Other",148,NA
+"788","Lowell Acre","Other",217,NA
+"789","Lowell Centralville","Other",288,NA
+"790","Lowell Highlands","Other",210,NA
+"791","Lowell Lower Belvidere","Other",328,NA
+"792","Lowell Lower Highlands","Other",210,NA
+"793","Lowell Pawtucketville","Other",253,NA
+"794","Lynn Ward 1","Other",284,NA
+"795","Lynn Ward 3","Other",212,NA
+"796","Lynn Ward 4","Other",280,NA
+"797","Lynn Ward 5","Other",226,NA
+"798","Lynn Ward 7","Other",268,NA
+"799","MAGIC Developing Suburbs","Other",432,NA
+"800","MAGIC Maturing Suburbs","Other",788,NA
+"801","Metrowest Developing Suburbs","Other",222,NA
+"802","Metrowest Maturing Suburbs","Other",865,NA
+"803","Metrowest Regional Urban Centers","Other",437,NA
+"804","MRPC Developing Suburbs","Other",515,NA
+"805","MRPC Regional Urban Centers","Other",622,NA
+"806","MRPC Rural Towns","Other",128,NA
+"807","MVPC Developing Suburbs","Other",776,NA
+"808","MVPC Regional Urban Centers","Other",608,NA
+"809","New Bedford Neighborhood 1","Other",214,NA
+"810","New Bedford Neighborhood 2","Other",99,NA
+"811","New Bedford Neighborhood 3","Other",86,NA
+"812","New Bedford Neighborhood 4","Other",84,NA
+"813","New Bedford Neighborhood 5","Other",123,NA
+"814","Newton Ward 2","Other",606,NA
+"815","Newton Ward 3","Other",321,NA
+"816","Newton Ward 5","Other",447,NA
+"817","NMCOG Developing Suburbs","Other",538,NA
+"818","NMCOG Maturing Suburbs","Other",599,NA
+"819","NSPC Maturing Suburbs","Other",946,NA
+"820","NSPC Regional Urban Centers","Other",512,NA
+"821","NSTF Developing Suburbs","Other",342,NA
+"822","NSTF Maturing Suburbs","Other",514,NA
+"823","NSTF Regional Urban Centers","Other",813,NA
+"824","OCPC Developing Suburbs","Other",1002,NA
+"825","PVPC Developing Suburbs","Other",549,NA
+"826","PVPC Maturing Suburbs","Other",166,NA
+"827","PVPC Regional Urban Centers","Other",563,NA
+"828","PVPC Rural Towns","Other",184,NA
+"829","Quincy Houghs Neck","Other",402,NA
+"830","Quincy North Quincy","Other",442,NA
+"831","Quincy Quincy Center","Other",582,NA
+"832","Quincy South Quincy","Other",602,NA
+"833","Quincy Wollaston","Other",410,NA
+"834","Somerville 2143","Other",516,NA
+"835","Somerville 2144","Other",709,NA
+"836","Somerville 2145","Other",551,NA
+"837","Springfield East Forest Park","Other",183,NA
+"838","Springfield Forest Park","Other",215,NA
+"839","Springfield Indian Orchard","Other",218,NA
+"840","Springfield Liberty Heights","Other",149,NA
+"841","Springfield McKnight","Other",121,NA
+"842","Springfield Pine Point","Other",139,NA
+"843","Springfield Sixteen Acres","Other",290,NA
+"844","Springfield South End","Other",164,NA
+"845","SRPEDD Developing Suburbs","Other",766,NA
+"846","SRPEDD Maturing Suburbs","Other",386,NA
+"847","SRPEDD Regional Urban Centers","Other",619,NA
+"848","SSC Developing Suburbs","Other",391,NA
+"849","SSC Maturing Suburbs","Other",1139,NA
+"850","SWAP Developing Suburbs","Other",622,NA
+"851","SWAP Regional Urban Centers","Other",302,NA
+"852","TRIC Developing Suburbs","Other",515,NA
+"853","TRIC Maturing Suburbs","Other",1063,NA
+"854","TRIC Regional Urban Centers","Other",439,NA
+"855","Worcester Burncoat","Other",317,NA
+"856","Worcester Doherty","Other",421,NA
+"857","Worcester North","Other",285,NA
+"858","Worcester South","Other",189,NA
