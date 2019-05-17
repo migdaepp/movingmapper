@@ -32,7 +32,8 @@ shinyServer(function(input, output) {
     })
     
     output$origins <- renderTable({
-            dests <- ccp.dat %>%
+            dests <- ccp.dat  %>%
+                    mutate(flows = round(flows, 0)) %>%
                     filter(destination==input$nbd & !is.na(flows)) %>%
                     arrange(desc(flows)) %>%
                     mutate(flows = format(flows, nsmall = 0)) %>%
