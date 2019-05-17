@@ -3,7 +3,8 @@ shinyServer(function(input, output) {
     # set up the dataset
     data <- reactive({
         ccp.dat %>%
-        filter(origin==input$nbd) 
+        filter(origin==input$nbd) %>%
+        mutate(flows = round(flows, 0))
         #filter(year %in% input$years[1]:input$years[2]) %>%
         #group_by(nbd.origin, nbd.destination) %>%
         #summarise(count = sum(count)) %>%
