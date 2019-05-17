@@ -23,5 +23,5 @@ mutate(FnlGg_m = gsub("_", " ", FnlGg_m))
 
 ccp.dat <- read.csv("data/flowsdat.csv") %>%
         # convert to average annual estimates
-        mutate(flows = round((flows/15)*20),0)
+        mutate(flows = round((flows/15)*20),1)
         # create a categorical variable including "suppressed" as a category
