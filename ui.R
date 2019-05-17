@@ -7,7 +7,7 @@ shinyUI(navbarPage("HNEF", id="nav",
                         includeCSS("www/styles.css"),
                         includeScript("www/gomap.js")
                 ),
-
+        # test
         # If not using custom CSS, set height of leafletOutput to a number instead of percent
         leafletOutput("map", width="100%", height="100%"),
         #leafletOutput("map", width = 1200, height = 800),
