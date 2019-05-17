@@ -66,10 +66,20 @@ shinyServer(function(input, output) {
     
     # Show a popup at the given location
     showZipcodePopup <- function(place, lat, lng){
+        # set up variables
         selectedNbd <- ccp.dat[ccp.dat$destination == place,][1,]
+        as.origin <- ccp.dat[ccp.dat$destination == place & ccp.dat$origin == input$nbd,] %>% mutate(flows = round(flows, 0))
+        as.destination <- ccp.dat[ccp.dat$destination == input$nbd & ccp.dat$origin == place,] %>% mutate(flows = round(flows, 0))
+        # make pop-up
         content <- as.character(tagList(
         tags$h4(HTML(sprintf("%s", selectedNbd$destination))),
-        tags$strong("Population in 2000:", format(as.integer(selectedNbd$population), big.mark = ",")),
+        "Population in 2000:", format(as.integer(selectedNbd$population), big.mark = ","),
+        tags$br(),
+        "In-movers from", sprintf("%s", paste(input$nbd, ":", sep = "")),
+        format(as.integer(as.origin$flows), big.mark = ","),
+        tags$br(),
+        "Out-movers to", sprintf("%s", input$nbd),":", 
+                    format(as.integer(as.destination$flows), big.mark = ","),
         tags$br()
         ))
         leafletProxy("map") %>% addPopups(lng, lat, content) #content, layerId = FnlGg_m)
