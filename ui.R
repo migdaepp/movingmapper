@@ -23,6 +23,9 @@ shinyUI(navbarPage("HNEF", id="nav",
         label = "Select town or neighborhood:",
         choices = levels(as.factor(ccp.dat$origin)),
         selected = NULL, multiple = FALSE),
+        
+        radioButtons("whichMap", label = NULL,
+                     c("As Origin"="o", "As Destination"="d")),
 
         tableOutput("destinations"),
         tableOutput("origins")

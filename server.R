@@ -2,9 +2,18 @@ shinyServer(function(input, output) {
     
     # set up the dataset
     data <- reactive({
-        ccp.dat %>%
-        filter(origin==input$nbd) %>%
-        mutate(flows = round(flows, 0))
+            if(input$whichMap=="d"){
+                    ccp.dat %>%
+                            filter(destination==input$nbd) %>%
+                            mutate(flows = round(flows, 0))     
+            }else{
+                    ccp.dat %>%
+                            filter(origin==input$nbd) %>%
+                            mutate(flows = round(flows, 0))
+                    
+            }
+                    
+        
         #filter(year %in% input$years[1]:input$years[2]) %>%
         #group_by(nbd.origin, nbd.destination) %>%
         #summarise(count = sum(count)) %>%
@@ -14,19 +23,26 @@ shinyServer(function(input, output) {
     
     # add the map data
     datmap <- reactive({
-        hns.merged %>%
-        left_join(data(), by = c("FnlGg_m" = "destination")) %>%
-        mutate(is.origin = ifelse(FnlGg_m == input$nbd, 0, 1))
+            if(input$whichMap=="d"){
+                    hns.merged %>%
+                            left_join(data(), by = c("FnlGg_m" = "origin")) %>%
+                            mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1))   
+            }else{
+                    hns.merged %>%
+                            left_join(data(), by = c("FnlGg_m" = "destination")) %>%
+                            mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1))
+            }
     })
     
     # create the table
     output$destinations <- renderTable({
-        dests <- data() %>%
-        filter(origin==input$nbd & !is.na(flows)) %>%
-        arrange(desc(flows)) %>%
-        mutate(flows = format(flows, nsmall = 0)) %>%
-        select(Destination = destination,
-        Count = flows)
+        dests <- ccp.dat  %>%
+                mutate(flows = round(flows, 0)) %>%
+                filter(origin==input$nbd & !is.na(flows)) %>%
+                arrange(desc(flows)) %>%
+                mutate(flows = format(flows, nsmall = 0)) %>%
+                select(Destination = destination,
+                       Count = flows)
         colnames(dests)[1] <- "Destination"
         dests[1:5,]
     })
@@ -48,7 +64,7 @@ shinyServer(function(input, output) {
         leaflet(datmap()) %>% addTiles(group = "OSM (default)") %>%
         addTiles(group = "OSM (default)") %>%
         addPolygons(layerId = ~FnlGg_m,
-        color = ~colorFactor(c("green", "#444444"), is.origin)(is.origin),
+        color = ~colorFactor(c("green", "#444444"), is.selected)(is.selected),
         weight = 1, smoothFactor = 0.5,
         opacity = 1.0, fillOpacity = 0.5,
         fillColor = ~colorNumeric("YlOrRd", flows)(flows),
