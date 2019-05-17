@@ -20,4 +20,7 @@ st_transform(4326) %>%
 mutate(FnlGg_m = gsub("Back Bay, Downtown, Beacon Hill, West &amp; North End", "Downtown", FnlGg_m)) %>%
 mutate(FnlGg_m = gsub("_", " ", FnlGg_m))
 
-ccp.dat <- read.csv("data/flowsdat.csv")
+ccp.dat <- read.csv("data/flowsdat.csv") %>%
+        # convert to average annual estimates
+        mutate(flows = (flows/15)*20)
+        # create a categorical variable including "suppressed" as a category
