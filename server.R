@@ -3,13 +3,14 @@ shinyServer(function(input, output) {
     # set up the dataset
     data <- reactive({
         ccp.dat %>%
-        filter(origin==input$nbd)
+        filter(origin==input$nbd) 
         #filter(year %in% input$years[1]:input$years[2]) %>%
         #group_by(nbd.origin, nbd.destination) %>%
         #summarise(count = sum(count)) %>%
         #filter(flows > 0)
         # maybe also filter either to top ten or just those with count > 0?
     })
+    
     # add the map data
     datmap <- reactive({
         hns.merged %>%
@@ -22,10 +23,22 @@ shinyServer(function(input, output) {
         dests <- data() %>%
         filter(origin==input$nbd & !is.na(flows)) %>%
         arrange(desc(flows)) %>%
+        mutate(flows = format(flows, nsmall = 0)) %>%
         select(Destination = destination,
         Count = flows)
         colnames(dests)[1] <- "Destination"
         dests[1:5,]
+    })
+    
+    output$origins <- renderTable({
+            dests <- ccp.dat %>%
+                    filter(destination==input$nbd & !is.na(flows)) %>%
+                    arrange(desc(flows)) %>%
+                    mutate(flows = format(flows, nsmall = 0)) %>%
+                    select(Origin = origin,
+                           Count = flows)
+            colnames(dests)[1] <- "Origin"
+            dests[1:5,]
     })
     
     # create the map

@@ -24,7 +24,8 @@ shinyUI(navbarPage("HNEF", id="nav",
         choices = levels(as.factor(ccp.dat$origin)),
         selected = NULL, multiple = FALSE),
 
-        tableOutput("destinations")
+        tableOutput("destinations"),
+        tableOutput("origins")
         ),
 
         tags$div(id="cite",
