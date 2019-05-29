@@ -134,10 +134,9 @@ shinyServer(function(input, output) {
                     #clearGroup("main") %>%
                     addPolygons(stroke = TRUE, col = "black", weight = 0.3, 
                                 layerId = ~FnlGg_m3, fillColor = "grey",
+                                highlightOptions = highlightOptions(color = "white",
+                                                                    weight = 2, bringToFront = TRUE),
                                 group = "main") 
-            #                            highlightOptions = highlightOptions(color = "white",
-            #                                                                weight = 2,bringToFront = TRUE)) 
-            #        #fitBounds(~min(long), ~min(lat), ~max(long), ~max(lat))
     })
     
     observe({
@@ -150,6 +149,8 @@ shinyServer(function(input, output) {
                                 opacity = 1.0, fillOpacity = 0.5,
                                 color = "cyan",
                                 fillColor = "grey",
+                                highlightOptions = highlightOptions(color = "white",
+                                                                    weight = 2, bringToFront = TRUE),
                                 group = "source")
             #                            highlightOptions = highlightOptions(color = "white",
             #                                                                weight = 2,bringToFront = TRUE)) 
@@ -166,13 +167,19 @@ shinyServer(function(input, output) {
         as.origin <- ccp.dat$flows[ccp.dat$destination == place2 & ccp.dat$origin == input$nbd]
         as.destination <- ccp.dat$flows[ccp.dat$destination == input$nbd & ccp.dat$origin == place2]
         
-        n.inmovers <- ifelse(length(as.origin)==0, "None", 
-                            ifelse(is.na(as.origin), "Fewer than 67", 
-                            paste(format(as.integer(as.origin), big.mark = ","))))
+        n.inmovers <- if(place2 == input$nbd){"N/A"}else{
+                ifelse(length(as.origin)==0, "None", 
+                       ifelse(is.na(as.origin), "Fewer than 67", 
+                              paste(format(as.integer(as.origin), big.mark = ","))))
+        }
         
-        n.outmovers <- ifelse(length(as.destination)==0, "None", 
+                
+        
+        n.outmovers <- if(place2 == input$nbd){"N/A"}else{
+                ifelse(length(as.destination)==0, "None", 
                               ifelse(is.na(as.destination), "Fewer than 67", 
                                     paste(format(as.integer(as.destination), big.mark = ","))))
+        }
         
         # make pop-up
         content <- as.character(tagList(
