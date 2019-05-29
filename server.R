@@ -25,11 +25,11 @@ shinyServer(function(input, output) {
     datmap <- reactive({
             if(input$whichMap=="d"){
                     hns.merged %>%
-                            left_join(data(), by = c("FnlGg_m" = "origin")) %>%
+                            right_join(data(), by = c("FnlGg_m" = "origin")) %>%
                             mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1))   
             }else{
                     hns.merged %>%
-                            left_join(data(), by = c("FnlGg_m" = "destination")) %>%
+                            right_join(data(), by = c("FnlGg_m" = "destination")) %>%
                             mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1))
             }
     })
