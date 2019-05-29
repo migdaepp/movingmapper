@@ -160,10 +160,11 @@ shinyServer(function(input, output) {
     
     # Show a popup at the given location
     showZipcodePopup <- function(place, lat, lng){
+            place2 <- gsub("2|3|4", "", place)
         # set up variables
-        selectedNbd <- ccp.dat[ccp.dat$destination == place,][1,]
-        as.origin <- ccp.dat$flows[ccp.dat$destination == place & ccp.dat$origin == input$nbd]
-        as.destination <- ccp.dat$flows[ccp.dat$destination == input$nbd & ccp.dat$origin == place]
+        selectedNbd <- ccp.dat[ccp.dat$destination == place2,][1,]
+        as.origin <- ccp.dat$flows[ccp.dat$destination == place2 & ccp.dat$origin == input$nbd]
+        as.destination <- ccp.dat$flows[ccp.dat$destination == input$nbd & ccp.dat$origin == place2]
         
         n.inmovers <- ifelse(length(as.origin)==0, "None", 
                             ifelse(is.na(as.origin), "Fewer than 67", 
@@ -197,9 +198,6 @@ shinyServer(function(input, output) {
         return()
         
         isolate({
-            selectedNbd <- ccp.dat[ccp.dat$destination == event$id,][1,]
-            print(event$id)
-            print(selectedNbd)
             showZipcodePopup(event$id, event$lat, event$lng)
         })
     })
