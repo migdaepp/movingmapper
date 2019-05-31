@@ -33,6 +33,8 @@ ccp.dat <- read.csv("data/flowsandprobs.min50.csv") %>%
         mutate(flows = ifelse(origin==destination, NA, flows),
                upper = ifelse(origin==destination, NA, upper),
                lower = ifelse(origin==destination, NA, lower)) %>%
+        mutate(upper = round(upper, digits = -1),
+               lower = round(lower, digits = -1)) %>%
         #filter(origin!=destination) %>%
         filter(origin!="" & destination!="") %>%
         # convert to average annual estimates

@@ -154,7 +154,7 @@ shinyServer(function(input, output) {
         as.destination.lower <- ccp.dat$lower[ccp.dat$destination == input$nbd & ccp.dat$origin == place2]
         
         n.inmovers <- if(place2 == input$nbd){"N/A"}else{
-                ifelse(is.na(as.origin.upper), "Fewer than 67",
+                ifelse(is.na(as.origin.upper), "Fewer than 70",
                        ifelse(as.origin.upper==0, "None",
                               paste(format(as.integer(as.origin.lower), big.mark = ","),
                                     " - ", 
@@ -164,7 +164,7 @@ shinyServer(function(input, output) {
                 
         
         n.outmovers <- if(place2 == input$nbd){"N/A"}else{
-                ifelse(is.na(as.destination.upper), "Fewer than 67",
+                ifelse(is.na(as.destination.upper), "Fewer than 70",
                        ifelse(as.destination.upper==0, "None", 
                                      paste(format(as.integer(as.destination.lower), big.mark = ","),
                                            " - ", 
