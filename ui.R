@@ -26,6 +26,8 @@ shinyUI(navbarPage("HNEF", id="nav",
         
         radioButtons("whichMap", label = NULL,
                      c("As Origin"="o", "As Destination"="d")),
+        
+        checkboxInput("rawnumbers", "Show counts", FALSE),
 
         tableOutput("destinations"),
         tableOutput("origins")

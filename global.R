@@ -14,7 +14,7 @@ library(RColorBrewer)
 # =========================================================================
 
 # fix names for merged places
-cleanNames <- fread("data/hns_finalgeogs_namesandpopulations.csv")
+cleanNames <- read.csv("data/hns_finalgeogs_namesandpopulations.csv")
 
 # load the shapefile
 hns.merged <- st_read("data/hns_finalGeogs_merged.shp") %>%
@@ -24,9 +24,10 @@ hns.merged <- st_read("data/hns_finalGeogs_merged.shp") %>%
         left_join(cleanNames, by = c("FnlGg_m" = "FinalGeog.merged")) %>%
         mutate(FnlGg_m = combinednames) %>%
         dplyr::select(-combinednames)
-hns.merged$FnlGg_m2 <- paste(hns.merged$FnlGg_m, "2", sep = "")
-hns.merged$FnlGg_m3 <- paste(hns.merged$FnlGg_m, "3", sep = "")
-hns.merged$FnlGg_m4 <- paste(hns.merged$FnlGg_m, "4", sep = "")
+hns.merged$FnlGg_m2 <- paste(hns.merged$FnlGg_m, "X2", sep = "")
+hns.merged$FnlGg_m3 <- paste(hns.merged$FnlGg_m, "X3", sep = "")
+hns.merged$FnlGg_m4 <- paste(hns.merged$FnlGg_m, "X4", sep = "")
+hns.merged$FnlGg_m5 <- paste(hns.merged$FnlGg_m, "X5", sep = "")
 
 ccp.dat <- read.csv("data/flowsandprobs.min50.csv") %>%
         # drop missing or same-same 
@@ -49,8 +50,6 @@ ccp.dat <- read.csv("data/flowsandprobs.min50.csv") %>%
         # create a categorical variable including "suppressed" as a category
 
 
-# add 2010 populations
-# fix names for merged places
 
 
 
