@@ -16,11 +16,16 @@ shinyServer(function(input, output) {
             if(input$whichMap=="d"){
                     hns.merged %>%
                             right_join(data(), by = c("FnlGg_m" = "origin")) %>%
-                            mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1))   
+                            mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1)) %>%
+                            filter(is.na(flows) | flows > 0)
+                    #%>%
+                            # mutate(flows = ifelse(flows==0, NA, prob.from.destination))
             }else{
                     hns.merged %>%
                             right_join(data(), by = c("FnlGg_m" = "destination")) %>%
-                            mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1))
+                            mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1)) %>%
+                            filter(is.na(flows) | flows > 0)
+                            #mutate(flows = ifelse(flows==0, NA, prob.from.origin))
             }
     })
     
@@ -61,42 +66,6 @@ shinyServer(function(input, output) {
                                 fillColor = "grey") %>%
                     setView(lng = -71.0, lat = 42.3929, zoom = 8)
     })
-    
-#    # A reactive expression that returns the set of zips that are
-#    # in bounds right now
-#    placesInBounds <- reactive({
-#            if (is.null(input$map_bounds))
-#                    return(datmap()[FALSE,])
-#            bounds <- input$map_bounds
-#            latRng <- range(bounds$north, bounds$south)
-#            lngRng <- range(bounds$east, bounds$west)
-#            
-#            st_intersection(datmap(), 
-#                            st_as_sfc(st_bbox(c(xmin = lngRng[1], xmax = lngRng[2], 
-#                                                ymin = latRng[1], ymax = latRng[2]), 
-#                                              crs=st_crs(datmap()))))
-#    })
-    
-    #    # create the map
-    #    output$map <- renderLeaflet({
-    #        leaflet(datmap()) %>% addTiles(group = "OSM (default)") %>%
-    #        addTiles(group = "OSM (default)") %>%
-    #        addPolygons(layerId = ~FnlGg_m,
-    #        color = ~colorFactor(c("green", "#444444"), is.selected)(is.selected),
-    #        weight = 1, smoothFactor = 0.5,
-    #        opacity = 1.0, fillOpacity = 0.5,
-    #        fillColor = ~colorNumeric("YlOrRd", flows)(flows),
-    #        highlightOptions = highlightOptions(color = "white",
-    #        weight = 2,bringToFront = TRUE)) %>%
-    #        addLegend("bottomright", pal = colorNumeric(
-    #        palette = "YlOrRd",
-    #        domain = datmap()$flows),
-    #        values = ~flows, bins = 5,x
-    #        title = "Number of Movers",
-    #        opacity = 1
-    #        ) #%>%
-    #        #fitBounds(~min(long), ~min(lat), ~max(long), ~max(lat))
-    #    })
     
     # This observer is responsible for showing the flows
     # according to the destination or origin the person has chosen
@@ -177,33 +146,46 @@ shinyServer(function(input, output) {
             place2 <- gsub("2|3|4", "", place)
         # set up variables
         selectedNbd <- hns.merged[hns.merged$FnlGg_m == place2,]
-        as.origin <- ccp.dat$flows[ccp.dat$destination == place2 & ccp.dat$origin == input$nbd]
-        as.destination <- ccp.dat$flows[ccp.dat$destination == input$nbd & ccp.dat$origin == place2]
+        
+        as.origin.upper <- ccp.dat$upper[ccp.dat$destination == place2 & ccp.dat$origin == input$nbd]
+        as.origin.lower <- ccp.dat$lower[ccp.dat$destination == place2 & ccp.dat$origin == input$nbd]
+        
+        as.destination.upper <- ccp.dat$upper[ccp.dat$destination == input$nbd & ccp.dat$origin == place2]
+        as.destination.lower <- ccp.dat$lower[ccp.dat$destination == input$nbd & ccp.dat$origin == place2]
         
         n.inmovers <- if(place2 == input$nbd){"N/A"}else{
-                ifelse(length(as.origin)==0, "None", 
-                       ifelse(is.na(as.origin), "Fewer than 67", 
-                              paste(format(as.integer(as.origin), big.mark = ","))))
+                ifelse(is.na(as.origin.upper), "Fewer than 67",
+                       ifelse(as.origin.upper==0, "None",
+                              paste(format(as.integer(as.origin.lower), big.mark = ","),
+                                    " - ", 
+                                    format(as.integer(as.origin.upper), big.mark = ","), sep = "")))
         }
         
                 
         
         n.outmovers <- if(place2 == input$nbd){"N/A"}else{
-                ifelse(length(as.destination)==0, "None", 
-                              ifelse(is.na(as.destination), "Fewer than 67", 
-                                    paste(format(as.integer(as.destination), big.mark = ","))))
+                ifelse(is.na(as.destination.upper), "Fewer than 67",
+                       ifelse(as.destination.upper==0, "None", 
+                                     paste(format(as.integer(as.destination.lower), big.mark = ","),
+                                           " - ", 
+                                           format(as.integer(as.destination.upper), big.mark = ","), sep = "")))
         }
+        
+        
         
         # make pop-up
         content <- as.character(tagList(
         tags$h4(HTML(sprintf("%s", selectedNbd$FnlGg_m))),
+        "Population in 2010:", format(as.integer(selectedNbd$pop.2010), big.mark = ","),
+        tags$br(),
         "Population in 2000:", format(as.integer(selectedNbd$pop.2000), big.mark = ","),
+        tags$br(),
         tags$br(),
         "In-movers from", sprintf("%s", paste(input$nbd, ": ", n.inmovers, "*", sep = "")),
         tags$br(),
         "Out-movers to", sprintf("%s", paste(input$nbd, ": ", n.outmovers, "*", sep = "")),
         tags$br(), tags$br(),
-        "*Figures are estimated annual averages, 2003 - 2018.", 
+        "*Figures are 95% CIs for estimated annual averages, 2003 - 2018.", 
         tags$br()
         ))
         leafletProxy("map") %>% addPopups(lng, lat, content) #content, layerId = FnlGg_m)
@@ -218,6 +200,8 @@ shinyServer(function(input, output) {
         return()
         
         isolate({
+                
+                
             showZipcodePopup(event$id, event$lat, event$lng)
         })
     })
