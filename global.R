@@ -13,18 +13,20 @@ library(RColorBrewer)
 # GET data
 # =========================================================================
 
+# fix names for merged places
+cleanNames <- fread("data/hns_finalgeogs_namesandpopulations.csv")
+
 # load the shapefile
 hns.merged <- st_read("data/hns_finalGeogs_merged.shp") %>%
         st_as_sf() %>%
         st_transform(4326) %>%
         # clean up names
-        mutate(FnlGg_m = gsub("Back Bay, Downtown, Beacon Hill, West &amp; North End", "Downtown", FnlGg_m)) %>%
-        mutate(FnlGg_m = gsub("_", " ", FnlGg_m)) 
+        left_join(cleanNames, by = c("FnlGg_m" = "FinalGeog.merged")) %>%
+        mutate(FnlGg_m = combinednames) %>%
+        dplyr::select(-combinednames)
 hns.merged$FnlGg_m2 <- paste(hns.merged$FnlGg_m, "2", sep = "")
 hns.merged$FnlGg_m3 <- paste(hns.merged$FnlGg_m, "3", sep = "")
 hns.merged$FnlGg_m4 <- paste(hns.merged$FnlGg_m, "4", sep = "")
-
-
 
 ccp.dat <- read.csv("data/flows.min50.csv") %>%
         # drop missing or same-same 
@@ -34,11 +36,17 @@ ccp.dat <- read.csv("data/flows.min50.csv") %>%
         # convert to average annual estimates
         mutate(flows = round((flows/15)*20,0)) %>%
         # clean up names
-        mutate(origin = gsub("Back Bay, Downtown, Beacon Hill, West &amp; North End", "Downtown", origin),
-               destination = gsub("Back Bay, Downtown, Beacon Hill, West &amp; North End", "Downtown", destination)) %>%
-        mutate(origin = gsub("_", " ", origin),
-               destination  = gsub("_", " ", destination))
+        left_join(cleanNames %>% dplyr::select(FinalGeog.merged, name.origin = combinednames), 
+                  by = c("origin" = "FinalGeog.merged")) %>%
+        left_join(cleanNames %>% dplyr::select(FinalGeog.merged, name.destination = combinednames), 
+                  by = c("destination" = "FinalGeog.merged")) %>%
+        mutate(origin = name.origin, destination = name.destination) %>%
+        dplyr::select(origin, destination, flows, pop.destination)
         # create a categorical variable including "suppressed" as a category
+
+
+# add 2010 populations
+# fix names for merged places
 
 
 

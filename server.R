@@ -1,7 +1,5 @@
 shinyServer(function(input, output) {
-    
-    # set up the dataset
-        #### not sure about this -- do i use it? ####
+        
     data <- reactive({
             if(input$whichMap=="d"){
                     ccp.dat %>%
@@ -104,27 +102,42 @@ shinyServer(function(input, output) {
     # according to the destination or origin the person has chosen
     observe({
             
-            leafletProxy("map", data = datmap()[datmap()$FnlGg_m!=input$nbd,]) %>%
-                    #removeShape(~FnlGg_m) %>%
-                    #removeShape("migrationFlows") %>%
-                    clearControls() %>%
-                    clearGroup("main") %>%
-                    addPolygons(layerId = ~FnlGg_m,
+            if(nrow(datmap()[datmap()$FnlGg_m!=input$nbd & !is.na(datmap()$flows),]) > 0){
+                    leafletProxy("map", data = datmap()[datmap()$FnlGg_m!=input$nbd,]) %>%
+                            #removeShape(~FnlGg_m) %>%
+                            #removeShape("migrationFlows") %>%
+                            clearControls() %>%
+                            clearGroup("main") %>%
+                            addPolygons(layerId = ~FnlGg_m,
                                         stroke = TRUE, col = "black", weight = 0.3,
-                            #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
-                            #weight = 1, smoothFactor = 0.5,
-                            opacity = 1.0, fillOpacity = 0.5,
-                            fillColor = ~colorNumeric("YlOrRd", flows)(flows),
-                            highlightOptions = highlightOptions(color = "white",
-                            weight = 2, bringToFront = TRUE),
-                            group = "main") %>%
-                      addLegend("bottomright", pal = colorNumeric( palette = "YlOrRd",
-                                                                   domain = datmap()$flows),
-                                values = ~flows, bins = 5,
-                                title = "Number of Movers",
-                                opacity = 1 
-                    ) 
-                    #fitBounds(~min(long), ~min(lat), ~max(long), ~max(lat))
+                                        #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
+                                        #weight = 1, smoothFactor = 0.5,
+                                        opacity = 1.0, fillOpacity = 0.5,
+                                        fillColor = ~colorNumeric("YlOrRd", flows)(flows),
+                                        highlightOptions = highlightOptions(color = "white",
+                                                                            weight = 2, bringToFront = TRUE),
+                                        group = "main") %>%
+                            addLegend("bottomright", pal = colorNumeric( palette = "YlOrRd",
+                                                                         domain = datmap()$flows),
+                                      values = ~flows, bins = 5,
+                                      title = "Number of Movers",
+                                      opacity = 1 
+                            )  
+            }
+            else{
+                    leafletProxy("map", data = hns.merged[hns.merged$FnlGg_m %in% datmap()$FnlGg_m &
+                                                                  hns.merged$FnlGg_m!=input$nbd,]) %>%
+                            clearControls() %>%
+                            clearGroup("main") %>%
+                            addPolygons(stroke = TRUE, col = "black", weight = 0.3, 
+                                        fillOpacity = 0.5,
+                                        layerId = ~FnlGg_m, fillColor = "black",
+                                        highlightOptions = highlightOptions(color = "white",
+                                                                            weight = 2, bringToFront = TRUE),
+                                        group = "main") 
+            }
+            
+
     })
    
     
