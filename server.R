@@ -131,7 +131,7 @@ shinyServer(function(input, output) {
                             clearGroup("main") %>%
                             addPolygons(stroke = TRUE, col = "black", weight = 0.3, 
                                         fillOpacity = 0.5,
-                                        layerId = ~FnlGg_m, fillColor = "black",
+                                        layerId = ~FnlGg_m, fillColor = "dimgrey",
                                         highlightOptions = highlightOptions(color = "white",
                                                                             weight = 2, bringToFront = TRUE),
                                         group = "main") 
@@ -176,7 +176,7 @@ shinyServer(function(input, output) {
     showZipcodePopup <- function(place, lat, lng){
             place2 <- gsub("2|3|4", "", place)
         # set up variables
-        selectedNbd <- ccp.dat[ccp.dat$destination == place2,][1,]
+        selectedNbd <- hns.merged[hns.merged$FnlGg_m == place2,]
         as.origin <- ccp.dat$flows[ccp.dat$destination == place2 & ccp.dat$origin == input$nbd]
         as.destination <- ccp.dat$flows[ccp.dat$destination == input$nbd & ccp.dat$origin == place2]
         
@@ -196,8 +196,8 @@ shinyServer(function(input, output) {
         
         # make pop-up
         content <- as.character(tagList(
-        tags$h4(HTML(sprintf("%s", selectedNbd$destination))),
-        "Population in 2000:", format(as.integer(selectedNbd$pop.destination), big.mark = ","),
+        tags$h4(HTML(sprintf("%s", selectedNbd$FnlGg_m))),
+        "Population in 2000:", format(as.integer(selectedNbd$pop.2000), big.mark = ","),
         tags$br(),
         "In-movers from", sprintf("%s", paste(input$nbd, ": ", n.inmovers, "*", sep = "")),
         tags$br(),
