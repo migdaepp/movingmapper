@@ -110,7 +110,7 @@ shinyServer(function(input, output) {
                          #removeShape(~FnlGg_m) %>%
                          #removeShape("migrationFlows") %>%
                          #clearControls() %>%
-                         clearGroup(c("main", "main2")) %>%
+                         clearGroup(c("main", "main2", "mainpos")) %>%
                          addPolygons(layerId = ~FnlGg_m,
                                      stroke = TRUE, col = "black", weight = 0.3,
                                      #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
@@ -119,7 +119,7 @@ shinyServer(function(input, output) {
                                      fillColor = ~colorNumeric("YlOrRd", prob)(prob),
                                      highlightOptions = highlightOptions(color = "white",
                                                                          weight = 2, bringToFront = TRUE),
-                                     group = "main")
+                                     group = "mainpos")
                     }
             
     })
@@ -127,6 +127,8 @@ shinyServer(function(input, output) {
     #### Show the negative probabilities ####
     # problem happens when brockton ward 7 is the origin
     # brockton ward 7 destination -- everything breaks
+    # boston charlestown as origin
+    # boston dorcester as destination
     observe({
             
             if(input$rawnumbers==FALSE){
@@ -135,7 +137,7 @@ shinyServer(function(input, output) {
                             #removeShape(~FnlGg_m) %>%
                             #removeShape("migrationFlows") %>%
                             clearControls() %>%
-                            clearGroup("main2") %>%
+                            clearGroup("main2", "mainneg") %>%
                             addPolygons(layerId = ~FnlGg_m2,
                                         stroke = TRUE, col = "black", weight = 0.3,
                                         #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
@@ -144,7 +146,7 @@ shinyServer(function(input, output) {
                                         fillColor = ~colorNumeric("YlGnBu", prob)(prob),
                                         highlightOptions = highlightOptions(color = "white",
                                                                             weight = 2, bringToFront = TRUE),
-                                        group = "main") %>%
+                                        group = "mainneg") %>%
                             addLegend("bottomright", pal = colorNumeric(palette = "Spectral",
                                                                          domain = (datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd &
                                                                                                          datmap.probs()$prob < 0,] %>% 
@@ -176,7 +178,7 @@ shinyServer(function(input, output) {
                                 #removeShape(~FnlGg_m) %>%
                                 #removeShape("migrationFlows") %>%
                                 clearControls() %>%
-                                clearGroup(c("main", "main2")) %>%
+                                clearGroup(c("mainpos", "mainneg", "main", "main2")) %>%
                                 addPolygons(layerId = ~FnlGg_m,
                                             stroke = TRUE, col = "black", weight = 0.3,
                                             #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
@@ -213,6 +215,7 @@ shinyServer(function(input, output) {
    
     
     observe({
+            if(input$rawnumbers==TRUE){
             leafletProxy("map", data = hns.merged[!hns.merged$FnlGg_m %in% datmap()$FnlGg_m &
                                                           hns.merged$FnlGg_m!=input$nbd,]) %>%
                     #clearGroup("main") %>%
@@ -221,6 +224,7 @@ shinyServer(function(input, output) {
                                 highlightOptions = highlightOptions(color = "white",
                                                                     weight = 2, bringToFront = TRUE),
                                 group = "main2") 
+            }
     })
     
 
