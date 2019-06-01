@@ -137,7 +137,7 @@ shinyServer(function(input, output) {
                             #removeShape(~FnlGg_m) %>%
                             #removeShape("migrationFlows") %>%
                             clearControls() %>%
-                            clearGroup("main2", "mainneg") %>%
+                            clearGroup(c("main2", "mainneg")) %>%
                             addPolygons(layerId = ~FnlGg_m2,
                                         stroke = TRUE, col = "black", weight = 0.3,
                                         #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
