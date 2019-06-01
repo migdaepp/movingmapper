@@ -82,6 +82,25 @@ shinyServer(function(input, output) {
                     setView(lng = -71.0, lat = 42.3929, zoom = 8)
     })
     
+    # show the source!
+    observe({
+            leafletProxy("map", data = hns.merged[hns.merged$FnlGg_m==input$nbd,]) %>%
+                    clearGroup("source") %>%
+                    addPolygons(layerId = ~FnlGg_m4,
+                                #stroke = FALSE,
+                                #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
+                                weight = 6, #smoothFactor = 0.5,
+                                opacity = 1.0, fillOpacity = 0.5,
+                                color = "cyan",
+                                fillColor = "grey",
+                                highlightOptions = highlightOptions(color = "white",
+                                                                    weight = 2, bringToFront = TRUE),
+                                group = "source")
+            #                            highlightOptions = highlightOptions(color = "white",
+            #                                                                weight = 2,bringToFront = TRUE)) 
+            #        #fitBounds(~min(long), ~min(lat), ~max(long), ~max(lat))
+    })
+    
     # Show the positive probabilities
     observe({
             
@@ -107,7 +126,7 @@ shinyServer(function(input, output) {
     
     #### Show the negative probabilities ####
     # problem happens when brockton ward 7 is the origin
-    # 
+    # brockton ward 7 destination -- everything breaks
     observe({
             
             if(input$rawnumbers==FALSE){
@@ -204,23 +223,7 @@ shinyServer(function(input, output) {
                                 group = "main2") 
     })
     
-    observe({
-            leafletProxy("map", data = datmap()[datmap()$FnlGg_m==input$nbd,]) %>%
-                    clearGroup("source") %>%
-                    addPolygons(layerId = ~FnlGg_m4,
-                                #stroke = FALSE,
-                                #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
-                                weight = 6, #smoothFactor = 0.5,
-                                opacity = 1.0, fillOpacity = 0.5,
-                                color = "cyan",
-                                fillColor = "grey",
-                                highlightOptions = highlightOptions(color = "white",
-                                                                    weight = 2, bringToFront = TRUE),
-                                group = "source")
-            #                            highlightOptions = highlightOptions(color = "white",
-            #                                                                weight = 2,bringToFront = TRUE)) 
-            #        #fitBounds(~min(long), ~min(lat), ~max(long), ~max(lat))
-    })
+
     
 
     
