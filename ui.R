@@ -34,5 +34,5 @@ shinyUI(navbarPage("HNEF", id="nav",
         ),
 
         tags$div(id="cite",
-        'Results constructed from the ABC.')
+        '')
         ))))
