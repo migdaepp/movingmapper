@@ -75,7 +75,7 @@ shinyServer(function(input, output) {
     output$map <- renderLeaflet({
             leaflet(hns.merged) %>%
                     addTiles(urlTemplate = "http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga", 
-                             attribution = 'Maps by Google | Data are randomly generated') %>%
+                             attribution = 'Maps by Google | Data from the Federal Reserve Bank of New York/Equifax Consumer Credit Panel') %>%
                     addPolygons(stroke = TRUE, col = "black", weight = 0.3, 
                                 layerId = ~FnlGg_m5, 
                                 fillColor = "grey") %>%
