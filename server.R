@@ -276,7 +276,7 @@ shinyServer(function(input, output) {
         tags$br(),
         "Out-movers to", sprintf("%s", paste(input$nbd, ": ", n.outmovers, "*", sep = "")),
         tags$br(), tags$br(),
-        "*Figures are 95% CIs for estimated annual averages, 2003 - 2018.", 
+        "*Figures are 95% confidence intervals for estimated annual averages, 2003 - 2018. Population estimates are calculated from the Decennial Census.", 
         tags$br()
         ))
         leafletProxy("map") %>% addPopups(lng, lat, content) #content, layerId = FnlGg_m)
