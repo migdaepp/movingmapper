@@ -38,27 +38,26 @@ shinyServer(function(input, output) {
             }
     })
     
-    # flows
-    #### not sure about this. dropping the NAs? ####
+    #### this section gets rid of the zeros ####
     datmap <- reactive({
             if(input$whichMap=="d"){
                     datmap.probs() %>%
-                            filter(is.na(flows) | flows > 0)
+                            filter(is.na(N) | N > 0)
             }else{
                     datmap.probs() %>%
-                            filter(is.na(flows) | flows > 0)
+                            filter(is.na(N) | N > 0)
             }
     })
     
     # create the table of destinations
     output$destinations <- renderTable({
         dests <- ccp.dat  %>%
-                mutate(flows = round(flows, digits = -1)) %>%
-                filter(origin==input$nbd & !is.na(flows) & flows > 0) %>%
-                arrange(desc(flows)) %>%
-                mutate(flows = format(flows, nsmall = 0)) %>%
+                mutate(N = round(N, digits = -1)) %>%
+                filter(origin==input$nbd & !is.na(N) & N > 0) %>%
+                arrange(desc(N)) %>%
+                mutate(N = format(N, nsmall = 0)) %>%
                 select(Destination = destination,
-                       Count = flows)
+                       Count = N)
         colnames(dests)[1] <- "Destination"
         dests[1:5,]
     })
@@ -66,18 +65,17 @@ shinyServer(function(input, output) {
     # create a table of origins
     output$origins <- renderTable({
             dests <- ccp.dat  %>%
-                    mutate(flows = round(flows, digits = -1)) %>%
-                    filter(destination==input$nbd & !is.na(flows) & flows > 0) %>%
-                    arrange(desc(flows)) %>%
-                    mutate(flows = format(flows, nsmall = 0)) %>%
+                    mutate(N = round(N, digits = -1)) %>%
+                    filter(destination==input$nbd & !is.na(N) & N > 0) %>%
+                    arrange(desc(N)) %>%
+                    mutate(N = format(N, nsmall = 0)) %>%
                     select(Origin = origin,
-                           Count = flows)
+                           Count = N)
             colnames(dests)[1] <- "Origin"
             dests[1:5,]
     })
     
-    
-    #### basic map in grey ####
+    #### background base map in grey ####
     output$map <- renderLeaflet({
             leaflet(hns.merged) %>%
                     addTiles(urlTemplate = "http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga", 
@@ -93,12 +91,10 @@ shinyServer(function(input, output) {
             leafletProxy("map", data = hns.merged[hns.merged$FnlGg_m==input$nbd,]) %>%
                     clearGroup("source") %>%
                     addPolygons(layerId = ~FnlGg_m4,
-                                #stroke = FALSE,
-                                #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
-                                weight = 6, #smoothFactor = 0.5,
-                                opacity = 1.0, fillOpacity = 0.5,
-                                color = "cyan",
-                                fillColor = "grey",
+                                # add a light blue outline
+                                weight = 2, color = "cyan", opacity = 0.5, 
+                                # and a blue fill
+                                fillColor = "cyan", fillOpacity = 0.5,
                                 highlightOptions = highlightOptions(color = "white",
                                                                     weight = 2, bringToFront = TRUE),
                                 group = "source")
@@ -111,7 +107,7 @@ shinyServer(function(input, output) {
                 leafletProxy("map", data = datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd &
                                                                   datmap.probs()$prob >= 0,]) %>%
                          #removeShape(~FnlGg_m) %>%
-                         #removeShape("migrationFlows") %>%
+                         #removeShape("migrationN") %>%
                          #clearControls() %>%
                          clearGroup(c("main", "main2", "mainpos")) %>%
                          addPolygons(layerId = ~FnlGg_m,
@@ -134,7 +130,7 @@ shinyServer(function(input, output) {
                     leafletProxy("map", data = datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd &
                                                                       datmap.probs()$prob < 0,] %>% mutate(prob = -1*prob)) %>%
                             #removeShape(~FnlGg_m) %>%
-                            #removeShape("migrationFlows") %>%
+                            #removeShape("migrationN") %>%
                             clearControls() %>%
                             clearGroup(c("main2", "mainneg")) %>%
                             addPolygons(layerId = ~FnlGg_m2,
@@ -170,10 +166,10 @@ shinyServer(function(input, output) {
     observe({
             
             if(input$rawnumbers==TRUE){
-                if(nrow(datmap()[datmap()$FnlGg_m!=input$nbd & !is.na(datmap()$flows),]) > 0){
+                if(nrow(datmap()[datmap()$FnlGg_m!=input$nbd & !is.na(datmap()$N),]) > 0){
                         leafletProxy("map", data = datmap()[datmap()$FnlGg_m!=input$nbd,]) %>%
                                 #removeShape(~FnlGg_m) %>%
-                                #removeShape("migrationFlows") %>%
+                                #removeShape("migrationN") %>%
                                 clearControls() %>%
                                 clearGroup(c("mainpos", "mainneg", "main", "main2")) %>%
                                 addPolygons(layerId = ~FnlGg_m,
@@ -181,14 +177,14 @@ shinyServer(function(input, output) {
                                             #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
                                             #weight = 1, smoothFactor = 0.5,
                                             opacity = 1.0, fillOpacity = 0.5,
-                                            fillColor = ~colorNumeric("YlOrRd", flows)(flows),
+                                            fillColor = ~colorNumeric("YlOrRd", N)(N),
                                             highlightOptions = highlightOptions(color = "white",
                                                                                 weight = 2, bringToFront = TRUE),
                                             group = "main") %>%
                                 #### simpler legend ####
                                 addLegend("bottomright", pal = colorNumeric( palette = "YlOrRd",
-                                                                             domain = datmap()$flows),
-                                          values = ~flows, bins = 5,
+                                                                             domain = datmap()$N),
+                                          values = ~N, bins = 5,
                                           title = "Number of Movers",
                                           opacity = 1 
                                 )  
