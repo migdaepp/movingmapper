@@ -81,7 +81,7 @@ ccp.dat  <-
                 pop.origin = p*pop.origin,
                 pop.destination = p*pop.destination) %>%
         # create the flows variable
-        mutate(flows = round(rlnorm(n(), (log(pop.origin) * log(pop.destination))/log(distance)^2), 0),
+        mutate(flows = round(rnorm(n(), 100*(log(pop.origin) * log(pop.destination))/log(distance)^2), 0),
                flows = ifelse(flows < 0 | is.na(flows), 0, flows)) %>%
         mutate(flows = round(flows, 0)) %>%
         # get the rate
@@ -90,12 +90,18 @@ ccp.dat  <-
         # SMvR
         filter(origin != destination & !is.na(origin) & !is.na(destination)) %>%
         group_by(origin) %>%
-        mutate(SMvR.by.origin = flows / mean(rate.of.destpop/1000, na.rm = TRUE) * pop.destination) %>%
+        mutate(SMvR.by.origin = flows / (mean(rate.of.destpop/1000, na.rm = TRUE) * pop.destination)) %>%
         group_by(destination) %>%
-        mutate(SMvR.by.destination = mean(rate.of.originpop/1000, na.rm = TRUE) * pop.origin) %>%
+        mutate(SMvR.by.destination = flows / (mean(rate.of.originpop/1000, na.rm = TRUE) * pop.origin)) %>%
         ungroup() %>%
-        dplyr::select(origin, destination, flows, credit, pop.destination, pop.origin, 
-                      rate.of.destpop, rate.of.origpop, SMvR.by.origin, SMvR.by.destination)
+        dplyr::select(origin, destination, N = flows, credit, pop.destination, pop.origin, 
+                      rate.of.destpop, rate.of.origpop = rate.of.originpop, SMvR.by.origin, SMvR.by.destination) %>%
+        mutate(N = ifelse(N < 50, NA, N),
+               rate.of.origpop = ifelse(N < 50, NA, rate.of.origpop),
+               rate.of.destpop = ifelse(N < 50, NA, rate.of.destpop)) %>%
+        mutate(N.lower = N - 2, N.upper = N + 2,
+                rate.of.destpop.lower = rate.of.destpop - 2, rate.of.destpop.upper = rate.of.destpop + 2,
+               rate.of.origpop.lower = rate.of.origpop - 2, rate.of.origpop.upper = rate.of.origpop + 2)
 
 
 

@@ -1,14 +1,24 @@
 shinyServer(function(input, output) {
         
+        # goals: 
+        # 1. break down by credit
+        # 2. replace probability with SMvR
+        # 3. replace counts with rates
+        # 4. move tables to the other tab
+        # 5. general clean-up
+        # Re the tool – when you make the changes, could you also see if you could put destination above origin? 
+        # And I wonder if the blue highlight could have a narrower outline? If you are zoomed out, it sort of obscures the closest geographies.
+    
+    # get the main data set with which to work (filter origin/destination and credit)  
     data <- reactive({
             if(input$whichMap=="d"){
                     ccp.dat %>%
-                            filter(destination==input$nbd) %>%
-                            mutate(prob = prob.from.destination)   
+                            filter(destination==input$nbd & credit == input$whichCredit) %>%
+                            mutate(prob = SMvR.by.destination)   
             }else{
                     ccp.dat %>%
-                            filter(origin==input$nbd) %>%
-                            mutate(prob = prob.from.origin)
+                            filter(origin==input$nbd & credit == input$whichCredit) %>%
+                            mutate(prob = SMvR.by.origin)
                     
             }
     })
@@ -20,20 +30,16 @@ shinyServer(function(input, output) {
                             right_join(data(), by = c("FnlGg_m" = "origin")) %>%
                             mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1)) %>%
                             filter(!is.na(prob))
-                            #filter(is.na(flows) | flows > 0)
-                    #%>%
-                            # mutate(flows = ifelse(flows==0, NA, prob.from.destination))
             }else{
                     hns.merged %>%
                             right_join(data(), by = c("FnlGg_m" = "destination")) %>%
                             mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1)) %>%
                             filter(!is.na(prob))
-                            #filter(is.na(flows) | flows > 0)
-                            #mutate(flows = ifelse(flows==0, NA, prob.from.origin))
             }
     })
     
     # flows
+    #### not sure about this. dropping the NAs? ####
     datmap <- reactive({
             if(input$whichMap=="d"){
                     datmap.probs() %>%
@@ -70,8 +76,8 @@ shinyServer(function(input, output) {
             dests[1:5,]
     })
     
-    # create the map
     
+    #### basic map in grey ####
     output$map <- renderLeaflet({
             leaflet(hns.merged) %>%
                     addTiles(urlTemplate = "http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga", 
@@ -82,7 +88,7 @@ shinyServer(function(input, output) {
                     setView(lng = -71.0, lat = 42.3929, zoom = 8)
     })
     
-    # show the source!
+    #### highlight the source neighborhood (source) ####
     observe({
             leafletProxy("map", data = hns.merged[hns.merged$FnlGg_m==input$nbd,]) %>%
                     clearGroup("source") %>%
@@ -96,12 +102,9 @@ shinyServer(function(input, output) {
                                 highlightOptions = highlightOptions(color = "white",
                                                                     weight = 2, bringToFront = TRUE),
                                 group = "source")
-            #                            highlightOptions = highlightOptions(color = "white",
-            #                                                                weight = 2,bringToFront = TRUE)) 
-            #        #fitBounds(~min(long), ~min(lat), ~max(long), ~max(lat))
     })
     
-    # Show the positive probabilities
+    #### show the positive probabilities (mainpos) ####
     observe({
             
             if(input$rawnumbers==FALSE){
@@ -124,11 +127,7 @@ shinyServer(function(input, output) {
             
     })
     
-    #### Show the negative probabilities ####
-    # problem happens when brockton ward 7 is the origin
-    # brockton ward 7 destination -- everything breaks
-    # boston charlestown as origin
-    # boston dorcester as destination
+    #### Show the negative probabilities (mainneg) ####
     observe({
             
             if(input$rawnumbers==FALSE){
@@ -147,7 +146,8 @@ shinyServer(function(input, output) {
                                         highlightOptions = highlightOptions(color = "white",
                                                                             weight = 2, bringToFront = TRUE),
                                         group = "mainneg") %>%
-                            addLegend("bottomright", pal = colorNumeric(palette = "Spectral",
+                            #### legend should be simpler ####
+                            addLegend("bottomleft", pal = colorNumeric(palette = "Spectral",
                                                                          domain = (datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd &
                                                                                                          datmap.probs()$prob < 0,] %>% 
                                                                                 mutate(prob = -1*prob))$prob), 
@@ -166,10 +166,7 @@ shinyServer(function(input, output) {
             
     })
     
-    
-    
-    # This observer is responsible for showing the flows
-    # according to the destination or origin the person has chosen
+    #### if we want raw rates instead of ratios (main) ####
     observe({
             
             if(input$rawnumbers==TRUE){
@@ -188,6 +185,7 @@ shinyServer(function(input, output) {
                                             highlightOptions = highlightOptions(color = "white",
                                                                                 weight = 2, bringToFront = TRUE),
                                             group = "main") %>%
+                                #### simpler legend ####
                                 addLegend("bottomright", pal = colorNumeric( palette = "YlOrRd",
                                                                              domain = datmap()$flows),
                                           values = ~flows, bins = 5,
@@ -195,6 +193,7 @@ shinyServer(function(input, output) {
                                           opacity = 1 
                                 )  
                 }
+                #### what to do if there are no unsuppressed data ####
                 else{
                         leafletProxy("map", data = hns.merged[hns.merged$FnlGg_m %in% datmap()$FnlGg_m &
                                                                       hns.merged$FnlGg_m!=input$nbd,]) %>%
@@ -211,9 +210,7 @@ shinyServer(function(input, output) {
             
     })
     
-    
-   
-    
+    #### i think these are the semi-suppressed nbds that still need to be clickable (main2) ####
     observe({
             if(input$rawnumbers==TRUE){
             leafletProxy("map", data = hns.merged[!hns.merged$FnlGg_m %in% datmap()$FnlGg_m &
@@ -227,14 +224,10 @@ shinyServer(function(input, output) {
             }
     })
     
-
-    
-
-    
-    # Show a popup at the given location
+    #### show a popup for each location ####
     showZipcodePopup <- function(place, lat, lng){
         
-            place2 <- gsub("X2|X3|X4|X5", "", place)
+        place2 <- gsub("X2|X3|X4|X5", "", place)
         # set up variables
         selectedNbd <- hns.merged[hns.merged$FnlGg_m == place2,]
         
@@ -275,9 +268,7 @@ shinyServer(function(input, output) {
         "In-movers from", sprintf("%s", paste(input$nbd, ": ", n.inmovers, "*", sep = "")),
         tags$br(),
         "Out-movers to", sprintf("%s", paste(input$nbd, ": ", n.outmovers, "*", sep = "")),
-        tags$br(), tags$br(),
-        "*Figures are 95% confidence intervals for estimated annual averages, 2003 - 2018. Population estimates are calculated from the Decennial Census.", 
-        tags$br()
+        tags$br(), tags$br()
         ))
         leafletProxy("map") %>% addPopups(lng, lat, content) #content, layerId = FnlGg_m)
     }

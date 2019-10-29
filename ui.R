@@ -7,7 +7,7 @@ shinyUI(navbarPage("HNEF", id="nav",
                         includeCSS("styles/styles.css"),
                         includeScript("styles/gomap.js")
                 ),
-        # test
+
         # If not using custom CSS, set height of leafletOutput to a number instead of percent
         leafletOutput("map", width="100%", height="100%"),
         #leafletOutput("map", width = 1200, height = 800),
@@ -18,17 +18,31 @@ shinyUI(navbarPage("HNEF", id="nav",
         width = 330, height = "auto",
 
         h2(" "),
-
+        
+        # selection of neighborhood
         selectInput(inputId = "nbd",
-        label = "Select town or neighborhood:",
+        label = "Where did people who lived in",
         choices = levels(as.factor(ccp.dat$origin)),
         selected = NULL, multiple = FALSE),
         
+        # origin versus destination
         radioButtons("whichMap", label = NULL,
-                     c("As Origin"="o", "As Destination"="d")),
+                     c("move to"="o", "move from"="d"), inline = TRUE),
         
-        checkboxInput("rawnumbers", "Show counts", FALSE),
-
+        # credit score
+        radioButtons("whichCredit", 
+                     label = "Which movers would you like to include?",
+                     c("All"="All", "Prime Credit"="Prime", "Subprime Credit" = "Subprime")),
+        
+        
+        # Results are ratio of actual versus expected movers, adjusting for population.
+        tags$p(id="p1",
+                 'Results are ratio of actual versus expected movers, adjusting for population'),
+        
+                
+        checkboxInput("rawnumbers", "Show raw rates instead", FALSE),
+        
+        # create tables of destinations and origins
         tableOutput("destinations"),
         tableOutput("origins")
         ),
