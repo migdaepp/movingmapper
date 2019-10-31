@@ -20,13 +20,14 @@ library(RColorBrewer)
 cleanNames <- read.csv("data/hns_finalgeogs_namesandpopulations.csv") 
 
 # load the shapefile
-hns.merged <- st_read("data/HNS_finalGeogs_merged.shp") %>%
+hns.merged <- st_read("data/hns_finalGeogs_merged.shp") %>%
         st_as_sf() %>%
         st_transform(4326) %>%
+        dplyr::select(FinalGeog2 = FnlGg_m, geometry) %>%
         # clean up names
         left_join(cleanNames, by = c("FinalGeog2" = "FinalGeog.merged")) %>%
         mutate(FnlGg_m = combinednames) %>%
-        dplyr::select(FnlGg_m, pop.2010 = pop, geometry) %>%
+        dplyr::select(FnlGg_m, pop.2010, geometry) %>%
   # create unique identifiers for each map layer
   mutate(
     FnlGg_m2 = paste(FnlGg_m, "X2", sep = ""),
