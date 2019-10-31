@@ -17,10 +17,10 @@ library(RColorBrewer)
 
 # 0. load data
 # fix names for merged places
-cleanNames <- read.csv("Data/hns_finalgeogs_namesandpopulations.csv") 
+cleanNames <- read.csv("data/hns_finalgeogs_namesandpopulations.csv") 
 
 # load the shapefile
-hns.merged <- st_read("Data/HNS_finalGeogs_merged.shp") %>%
+hns.merged <- st_read("data/HNS_finalGeogs_merged.shp") %>%
         st_as_sf() %>%
         st_transform(4326) %>%
         # clean up names
@@ -34,7 +34,7 @@ hns.merged <- st_read("Data/HNS_finalGeogs_merged.shp") %>%
     FnlGg_m4 = paste(FnlGg_m, "X4", sep = ""),
     FnlGg_m5 = paste(FnlGg_m, "X5", sep = ""))
 
-ccp.dat <- read.csv("Data/finaldat_simulated_suppressed.csv") %>%
+ccp.dat <- read.csv("data/finaldat_simulated_suppressed.csv") %>%
         filter(!is.na(SMvR.by.destination.fitted) & !is.na(SMvR.by.origin.fitted)) %>%
         # convert to average annual estimates
         mutate(N = round((N/11)*20,0)) %>%
