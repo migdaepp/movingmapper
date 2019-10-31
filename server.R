@@ -100,64 +100,30 @@ shinyServer(function(input, output) {
                                 group = "source")
     })
     
-    #### show the positive probabilities (mainpos) ####
+    #### show the probabilities (mainpos) ####
     observe({
-            
             if(input$rawnumbers==FALSE){
-                leafletProxy("map", data = datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd &
-                                                                  datmap.probs()$prob >= 0,]) %>%
-                         #removeShape(~FnlGg_m) %>%
-                         #removeShape("migrationN") %>%
-                         #clearControls() %>%
-                         clearGroup(c("main", "main2", "mainpos")) %>%
-                         addPolygons(layerId = ~FnlGg_m,
-                                     stroke = TRUE, col = "black", weight = 0.3,
-                                     #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
-                                     #weight = 1, smoothFactor = 0.5,
-                                     opacity = 1.0, fillOpacity = 0.5,
-                                     fillColor = ~colorNumeric("YlOrRd", prob)(prob),
-                                     highlightOptions = highlightOptions(color = "white",
-                                                                         weight = 2, bringToFront = TRUE),
-                                     group = "mainpos")
-                    }
-            
-    })
-    
-    #### Show the negative probabilities (mainneg) ####
-    observe({
-            
-            if(input$rawnumbers==FALSE){
-                    leafletProxy("map", data = datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd &
-                                                                      datmap.probs()$prob < 0,] %>% mutate(prob = -1*prob)) %>%
-                            #removeShape(~FnlGg_m) %>%
-                            #removeShape("migrationN") %>%
+                    #### datmap.probs has no zeros. is that what we want, or do we want to bring the zeros back? ####
+                    leafletProxy("map", data = datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd,]) %>%
                             clearControls() %>%
-                            clearGroup(c("main2", "mainneg")) %>%
+                            clearGroup(c("main2")) %>%
+                            # colors for the polygons
                             addPolygons(layerId = ~FnlGg_m2,
-                                        stroke = TRUE, col = "black", weight = 0.3,
-                                        #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
-                                        #weight = 1, smoothFactor = 0.5,
-                                        opacity = 1.0, fillOpacity = 0.5,
-                                        fillColor = ~colorNumeric("YlGnBu", prob)(prob),
+                                        # set up the outlines
+                                        stroke = TRUE, col = "black", weight = 0.3, opacity = 1.0, 
+                                        # set up the fill
+                                        fillOpacity = 0.5, fillColor = ~colorNumeric("Spectral", prob)(prob),
                                         highlightOptions = highlightOptions(color = "white",
                                                                             weight = 2, bringToFront = TRUE),
                                         group = "mainneg") %>%
                             #### legend should be simpler ####
-                            addLegend("bottomleft", pal = colorNumeric(palette = "Spectral",
-                                                                         domain = (datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd &
-                                                                                                         datmap.probs()$prob < 0,] %>% 
-                                                                                mutate(prob = -1*prob))$prob), 
-                                      values = ~prob, 
-                                      title = "Probability", 
-                                      opacity = 1, 
-                                      labFormat = function(type, cuts, p) { 
-                                              n = length(cuts) 
-                                              cuts[n] = "less likely" 
-                                              for(i in 2:(n-1)){
-                                                      cuts[i] = ""
-                                              } 
-                                              cuts[1] = "more likely" 
-                                              paste0(cuts[-n], cuts[-1])})
+                    addLegend("bottomleft", 
+                              pal = colorNumeric( palette = "Spectral", 
+                                                  domain = datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd,]$prob),
+                              values = ~prob, bins = 5,
+                              title = "Standardized Moving Ratio",
+                              opacity = 1 
+                    )  
             }
             
     })
