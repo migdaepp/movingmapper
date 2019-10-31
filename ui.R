@@ -45,8 +45,12 @@ shinyUI(navbarPage("HNEF", id="nav",
         checkboxInput("rawnumbers", "Show raw rates instead", FALSE),
         
         # create tables of destinations and origins
-        tableOutput("resultstab")
+        tableOutput("resultstab"),
+        
+        tags$p(id="p2",
+               'Currently with simulated rather than real data!')
         ),
+        
 
         tags$div(id="cite",
         '')
