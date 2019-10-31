@@ -63,7 +63,7 @@ ccp.dat <- read.csv("data/flowsandprobs.min50.csv") %>%
                           dplyr::select(FnlGg_m, pop.destination = pop.2010), by = c("destination" = "FnlGg_m")) %>%
         left_join(hnsadj) 
 
-# create fake data set with rates by credit score
+# create fake data set with rates by credit score 
 ccp.dat  <- 
         # create a row for every credit level
         rbind(ccp.dat %>% mutate(credit = "All"), 

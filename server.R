@@ -100,7 +100,7 @@ shinyServer(function(input, output) {
                                 group = "source")
     })
     
-    #### show the probabilities (mainpos) ####
+    #### show the probabilities (mainpos) #### 
     observe({
             if(input$rawnumbers==FALSE){
                     #### datmap.probs has no zeros. is that what we want, or do we want to bring the zeros back? ####
