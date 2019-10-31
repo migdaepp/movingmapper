@@ -1,78 +1,60 @@
 shinyServer(function(input, output) {
         
         # goals: 
-        # 1. break down by credit
-        # 2. replace probability with SMvR
-        # 3. replace counts with rates
-        # 4. move tables to the other tab
-        # 5. general clean-up
-        # Re the tool – when you make the changes, could you also see if you could put destination above origin? 
-        # And I wonder if the blue highlight could have a narrower outline? If you are zoomed out, it sort of obscures the closest geographies.
-    
-    # get the main data set with which to work (filter origin/destination and credit)  
+        # X. break down by credit
+        # X. replace probability with SMvR
+        # X. replace counts with rates
+        # X. fix legend for rates
+        # X. use a single, reactive table
+        # X. put destination above origin? 
+        # X. narrower outline?   
+        # X. fix legend for SMvR: to do - better labels
+        # X. reduce text on the pop ups [rates not counts?] 
+        # X. clear explanations for what things mean
+        # B. fix weird neighborhoods
+
+
+  
+    #### main data set based on inputs ####  
     data <- reactive({
             if(input$whichMap=="d"){
                     ccp.dat %>%
                             filter(destination==input$nbd & credit == input$whichCredit) %>%
-                            mutate(prob = SMvR.by.destination)   
+                            mutate(prob = log10(SMvR.by.destination.fitted),
+                                   rate = rate.of.origpop,
+                                   type = "Origins", place = origin)   
             }else{
                     ccp.dat %>%
                             filter(origin==input$nbd & credit == input$whichCredit) %>%
-                            mutate(prob = SMvR.by.origin)
+                            mutate(prob = log10(SMvR.by.origin.fitted),
+                                   rate = rate.of.destpop,
+                                   type = "Destinations", place = destination)  
                     
             }
     })
     
-    # create the tiles of destinations and origins
+    #### link main data with geographic information ####
     datmap.probs <- reactive({
             if(input$whichMap=="d"){
                     hns.merged %>%
-                            right_join(data(), by = c("FnlGg_m" = "origin")) %>%
-                            mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1)) %>%
-                            filter(!is.na(prob))
+                            right_join(data(), by = c("FnlGg_m" = "origin")) 
             }else{
                     hns.merged %>%
-                            right_join(data(), by = c("FnlGg_m" = "destination")) %>%
-                            mutate(is.selected = ifelse(FnlGg_m == input$nbd, 0, 1)) %>%
-                            filter(!is.na(prob))
+                            right_join(data(), by = c("FnlGg_m" = "destination"))
             }
     })
     
-    #### this section gets rid of the zeros ####
-    datmap <- reactive({
-            if(input$whichMap=="d"){
-                    datmap.probs() %>%
-                            filter(is.na(N) | N > 0)
-            }else{
-                    datmap.probs() %>%
-                            filter(is.na(N) | N > 0)
-            }
-    })
-    
-    # create the table of destinations
-    output$destinations <- renderTable({
-        dests <- ccp.dat  %>%
-                mutate(N = round(N, digits = -1)) %>%
-                filter(origin==input$nbd & !is.na(N) & N > 0) %>%
-                arrange(desc(N)) %>%
-                mutate(N = format(N, nsmall = 0)) %>%
-                select(Destination = destination,
-                       Count = N)
-        colnames(dests)[1] <- "Destination"
-        dests[1:5,]
-    })
-    
-    # create a table of origins
-    output$origins <- renderTable({
-            dests <- ccp.dat  %>%
-                    mutate(N = round(N, digits = -1)) %>%
-                    filter(destination==input$nbd & !is.na(N) & N > 0) %>%
-                    arrange(desc(N)) %>%
-                    mutate(N = format(N, nsmall = 0)) %>%
-                    select(Origin = origin,
-                           Count = N)
-            colnames(dests)[1] <- "Origin"
-            dests[1:5,]
+    #### create table of top 5 destinations ####
+    output$resultstab <- renderTable({
+        tab1 <- data()  %>%
+                mutate(count = ifelse(is.na(N), "< 90", 
+                                      paste(N.lower, N.upper, sep = "-"))) %>%
+                arrange(desc(prob)) %>%
+                select(place, count, type)
+        
+        colnames(tab1)[1] <- paste("Top 5", unique(tab1$type), sep = " ")
+        colnames(tab1)[2] <- "Movers per Year"
+        tab1[1:5,1:2]
     })
     
     #### background base map in grey ####
@@ -82,7 +64,9 @@ shinyServer(function(input, output) {
                              attribution = 'Maps by Google | Data from the Federal Reserve Bank of New York/Equifax Consumer Credit Panel') %>%
                     addPolygons(stroke = TRUE, col = "black", weight = 0.3, 
                                 layerId = ~FnlGg_m5, 
-                                fillColor = "grey") %>%
+                                fillColor = "grey",
+                                highlightOptions = highlightOptions(color = "white",
+                                                                    weight = 2, bringToFront = TRUE)) %>%
                     setView(lng = -71.0, lat = 42.3929, zoom = 8)
     })
     
@@ -100,27 +84,36 @@ shinyServer(function(input, output) {
                                 group = "source")
     })
     
-    #### show the probabilities (mainpos) #### 
+    #### show the probabilities (mainneg) ####
     observe({
             if(input$rawnumbers==FALSE){
                     #### datmap.probs has no zeros. is that what we want, or do we want to bring the zeros back? ####
                     leafletProxy("map", data = datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd,]) %>%
                             clearControls() %>%
-                            clearGroup(c("main2")) %>%
+                            clearGroup(c("main2", "main", "mainneg")) %>%
                             # colors for the polygons
                             addPolygons(layerId = ~FnlGg_m2,
                                         # set up the outlines
                                         stroke = TRUE, col = "black", weight = 0.3, opacity = 1.0, 
                                         # set up the fill
-                                        fillOpacity = 0.5, fillColor = ~colorNumeric("Spectral", prob)(prob),
+                                        fillOpacity = 0.5, fillColor = ~ 
+                                          colorNumeric("Spectral", domain = c(min(datmap.probs()$prob),
+                                                                              max(datmap.probs()$prob)), 
+                                                       reverse = TRUE)(prob),
                                         highlightOptions = highlightOptions(color = "white",
                                                                             weight = 2, bringToFront = TRUE),
                                         group = "mainneg") %>%
                             #### legend should be simpler ####
                     addLegend("bottomleft", 
                               pal = colorNumeric( palette = "Spectral", 
-                                                  domain = datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd,]$prob),
-                              values = ~prob, bins = 5,
+                                                  domain = c(min(datmap.probs()$prob),
+                                                                      max(datmap.probs()$prob)),
+                                                  reverse = TRUE),
+                              values = c(min(datmap.probs()$prob), 1, max(datmap.probs()$prob)), 
+                              bins = 4,
+                              labFormat = labelFormat(
+                                transform = function(x) 10 ^ x
+                              ),
                               title = "Standardized Moving Ratio",
                               opacity = 1 
                     )  
@@ -128,42 +121,46 @@ shinyServer(function(input, output) {
             
     })
     
-    #### if we want raw rates instead of ratios (main) ####
+    #### map of raw rates instead of ratios (main) ####
     observe({
             
             if(input$rawnumbers==TRUE){
-                if(nrow(datmap()[datmap()$FnlGg_m!=input$nbd & !is.na(datmap()$N),]) > 0){
-                        leafletProxy("map", data = datmap()[datmap()$FnlGg_m!=input$nbd,]) %>%
-                                #removeShape(~FnlGg_m) %>%
-                                #removeShape("migrationN") %>%
+                # first make sure that there is at least one row with non-suppressed data
+                if(nrow(datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd & !is.na(datmap.probs()$N),]) > 0){
+                        leafletProxy("map", data = datmap.probs()[datmap.probs()$FnlGg_m!=input$nbd &
+                                                                    !is.na(datmap.probs()$N),]) %>%
                                 clearControls() %>%
-                                clearGroup(c("mainpos", "mainneg", "main", "main2")) %>%
+                                clearGroup(c("mainneg", "main", "main2")) %>%
                                 addPolygons(layerId = ~FnlGg_m,
                                             stroke = TRUE, col = "black", weight = 0.3,
-                                            #color = ~colorFactor(c("black", "green"), is.selected)(is.selected),
-                                            #weight = 1, smoothFactor = 0.5,
                                             opacity = 1.0, fillOpacity = 0.5,
-                                            fillColor = ~colorNumeric("YlOrRd", N)(N),
+                                            fillColor = ~colorNumeric("Spectral",
+                                                                      palette = "Spectral",
+                                                                      domain = c(0, 1, 2, 5, 10, 50),
+                                                                      reverse = TRUE)(rate),
                                             highlightOptions = highlightOptions(color = "white",
                                                                                 weight = 2, bringToFront = TRUE),
                                             group = "main") %>%
-                                #### simpler legend ####
-                                addLegend("bottomright", pal = colorNumeric( palette = "YlOrRd",
-                                                                             domain = datmap()$N),
-                                          values = ~N, bins = 5,
-                                          title = "Number of Movers",
-                                          opacity = 1 
+                                # add a simple legend
+                                addLegend("bottomleft", pal = colorNumeric(palette = "Spectral",
+                                                                           domain = c(0, 1, 2, 5, 10, 50),
+                                                                           reverse = TRUE),
+                                          values = c(0, 1, 2, 5, 10, 50), 
+                                          bins = 6,
+                                          title = "Movers Per Thousand",
+                                          opacity = 0.5
+                                          
                                 )  
                 }
-                #### what to do if there are no unsuppressed data ####
+                # otherwise just fill the polygons and ignore suppression issue
                 else{
-                        leafletProxy("map", data = hns.merged[hns.merged$FnlGg_m %in% datmap()$FnlGg_m &
+                        leafletProxy("map", data = hns.merged[hns.merged$FnlGg_m %in% datmap.probs()$FnlGg_m &
                                                                       hns.merged$FnlGg_m!=input$nbd,]) %>%
                                 clearControls() %>%
-                                clearGroup(c("main", "main2")) %>%
+                                clearGroup(c("main", "main2", "mainneg")) %>%
                                 addPolygons(stroke = TRUE, col = "black", weight = 0.3, 
-                                            fillOpacity = 0.5,
-                                            layerId = ~FnlGg_m, fillColor = "dimgrey",
+                                            fillOpacity = 0.1,
+                                            layerId = ~FnlGg_m, fillColor = "grey",
                                             highlightOptions = highlightOptions(color = "white",
                                                                                 weight = 2, bringToFront = TRUE),
                                             group = "main") 
@@ -172,69 +169,86 @@ shinyServer(function(input, output) {
             
     })
     
-    #### i think these are the semi-suppressed nbds that still need to be clickable (main2) ####
-    observe({
-            if(input$rawnumbers==TRUE){
-            leafletProxy("map", data = hns.merged[!hns.merged$FnlGg_m %in% datmap()$FnlGg_m &
-                                                          hns.merged$FnlGg_m!=input$nbd,]) %>%
-                    #clearGroup("main") %>%
-                    addPolygons(stroke = TRUE, col = "black", weight = 0.3, 
-                                layerId = ~FnlGg_m3, fillColor = "grey",
-                                highlightOptions = highlightOptions(color = "white",
-                                                                    weight = 2, bringToFront = TRUE),
-                                group = "main2") 
-            }
-    })
-    
     #### show a popup for each location ####
     showZipcodePopup <- function(place, lat, lng){
         
+        # identify the place that has been clicked
         place2 <- gsub("X2|X3|X4|X5", "", place)
+        
         # set up variables
         selectedNbd <- hns.merged[hns.merged$FnlGg_m == place2,]
         
-        as.origin.upper <- ccp.dat$upper[ccp.dat$destination == place2 & ccp.dat$origin == input$nbd]
-        as.origin.lower <- ccp.dat$lower[ccp.dat$destination == place2 & ccp.dat$origin == input$nbd]
-        
-        as.destination.upper <- ccp.dat$upper[ccp.dat$destination == input$nbd & ccp.dat$origin == place2]
-        as.destination.lower <- ccp.dat$lower[ccp.dat$destination == input$nbd & ccp.dat$origin == place2]
-        
-        n.inmovers <- if(place2 == input$nbd){"N/A"}else{
-                ifelse(is.na(as.origin.upper), "Fewer than 70",
-                       ifelse(as.origin.upper==0, "None",
-                              paste(format(as.integer(as.origin.lower), big.mark = ","),
-                                    " - ", 
-                                    format(as.integer(as.origin.upper), big.mark = ","), sep = "")))
+        # set up data
+        selectedDat <- 
+          if(input$nbd == place2){
+            ccp.dat %>%
+              filter(destination == input$nbd) %>%
+              slice(1) %>%
+              mutate(text.popup = "")
+          }
+          else if(input$whichMap=="d"){
+          ccp.dat %>%
+            filter(destination==input$nbd & origin == place2) %>%
+            mutate(rate.clean = ifelse(is.na(rate.of.origpop), NA, 
+                                       paste(round(rate.of.origpop, 1), 
+                                             " (95% CI ", 
+                                             round(rate.of.origpop.lower, 1), " - ", 
+                                             round(rate.of.origpop.upper, 1), 
+                                             ")", 
+                                             sep = ""))) %>%
+            dplyr::select(origin, destination, credit, rate.clean) %>%
+            spread(key = credit, value = rate.clean) %>%
+              mutate(text.popup = case_when(
+                is.na(All) ~ "Mover rates are suppressed",
+                is.na(prime) ~ paste("Per thousand residents, ", All, 
+                                     " moved to ", input$nbd, ". 
+                                     Rates by credit score are suppressed.", sep = ""),
+                TRUE ~ paste("Per thousand residents, ", All, 
+                             " moved to ", input$nbd, 
+                             ". The moving rate was ", prime, 
+                             " for movers with prime credit and ", subprime,
+                             " for movers with subprime scores.", sep = "")))
+        }else{
+          ccp.dat %>%
+            filter(origin==input$nbd & destination == place2) %>%
+            mutate(rate.clean = ifelse(is.na(rate.of.destpop), NA, 
+                                       paste(round(rate.of.destpop, 1), 
+                                             " (95% CI ", 
+                                             round(rate.of.destpop.lower, 1), " - ", 
+                                             round(rate.of.destpop.upper, 1), 
+                                             ")", 
+                                             sep = ""))) %>%
+            dplyr::select(origin, destination, credit, rate.clean) %>%
+            spread(key = credit, value = rate.clean) %>%
+            mutate(text.popup = case_when(
+              is.na(All) ~ "Mover rates are suppressed",
+              is.na(prime) ~ paste("Per thousand residents, ", All, 
+                                   " moved from ", input$nbd, ". 
+                                     Rates by credit score are suppressed.", sep = ""),
+              TRUE ~ paste("Per thousand residents, ", All, 
+                           " moved from ", input$nbd, 
+                           ". The moving rate was ", prime, 
+                           " for movers with prime credit and ", subprime,
+                           " for movers with subprime scores.", sep = "")))
+                     
         }
-        
-                
-        
-        n.outmovers <- if(place2 == input$nbd){"N/A"}else{
-                ifelse(is.na(as.destination.upper), "Fewer than 70",
-                       ifelse(as.destination.upper==0, "None", 
-                                     paste(format(as.integer(as.destination.lower), big.mark = ","),
-                                           " - ", 
-                                           format(as.integer(as.destination.upper), big.mark = ","), sep = "")))
-        }
-        
-        
         
         # make pop-up
         content <- as.character(tagList(
+        # neighborhood name
         tags$h4(HTML(sprintf("%s", selectedNbd$FnlGg_m))),
+        # population in 2010
         "Population in 2010:", format(as.integer(selectedNbd$pop.2010), big.mark = ","),
         tags$br(),
-        "Population in 2000:", format(as.integer(selectedNbd$pop.2000), big.mark = ","),
         tags$br(),
-        tags$br(),
-        "In-movers from", sprintf("%s", paste(input$nbd, ": ", n.inmovers, "*", sep = "")),
-        tags$br(),
-        "Out-movers to", sprintf("%s", paste(input$nbd, ": ", n.outmovers, "*", sep = "")),
+        # moving rates by credit level
+        sprintf("%s", selectedDat$text.popup),
         tags$br(), tags$br()
         ))
-        leafletProxy("map") %>% addPopups(lng, lat, content) #content, layerId = FnlGg_m)
+        
+        leafletProxy("map") %>% 
+          addPopups(lng, lat, content) 
     }
-    #}
     
     # When map is clicked, show a popup with city info
     observe({

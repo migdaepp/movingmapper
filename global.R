@@ -13,95 +13,62 @@ library(RColorBrewer)
 # GET data
 # =========================================================================
 
+#### change Data back to data ####
+
 # 0. load data
 # fix names for merged places
-cleanNames <- read.csv("data/hns_finalgeogs_namesandpopulations.csv")
+cleanNames <- read.csv("Data/hns_finalgeogs_namesandpopulations.csv") 
 
 # load the shapefile
-hns.merged <- st_read("data/hns_finalGeogs_merged.shp") %>%
+hns.merged <- st_read("Data/HNS_finalGeogs_merged.shp") %>%
         st_as_sf() %>%
         st_transform(4326) %>%
         # clean up names
-        left_join(cleanNames, by = c("FnlGg_m" = "FinalGeog.merged")) %>%
+        left_join(cleanNames, by = c("FinalGeog2" = "FinalGeog.merged")) %>%
         mutate(FnlGg_m = combinednames) %>%
-        dplyr::select(-combinednames)
-hns.merged$FnlGg_m2 <- paste(hns.merged$FnlGg_m, "X2", sep = "")
-hns.merged$FnlGg_m3 <- paste(hns.merged$FnlGg_m, "X3", sep = "")
-hns.merged$FnlGg_m4 <- paste(hns.merged$FnlGg_m, "X4", sep = "")
-hns.merged$FnlGg_m5 <- paste(hns.merged$FnlGg_m, "X5", sep = "")
+        dplyr::select(FnlGg_m, pop.2010 = pop, geometry) %>%
+  # create unique identifiers for each map layer
+  mutate(
+    FnlGg_m2 = paste(FnlGg_m, "X2", sep = ""),
+    FnlGg_m3 = paste(FnlGg_m, "X3", sep = ""),
+    FnlGg_m4 = paste(FnlGg_m, "X4", sep = ""),
+    FnlGg_m5 = paste(FnlGg_m, "X5", sep = ""))
 
-# adjacency
-hnsadj <- fread("data/HNSadjacency_2010.csv") %>% 
-        left_join(cleanNames %>% dplyr::select(FinalGeog.merged, origin = combinednames), 
-                  by = c("FinalGeog2" = "FinalGeog.merged")) %>%
-        left_join(cleanNames %>% dplyr::select(FinalGeog.merged, destination = combinednames), 
-                  by = c("FinalGeog3" = "FinalGeog.merged")) %>%
-        dplyr::select(origin, destination, adjacent, distance)
-
-ccp.dat <- read.csv("data/flowsandprobs.min50.csv") %>%
-        # drop missing or same-same 
-        mutate(flows = ifelse(origin==destination, NA, flows),
-               upper = ifelse(origin==destination, NA, upper),
-               lower = ifelse(origin==destination, NA, lower)) %>%
-        mutate(upper = round(upper, digits = -1),
-               lower = round(lower, digits = -1)) %>%
-        #filter(origin!=destination) %>%
-        filter(origin!="" & destination!="") %>%
+ccp.dat <- read.csv("Data/finaldat_simulated_suppressed.csv") %>%
+        filter(!is.na(SMvR.by.destination.fitted) & !is.na(SMvR.by.origin.fitted)) %>%
         # convert to average annual estimates
-        #        mutate(flows = round((flows/15)*20,0)) %>%
+        mutate(N = round((N/11)*20,0)) %>%
+        # correct rounding on all numeric columns
+        mutate_if(is.numeric, round, digits = 2) %>%
+        mutate(N.lower = round(N.lower, digits = 0),
+               N.upper = round(N.upper, digits = 0)) %>%
         # clean up names
         left_join(cleanNames %>% dplyr::select(FinalGeog.merged, name.origin = combinednames), 
                   by = c("origin" = "FinalGeog.merged")) %>%
         left_join(cleanNames %>% dplyr::select(FinalGeog.merged, name.destination = combinednames), 
                   by = c("destination" = "FinalGeog.merged")) %>%
         mutate(origin = name.origin, destination = name.destination) %>%
-        dplyr::select(origin, destination, flows, upper, lower, prob.from.origin, prob.from.destination) %>%
+        # keep just the relevant columns
+        dplyr::select(origin, destination, credit,
+                      N, N.lower, N.upper, 
+                      rate.of.origpop, rate.of.origpop.lower, rate.of.origpop.upper,
+                      rate.of.destpop, rate.of.destpop.lower, rate.of.destpop.upper,
+                      #SMvR.by.origin.fitted025, SMvR.by.origin.fitted975,
+                      #SMvR.by.destination.fitted025, SMvR.by.destination.fitted975
+                      SMvR.by.destination.fitted, SMvR.by.origin.fitted) %>%
+        # link with 2010 population counts from ACS
         left_join(hns.merged[,c("FnlGg_m", "pop.2010")] %>% as.data.frame() %>%
                           dplyr::select(FnlGg_m, pop.origin = pop.2010), 
                   by = c("origin" = "FnlGg_m")) %>% 
         left_join(hns.merged[,c("FnlGg_m", "pop.2010")] %>% as.data.frame() %>%
-                          dplyr::select(FnlGg_m, pop.destination = pop.2010), by = c("destination" = "FnlGg_m")) %>%
-        left_join(hnsadj) 
-
-# create fake data set with rates by credit score 
-ccp.dat  <- 
-        # create a row for every credit level
-        rbind(ccp.dat %>% mutate(credit = "All"), 
-              ccp.dat %>% mutate(credit = "Subprime"), 
-              ccp.dat %>% mutate(credit = "Prime")) %>%
-        # get the fraction subprime in each place
-        group_by(origin) %>% mutate(p = runif(1, 0, 1)) %>% ungroup() %>%
-        # update population based on fraction prime/subprime
-        # ideally, you'd separate pop.destination versus pop.origin
-        mutate(#distance = ifelse(distance < 1, 1, distance),
-                p = case_when(
-                        credit == "Subprime" ~ p,
-                        credit == "Prime" ~ 1 - p,
-                        TRUE ~ 1),
-                pop.origin = p*pop.origin,
-                pop.destination = p*pop.destination) %>%
-        # create the flows variable
-        mutate(flows = round(rnorm(n(), 100*(log(pop.origin) * log(pop.destination))/log(distance)^2), 0),
-               flows = ifelse(flows < 0 | is.na(flows), 0, flows)) %>%
-        mutate(flows = round(flows, 0)) %>%
-        # get the rate
-        mutate(rate.of.destpop = 1000*flows / pop.destination,
-               rate.of.originpop = 1000*flows / pop.origin) %>%
-        # SMvR
-        filter(origin != destination & !is.na(origin) & !is.na(destination)) %>%
-        group_by(origin) %>%
-        mutate(SMvR.by.origin = flows / (mean(rate.of.destpop/1000, na.rm = TRUE) * pop.destination)) %>%
-        group_by(destination) %>%
-        mutate(SMvR.by.destination = flows / (mean(rate.of.originpop/1000, na.rm = TRUE) * pop.origin)) %>%
-        ungroup() %>%
-        dplyr::select(origin, destination, N = flows, credit, pop.destination, pop.origin, 
-                      rate.of.destpop, rate.of.origpop = rate.of.originpop, SMvR.by.origin, SMvR.by.destination) %>%
-        mutate(N = ifelse(N < 50, NA, N),
-               rate.of.origpop = ifelse(N < 50, NA, rate.of.origpop),
-               rate.of.destpop = ifelse(N < 50, NA, rate.of.destpop)) %>%
-        mutate(N.lower = N - 2, N.upper = N + 2,
-                rate.of.destpop.lower = rate.of.destpop - 2, rate.of.destpop.upper = rate.of.destpop + 2,
-               rate.of.origpop.lower = rate.of.origpop - 2, rate.of.origpop.upper = rate.of.origpop + 2)
+                          dplyr::select(FnlGg_m, pop.destination = pop.2010), 
+                  by = c("destination" = "FnlGg_m")) %>%
+        # replace zeros with small values to allow logs
+        mutate(SMvR.by.origin.fitted = ifelse(SMvR.by.origin.fitted == 0, 0.01, 
+                                              SMvR.by.origin.fitted),
+               SMvR.by.destination.fitted = ifelse(SMvR.by.destination.fitted == 0, 0.01, 
+                                                   SMvR.by.destination.fitted)) 
+  
 
 
 

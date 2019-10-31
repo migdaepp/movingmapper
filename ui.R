@@ -2,6 +2,7 @@ shinyUI(navbarPage("HNEF", id="nav",
                    tabPanel("Interactive map",
                             div(class="outer",
 
+                #### get back .js ####
                 tags$head(
                         # Include our custom CSS
                         includeCSS("styles/styles.css"),
@@ -15,7 +16,7 @@ shinyUI(navbarPage("HNEF", id="nav",
         # Shiny versions prior to 0.11 should use class = "modal" instead.
         absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
         draggable = TRUE, top = 60, left = "auto", right = 20, bottom = "auto",
-        width = 330, height = "auto", 
+        width = 330, height = "auto",
 
         h2(" "),
         
@@ -27,24 +28,24 @@ shinyUI(navbarPage("HNEF", id="nav",
         
         # origin versus destination
         radioButtons("whichMap", label = NULL,
-                     c("move to"="o", "move from"="d"), inline = TRUE),
+                     c("move from"="d", "move to"="o"), inline = TRUE),
         
         # credit score
         radioButtons("whichCredit", 
                      label = "Which movers would you like to include?",
-                     c("All"="All", "Prime Credit"="Prime", "Subprime Credit" = "Subprime")),
+                     c("All"="All", "Prime Credit"="prime", "Subprime Credit" = "subprime")),
         
         
         # Results are ratio of actual versus expected movers, adjusting for population.
         tags$p(id="p1",
-                 'Results are ratio of actual versus expected movers, adjusting for population'),
+                 'The map shows the ratio of actual movers to the number of movers we would see 
+               if people moved to every place with equal probability'),
         
                 
         checkboxInput("rawnumbers", "Show raw rates instead", FALSE),
         
         # create tables of destinations and origins
-        tableOutput("destinations"),
-        tableOutput("origins")
+        tableOutput("resultstab")
         ),
 
         tags$div(id="cite",
