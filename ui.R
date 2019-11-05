@@ -33,7 +33,7 @@ shinyUI(navbarPage("HNEF", id="nav",
         # credit score
         radioButtons("whichCredit", 
                      label = "Which movers would you like to include?",
-                     c("All"="All", "Prime Credit"="prime", "Subprime Credit" = "subprime")),
+                     c("All"="All", "Advantaged"="prime", "Disadvantaged" = "subprime")),
         
         
         # Results are ratio of actual versus expected movers, adjusting for population.
