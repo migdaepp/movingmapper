@@ -35,7 +35,7 @@ hns.merged <- st_read("data/hns_finalGeogs_merged.shp") %>%
     FnlGg_m4 = paste(FnlGg_m, "X4", sep = ""),
     FnlGg_m5 = paste(FnlGg_m, "X5", sep = ""))
 
-ccp.dat <- read.csv("data/finaldat_simulated_suppressed.csv") %>%
+ccp.dat <- read.csv("data/finaldat_clean_suppressed.csv") %>%
         filter(!is.na(SMvR.by.destination.fitted) & !is.na(SMvR.by.origin.fitted)) %>%
         # convert to average annual estimates
         mutate(N = round((N/11)*20,0)) %>%

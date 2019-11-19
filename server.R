@@ -109,7 +109,7 @@ shinyServer(function(input, output) {
                                                   domain = c(min(datmap.probs()$prob),
                                                                       max(datmap.probs()$prob)),
                                                   reverse = TRUE),
-                              values = c(min(datmap.probs()$prob), 1, max(datmap.probs()$prob)), 
+                              values = c(min(datmap.probs()$prob), 0, max(datmap.probs()$prob)), 
                               bins = 4,
                               labFormat = labelFormat(
                                 transform = function(x) 10 ^ x
