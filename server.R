@@ -12,6 +12,8 @@ shinyServer(function(input, output) {
         # X. reduce text on the pop ups [rates not counts?] 
         # X. clear explanations for what things mean
         # B. fix weird neighborhoods
+  
+        # do you want to do log(SMvR + 1) rather than log(SMvR)?
 
 
   
