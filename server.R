@@ -1,22 +1,5 @@
 shinyServer(function(input, output) {
         
-        # goals: 
-        # X. break down by credit
-        # X. replace probability with SMvR
-        # X. replace counts with rates
-        # X. fix legend for rates
-        # X. use a single, reactive table
-        # X. put destination above origin? 
-        # X. narrower outline?   
-        # X. fix legend for SMvR: to do - better labels
-        # X. reduce text on the pop ups [rates not counts?] 
-        # X. clear explanations for what things mean
-        # B. fix weird neighborhoods
-  
-        # do you want to do log(SMvR + 1) rather than log(SMvR)?
-
-
-  
     #### main data set based on inputs ####  
     data <- reactive({
             if(input$whichMap=="d"){
@@ -204,12 +187,12 @@ shinyServer(function(input, output) {
                 is.na(All) ~ "Mover rates are suppressed",
                 is.na(prime) ~ paste("Per thousand residents, ", All, 
                                      " moved to ", input$nbd, ". 
-                                     Rates by credit score are suppressed.", sep = ""),
+                                     Rates by Equifax Risk Scores are suppressed.", sep = ""),
                 TRUE ~ paste("Per thousand residents, ", All, 
                              " moved to ", input$nbd, 
                              ". The moving rate was ", prime, 
-                             " for movers with prime credit and ", subprime,
-                             " for movers with subprime scores.", sep = "")))
+                             " for movers with prime and ", subprime,
+                             " for movers with subprime Equifax Risk Scores.", sep = "")))
         }else{
           ccp.dat %>%
             filter(origin==input$nbd & destination == place2) %>%
@@ -226,12 +209,12 @@ shinyServer(function(input, output) {
               is.na(All) ~ "Mover rates are suppressed",
               is.na(prime) ~ paste("Per thousand residents, ", All, 
                                    " moved from ", input$nbd, ". 
-                                     Rates by credit score are suppressed.", sep = ""),
+                                     Rates by Equifax Risk Score are suppressed.", sep = ""),
               TRUE ~ paste("Per thousand residents, ", All, 
                            " moved from ", input$nbd, 
                            ". The moving rate was ", prime, 
-                           " for movers with prime credit and ", subprime,
-                           " for movers with subprime scores.", sep = "")))
+                           " for movers with prime and ", subprime,
+                           " for movers with subprime Equifax Risk Scores.", sep = "")))
                      
         }
         
