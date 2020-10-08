@@ -1,7 +1,7 @@
-shinyUI(navbarPage("HNEF", id="nav",
-                   tabPanel("Interactive map",
+shinyUI(navbarPage("Healthy Neighborhoods Study", id="nav",
+                   tabPanel("Migration Mapper",
                             div(class="outer",
-
+                                
                 #### get back .js ####
                 tags$head(
                         # Include our custom CSS
@@ -39,8 +39,7 @@ shinyUI(navbarPage("HNEF", id="nav",
         # Results are ratio of actual versus expected movers, adjusting for population.
         tags$p(id="p1",
                  'The map shows the ratio of actual movers to the number of movers we would see 
-               if people moved to every place with equal probability'),
-        
+                  based on differences in population size alone.'),
                 
         checkboxInput("rawnumbers", "Show raw rates instead", FALSE),
         
