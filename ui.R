@@ -1,5 +1,5 @@
 shinyUI(navbarPage("Healthy Neighborhoods Study", id="nav",
-                   tabPanel("Migration Mapper",
+                   tabPanel("Moving Mapper",
                             div(class="outer",
                                 
                 #### get back .js ####
