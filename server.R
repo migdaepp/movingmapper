@@ -45,8 +45,10 @@ shinyServer(function(input, output) {
     #### background base map in grey ####
     output$map <- renderLeaflet({
             leaflet(hns.merged) %>%
-                    addTiles(urlTemplate = "http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga", 
-                             attribution = 'Maps by Google | Data from the Federal Reserve Bank of New York/Equifax Consumer Credit Panel | <a href="http://hns.mit.edu/data-tools-resources/mobility-mapper">Technical Appendix</a> | <a href="https://accessibility.mit.edu/">Accessibility</a>') %>%
+                    addProviderTiles(providers$CartoDB.Positron) %>%
+                    addTiles(urlTemplate = "", attribution = ' Data from the Federal Reserve Bank of New York/Equifax Consumer Credit Panel | <a href="http://hns.mit.edu/data-tools-resources/mobility-mapper">Technical Appendix</a> | <a href="https://accessibility.mit.edu/">Accessibility</a>') %>%
+                    #addTiles(urlTemplate = "http://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga", 
+                    #         attribution = 'Maps by Google | Data from the Federal Reserve Bank of New York/Equifax Consumer Credit Panel | <a href="http://hns.mit.edu/data-tools-resources/mobility-mapper">Technical Appendix</a> | <a href="https://accessibility.mit.edu/">Accessibility</a>') %>%
                     addPolygons(stroke = TRUE, col = "black", weight = 0.3, 
                                 layerId = ~FnlGg_m5, 
                                 fillColor = "grey",

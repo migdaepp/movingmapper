@@ -45,7 +45,10 @@ shinyUI(navbarPage("Healthy Neighborhoods Study", id="nav",
         
         # create tables of destinations and origins
         tableOutput("resultstab")
+        
         ),
+        
+        
 
         tags$div(id="cite",
         '')
