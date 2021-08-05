@@ -34,7 +34,8 @@ hns.merged <- st_read("data/HNSneighborhoods_2010.shp") %>%
     FnlGg_m4 = paste(FnlGg_m, "X4", sep = ""),
     FnlGg_m5 = paste(FnlGg_m, "X5", sep = ""))
 
-ccp.dat <- read.csv("data/finaldat_clean_suppressed.csv") %>%
+ccp.dat <- #read.csv("data/finaldat_clean_suppressed.csv") %>% 
+        read.csv("data/finaldat_simulated_suppressed.csv") %>% #comment out this line and uncomment previous to use real data
         # convert to average annual estimates
         mutate(N = round((N/11)*20,0)) %>%
         # correct rounding on all numeric columns
